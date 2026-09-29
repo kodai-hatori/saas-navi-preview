@@ -12,16 +12,19 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 .body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
 .body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
 .tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
 .nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/smtp2go-howto/eyecatch.png" alt="">
 <h1 id="t">SMTPリレーサービスは必要？使う場面と選び方、無料から試せるSMTP2GOなど4選</h1>
-<div class="meta"><span class="badge">マーケ・メール配信・LP・SNS</span> 7,159字</div>
+<div class="meta"><span class="badge">マーケ・メール配信・LP・SNS</span> 7,446字</div>
 <div class="tags">#SMTPリレー #SMTP2GO #メール配信 #海外SaaS</div>
 <div class="body" id="b"><p>問い合わせフォームの自動返信が届かない、複合機の通知が途中で止まる、取引先からGmailの送信者ガイドラインへの対応を求められた。そんなときに迷うのが「今のSMTPのままでよいか」と「外部に任せるならどこか」の2点です。この記事では両方に答えます。紹介する4サービスはどれも編集部では契約していないため、公式情報と公開情報をもとに整理しました。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>SMTP2GOの料金ページでは、無料プランの送信数と有料プランの段階を確認できます（サイトは英語です）。</p>
-<h2>結論：少量ならSMTP2GOかBrevoの無料枠から、日本語サポートと円払いが要るならSendGrid</h2>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：少量ならSMTP2GOかBrevoの無料枠から、日本語サポートと円払いが要るならSendGrid</a></li><li><a href="#s2">SMTPリレーサービスとは：自社のメール送信を代わりに引き受けるサービス</a></li><li><a href="#s3">SMTPリレーサービスが必要になる場面</a></li><li><a href="#s4">今のSMTPを使い続けるか、リレーサービスに任せるか：4つの選択肢</a></li><li><a href="#s5">SMTPリレーサービスの選び方：確認したい4つのポイント</a></li><li><a href="#s6">小規模から試せるSMTPリレーサービス4選</a></li><li><a href="#s7">費用の目安：月1,000通・1万通・10万通でどう変わるか</a></li><li><a href="#s8">導入の流れ：SMTP2GOで始める場合の4ステップ</a></li><li><a href="#s9">まとめ：今のSMTPで困っていなければ様子見、困っているなら無料枠で試す</a></li></ol></nav><h2 id="s1">結論：少量ならSMTP2GOかBrevoの無料枠から、日本語サポートと円払いが要るならSendGrid</h2>
 <p><strong>今のSMTPで届いていて送信数も少ないなら、乗り換えは不要です。</strong> 届かない、上限に当たる、送信ドメイン認証を整えられない、のどれかがあればリレーサービスを試す価値があります。日本語サポートで選ぶならSendGridですが、契約できるのは法人だけです。日本円での支払いと適格請求書が目的なら、Amazon SESも候補に入ります。</p>
 <h3>乗り換えなくてよいケース・任せたほうがよいケース</h3>
 <p>今のままでよいのは、次のような場合です。</p>
@@ -30,7 +33,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <ul><li>フォームの自動返信や通知が届かない、迷惑メールに入る</li><li>送信数の上限に当たってメールが止まる</li><li>今のサーバーがDKIMの署名に対応しておらず、送信ドメイン認証を整えられない</li></ul>
 <h3>4サービスの選び分け</h3>
 <ul><li><strong>SMTP2GO</strong>：SMTP送信に絞ったサービスで、無料プランに期限がない</li><li><strong>Brevo</strong>：メルマガ配信と同じアカウントでSMTP送信も使える</li><li><strong>SendGrid</strong>：契約できるのは法人のみ。国内代理店経由なら円建てで、日本語サポートとJCB払いがそろう（請求書払いはプロプランから）</li><li><strong>Amazon SES</strong>：月額の基本料がない従量課金。日本円で払えて適格請求書も出るが、使い始めに審査がある</li></ul>
-<h2>SMTPリレーサービスとは：自社のメール送信を代わりに引き受けるサービス</h2>
+<h2 id="s2">SMTPリレーサービスとは：自社のメール送信を代わりに引き受けるサービス</h2>
 <p><strong>アプリやWordPress、複合機が送るメールを、自社のメールサーバーの代わりに受け取って宛先へ届けるサービスです。</strong> 送信元のSMTPサーバー名・ポート・認証情報を書き換えれば使い始められます。</p>
 <ul><li>送信元（WordPress・フォーム・複合機・社内システム）がメールを作る</li><li>リレーサービスが受け取り、送信ドメインの認証情報を付けて配送する</li><li>受信者のメールサーバー（Gmail・Outlookなど）に届く</li></ul>
 <figure><img loading="lazy" src="../img/smtp2go-howto/smtp2go-howto-relay-flow.png" alt="SMTPリレーサービスの仕組み"></figure>
@@ -38,7 +41,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>SMTPリレーは、自動返信や注文確認のようにシステムが自動で送るメールを届ける土台で、メール配信システムは宛先リストへ一斉配信するための道具です。後で紹介するBrevoは、この2つを1つのアカウントで扱えます。</p>
 <h3>使い方はSMTP設定とAPIの2通り</h3>
 <p>今のアプリの送信設定を書き換える方法と、開発者がプログラムからAPIで送る方法があります。WordPressや複合機のメールを直したい段階なら、SMTP設定の書き換えで足ります。</p>
-<h2>SMTPリレーサービスが必要になる場面</h2>
+<h2 id="s3">SMTPリレーサービスが必要になる場面</h2>
 <p><strong>よくあるのは「届かない」「送信数の上限に当たる」「送信者要件を満たせない」の3つです。</strong> どれかに当てはまるなら、次の章の4つの選択肢と見比べてください。</p>
 <h3>WordPressや問い合わせフォームのメールが届かない・迷惑メールに入る</h3>
 <p>WordPressは標準では、サーバーからそのままメールを送ります。送信元のドメインと送信サーバーが一致しない、SPFやDKIMが設定されていない、といった状態だと受信側はなりすましを疑い、迷惑メールに振り分けたり受け取りを拒否したりします。自動返信が届かないときに、まず疑うのがこの認証です。</p>
@@ -46,7 +49,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>レンタルサーバーのSMTPにも、GmailやMicrosoft 365のアカウントにも、1日に送れる通数の上限があります。自動通知や注文確認メールが重なると上限に届き、超えた分は送られません。</p>
 <h3>Gmailなどの送信者要件（SPF・DKIM・DMARC）への対応を迫られた</h3>
 <p>Gmailは送信者ガイドラインで、すべての送信者にSPFかDKIMの設定を求め、大量に送る送信者にはSPF・DKIM・DMARCをそろえるよう求めています。米YahooやMicrosoftのOutlookも、大量に送る送信者に同じ方向の要件を示しています。リレーサービスなら、送信ドメインを登録すると追加すべきSPF・DKIMのレコードが画面に表示されます。</p>
-<h2>今のSMTPを使い続けるか、リレーサービスに任せるか：4つの選択肢</h2>
+<h2 id="s4">今のSMTPを使い続けるか、リレーサービスに任せるか：4つの選択肢</h2>
 <p><strong>社内の数人が普通にやりとりする程度なら、今のSMTPで足ります。</strong> システムからの自動送信が増えた、または認証を自分で整えられないなら、リレーサービスに任せたほうが手間は少なくて済みます。</p>
 <figure><img loading="lazy" src="../img/smtp2go-howto/smtp2go-howto-options.png" alt="4つの選択肢の比べ方"></figure>
 <h3>GmailやMicrosoft 365のアカウントでそのまま送る</h3>
@@ -59,7 +62,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>WordPressと同じサーバーで設定が完結し、費用はサーバー代に含まれます。1日の送信上限やDKIMへの対応はサーバー会社とプランごとに決まっているので、契約中のプランの仕様書で確かめてから使い続けるかを決めます。</p>
 <h3>SMTPリレーサービスに任せる</h3>
 <p>送信ドメインの認証と送信ログを1つの管理画面で扱えます。費用はサービスによって形が違い、SMTP2GOとBrevoは期限のない無料プラン、SendGridは60日間のトライアル、Amazon SESは送った分だけの従量課金から始まります。金額は後の章で紹介します。</p>
-<h2>SMTPリレーサービスの選び方：確認したい4つのポイント</h2>
+<h2 id="s5">SMTPリレーサービスの選び方：確認したい4つのポイント</h2>
 <p><strong>小さく始めるなら、送信数と無料枠、送信ドメイン認証、支払い・請求書・サポート、上限超過と解約の4点で比べれば足ります。</strong></p>
 <h3>月の送信数と無料枠</h3>
 <p>まず月と1日の送信数を見積もります。無料枠の上限には月単位と1日単位があり、SMTP2GOには両方、Brevoには1日単位の上限がかかります。月初の請求書送付のように1日に集中する送り方だと、1日の上限に先に当たります。</p>
@@ -69,34 +72,34 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>海外サービスはUSD建てで、サポートも英語が基本です。JCBが使えるか、請求書をPDFで受け取れるか、適格請求書（インボイス）が出るかはサービスごとに違います。海外サービスの利用料にかかる消費税の扱いは、顧問の税理士に確認してください。</p>
 <h3>上限を超えたときの扱いと解約のしやすさ</h3>
 <p>上限を超えたら送信が止まるのか、追加料金で送れるのかを見ておきます。SMTP2GOの無料プランは月の上限で送信を受け付けなくなり、有料プランは月の枠の3倍まで自動で超過して送れます。解約も、SMTP2GOは管理画面から自分でできる一方、SendGridの国内代理店経由の契約はサポートへの連絡が必要です。</p>
-<h2>小規模から試せるSMTPリレーサービス4選</h2>
+<h2 id="s6">小規模から試せるSMTPリレーサービス4選</h2>
 <p><strong>無料枠から始めるならSMTP2GOとBrevo、日本語サポート重視ならSendGrid、従量課金で抑えたいならAmazon SESが候補です。</strong></p>
 <h3>SMTP2GO：期限なしの無料プランがあるSMTP送信専用のサービス</h3>
 <p>SMTP2GOは、システムやアプリからの送信に機能を絞ったサービスです。有料プランは月1万通から刻まれていて、小規模の送信量に合わせて選べます。</p>
 <ul><li><strong>無料プラン</strong>：期限なし・カード登録不要で、月1,000通・1日200通まで。1日の上限を超えた分は順番待ちに入り、月1,000通に達すると送信を受け付けない</li><li><strong>Starter</strong>：月1万通で$15/月。年払いは$150/年で2か月分が無料</li><li><strong>Professional</strong>：月10万通で$75/月。専用IPが1つ付く</li><li><strong>超過送信</strong>：超過分は1,000通単位の従量（Starterは$1.20/1,000通）</li><li><strong>返金</strong>：30日間の返金保証あり</li></ul>
 <p>1ドル=157円換算（執筆時点の目安。為替で変動）で、Starterは月約2,355円、Professionalは月約11,775円です。</p>
 <p>支払いはVisa・Mastercard・American Express・DiscoverのカードとPayPalで、JCBは記載がありません。年払いなら銀行送金も選べます。サイト・管理画面・サポートは英語のみで、無料プランのチャット・電話サポートは登録から14日間だけです。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>料金ページで月の送信数を選ぶと、段階ごとの月額と年払いの価格が表示されます。</p>
 <h3>Brevo：メルマガ配信と同じアカウントでSMTPも使える</h3>
 <p>Brevoはメルマガ配信が主力のサービスで、全プランでSMTPリレーとAPIによる送信が使えます。ニュースレターとフォームの自動返信を1つのアカウントで管理できます。</p>
 <ul><li><strong>無料プラン</strong>：期限なし・カード不要で、1日300通まで。自動送信のメールにもこの上限がかかる</li><li><strong>送信枠の数え方</strong>：メルマガとSMTP・APIの送信を同じ月の枠で数える</li><li><strong>Starter</strong>：月5,000通から段階を選ぶ方式。日本から表示すると円建てで、月払い¥1,140/月から（年払いは¥1,026/月から）</li><li><strong>Email credits</strong>：1日の上限も有効期限もない前払いの送信クレジットも買える</li></ul>
 <p>無料アカウントは4か月ログインがないと削除の対象ですが、自動送信などの活動があれば対象外です。公式の日本語サイトはあるものの、管理画面と公式サポートは日本語に対応していません。支払いはカード（Adyen・Stripe経由）が基本で、PayPalは新しい管理画面のアカウントでは現在使えません。有料プランはいつでも解約でき、請求期間の終わりに無料プランへ移ります。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.brevo.com/jp/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.brevo.com/jp/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>料金ページで月の送信数を選ぶと、Starterの金額が段階ごとに切り替わります。</p>
 <h3>SendGrid：国内代理店経由なら円建て・日本語サポート</h3>
 <p>SendGridは、日本では構造計画研究所（KKE）が国内代理店として販売しています。ここではKKE経由の条件を紹介します。米Twilioと直接契約する場合は条件が異なります。</p>
 <ul><li><strong>無料トライアル</strong>：常設の無料プランは2026年3月末で終わり、4月からはアカウント作成から60日間のトライアルに変わった。送信は1日100通まで、カード登録は不要</li><li><strong>エッセンシャル50K</strong>：月5万通で¥3,000/月（税抜）</li><li><strong>プロ100K</strong>：月10万通で¥14,000/月（税抜）。このプランから固定IPが付く</li></ul>
 <p>JCBを含むクレジットカードで払え、プロ以上は請求書払いも選べます。日本語のサポートとドキュメントは全プランで無料です。法人向けのため個人ではアカウントを作れず、解約は希望月の月末の10日以上前までにサポートへ申し込みます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://sendgrid.kke.co.jp/plan/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://sendgrid.kke.co.jp/plan/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>KKEの料金ページには、プランごとの月額と超過料金が円で載っています。</p>
 <h3>Amazon SES：月額なしの従量課金、使い始めに申請が要る</h3>
 <p>Amazon SESはAWSのメール送信サービスで、月額の基本料がありません。送信1,000通あたり$0.10の従量課金で、添付ファイルと専用IPは別料金です。</p>
 <ul><li><strong>サンドボックス</strong>：新規アカウントは認証済みの宛先にしか送れず、24時間200通・毎秒1通まで</li><li><strong>本番利用の申請</strong>：コンソールから申請して審査を通す。連絡の言語は英語か日本語を選べる</li><li><strong>無料で試す方法</strong>：常設の無料枠はないが、新規AWSアカウントに付く最大$200のFree Tierクレジットを使える</li></ul>
 <p>コンソールは日本語表示に対応し、アカウントと請求の問い合わせも日本語で受け付けています（技術的な質問には有料のサポートプランが必要）。請求はUSD建てですが、支払い通貨に日本円を選べ、利用料には適格請求書が発行されます。DNSやIAMの設定も自分で行うため、開発者がいる会社向けです。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://aws.amazon.com/ses/pricing/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://aws.amazon.com/ses/pricing/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>料金ページには、送信料のほかに添付ファイルや専用IPの料金も並んでいます。</p>
-<h2>費用の目安：月1,000通・1万通・10万通でどう変わるか</h2>
+<h2 id="s7">費用の目安：月1,000通・1万通・10万通でどう変わるか</h2>
 <p><strong>月1,000通程度なら無料枠で収まります。</strong> 月1万通を超えると月額が発生し、10万通の規模では専用IPを含めるかどうかで差が開きます。</p>
 <figure><img loading="lazy" src="../img/smtp2go-howto/smtp2go-howto-pricing.png" alt="通数別の費用の目安"></figure>
 <h3>月1,000通前後：無料枠で足りる範囲</h3>
@@ -105,7 +108,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <ul><li><strong>SMTP2GO</strong>：Starterで$15/月（年払いなら$150/年）</li><li><strong>Brevo</strong>：Starterの1万通の段階。月5,000通の¥1,140/月より上の金額になる</li><li><strong>SendGrid</strong>：エッセンシャル50K（月5万通まで）で¥3,000/月</li><li><strong>Amazon SES</strong>：計算上は約$1（添付ファイル・専用IPは別）</li></ul>
 <h3>月10万通前後：専用IPを含めるかで差が出る</h3>
 <ul><li><strong>SMTP2GO</strong>：Professionalで$75/月（専用IP 1つ込み）</li><li><strong>SendGrid</strong>：エッセンシャル100Kで¥5,400/月（固定IPなし）、プロ100Kで¥14,000/月（固定IPあり）</li><li><strong>Amazon SES</strong>：計算上は約$10。マネージド専用IPを付けるなら、月$15に加えて通数に応じた料金がかかる</li><li><strong>Brevo</strong>：Starterの段階は月10万通まで。月15万通からはProfessional（¥81,400/月から）という別の価格帯</li></ul>
-<h2>導入の流れ：SMTP2GOで始める場合の4ステップ</h2>
+<h2 id="s8">導入の流れ：SMTP2GOで始める場合の4ステップ</h2>
 <p><strong>登録、送信ドメインの認証、SMTP設定の書き換え、テスト送信の順に進めます。</strong> ほかのサービスも大きな流れは同じですが、Amazon SESは登録の後に本番利用の申請と審査が加わります。</p>
 <ol><li>アカウントを登録する</li><li>送信ドメインをDNSで認証する</li><li>WordPressや複合機のSMTP設定を書き換える</li><li>テスト送信して、届き方と送信数を確かめる</li></ol>
 <h3>登録して送信ドメインを認証する</h3>
@@ -114,9 +117,9 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>WordPressはSMTP設定ができるプラグインを入れ、サービスが発行するSMTPのユーザー名とパスワードを入力します。複合機や社内システムは、管理画面の「SMTPサーバー」欄をリレーサービスのサーバー名と認証情報に書き換えます。</p>
 <h3>テスト送信して、送信数と届き方を確認する</h3>
 <p>複数の宛先に送り、迷惑メールに入らないか、送信者名が正しいかを見ます。運用開始後は送信数を見て、上限が近づいたらプランを見直してください。無料プランのレポートは5日分しか残りません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>無料プランなら、カードを登録せずにアカウントを作れます。</p>
-<h2>まとめ：今のSMTPで困っていなければ様子見、困っているなら無料枠で試す</h2>
+<h2 id="s9">まとめ：今のSMTPで困っていなければ様子見、困っているなら無料枠で試す</h2>
 <p><strong>少量ならSMTP2GOかBrevoの無料枠で試し、法人で日本語サポートが欲しいならSendGrid、日本円払いと適格請求書を従量でそろえたいならAmazon SESを選びます。</strong> SendGridで請求書払いにできるのはプロ100K（¥14,000/月）からで、Amazon SESはAWSの設定を自分で進められることが前提です。</p>
 <p>契約前に確かめたいのは次の3点です。</p>
 <ul><li>月と1日に何通送るか</li><li>送信ドメインのDNSを自分で編集できるか</li><li>支払い方法と請求書の形式が社内の経理に合うか</li></ul>
@@ -124,7 +127,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>送信数が少なく、英語の画面でも設定を進められる人向けです。メルマガも送るならBrevo、システムからの送信だけならSMTP2GOです。</p>
 <h3>SendGrid・Amazon SESが向いている人</h3>
 <p>日本語の窓口に相談しながら進めたい法人はSendGridです。AWSを使っていて、送った分だけ日本円で払い、適格請求書も受け取りたいならAmazon SESが合います。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.smtp2go.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>SMTP2GOの無料プランには期限がないので、今の送信数で足りるかを実際の運用で見極められます。</p></div>
 <div class="nav"><span><a href="similarweb-pricing.html">← Similarweb無料版でどこまで見られる？無…</a></span><span><a href="surveymonkey-pricing.html">SurveyMonkey（サーベイモンキー）の料… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>

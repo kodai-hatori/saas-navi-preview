@@ -12,17 +12,20 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 .body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
 .body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
 .tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
 .nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/netlify-japanese/eyecatch.png" alt="">
 <h1 id="t">Netlifyは日本語で使える？管理画面の言語・日本語サイトの注意点・代替候補</h1>
-<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,736字</div>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,942字</div>
 <div class="tags">#Netlify #ホスティング #Web制作 #海外SaaS</div>
 <div class="body" id="b"><p>AIで作ったサイトや自作のポートフォリオをNetlifyで公開しようとして、管理画面が英語だけだと気づいて手が止まった人もいると思います。先に答えると、Netlifyの管理画面と公式ドキュメントは英語のみで、日本語に切り替える設定はありません。サポートも英語の窓口で、日本語で対応するという記載はありません。それでも、日本語で書いたサイトそのものは公開できます。</p>
 <p>英語の画面にどこまで付き合えば公開までたどり着けるのか、日本語のファイル名やドメインで何に気をつけるのかが分かれば、Netlifyのまま進めるか、日本語の管理画面を持つ別のサービスにするかを決められます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>料金ページも英語ですが、無料のFreeと有料プランの月額はここで確かめられます。</p>
-<h2>結論：Netlifyの日本語対応は4つに分けると分かりやすい</h2>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：Netlifyの日本語対応は4つに分けると分かりやすい</a></li><li><a href="#s2">Netlifyの管理画面を日本語で読む方法：ブラウザ翻訳と注意点</a></li><li><a href="#s3">英語画面で迷いやすい3つの設定を日本語で案内</a></li><li><a href="#s4">日本語サイトを公開するときの注意点</a></li><li><a href="#s5">日本語サポート・請求書・日本からの支払い</a></li><li><a href="#s6">日本語の管理画面で使いたいなら：代替候補</a></li><li><a href="#s7">Netlifyの料金と始め方</a></li><li><a href="#s8">Netlifyの日本語対応でよくある質問</a></li><li><a href="#s9">まとめ：日本語だけで使えるかを確かめてから選ぶ</a></li></ol></nav><h2 id="s1">結論：Netlifyの日本語対応は4つに分けると分かりやすい</h2>
 <p><strong>英語のみなのは管理画面とドキュメントです。サポートも英語の窓口で日本語対応の記載はありませんが、日本語サイトの公開そのものには対応しています。</strong></p>
 <ul><li>管理画面：英語のみ。言語の設定項目はない</li><li>公式ドキュメント・フォーラム：英語のみ。日本語の公式サイトもない</li><li>日本語サイトの配信：対応。ただしファイル名・リダイレクト・日本語ドメインの3点に注意</li><li>サポート・請求：窓口は英語、請求はUSD建て</li></ul>
 <h3>管理画面：日本語の表示設定はない</h3>
@@ -33,7 +36,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>本文を日本語で書く分には、英語のサイトと同じように公開できます。手間がかかるのはURLとドメインまわりです。リダイレクト設定では日本語のパスをエンコードして書く必要があり、日本語ドメインはNetlifyでは取得できません。</p>
 <h3>サポート・請求：英語の窓口とUSD建ての請求</h3>
 <p>問い合わせ先は英語のフォーラムとメールで、日本語対応の記載はありません。請求はUSD建てで、JCBが使えるかは公開されている情報からは分かりません。</p>
-<h2>Netlifyの管理画面を日本語で読む方法：ブラウザ翻訳と注意点</h2>
+<h2 id="s2">Netlifyの管理画面を日本語で読む方法：ブラウザ翻訳と注意点</h2>
 <p><strong>公式の日本語化はできないので、ブラウザの翻訳機能で読むのが現実的です。ただし訳されたボタン名は公式ドキュメントの英語表記と一致しなくなるため、設定値の入力や検索は英語の原文で行います。</strong></p>
 <h3>設定画面に言語の項目はない</h3>
 <p>User settingsで変更できるのは、アバター、名前、メールアドレス、パスワード、既定のチーム、Git連携、外観テーマ、キーボードショートカット、2要素認証で、言語を切り替える項目はありません。</p>
@@ -43,7 +46,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>英語のページを常に翻訳する設定もできますが、次のような理由から、設定を触るときは原文表示に戻すのがおすすめです。</p>
 <h3>翻訳で読むときの注意点</h3>
 <ul><li>ボタン名やメニュー名が訳されるため、英語の公式ドキュメントやフォーラムの説明と照らし合わせにくくなる</li><li>ビルドコマンドやフォルダ名などの入力欄は翻訳に任せず、原文の表示で英数字のまま入力する</li><li>ビルド失敗時のエラーログは、訳文ではなく英語の原文をそのまま検索したほうが解決策に早くたどり着ける</li></ul>
-<h2>英語画面で迷いやすい3つの設定を日本語で案内</h2>
+<h2 id="s3">英語画面で迷いやすい3つの設定を日本語で案内</h2>
 <p><strong>初心者がつまずきやすいのは「デプロイ設定」「ドメイン設定」「クレジット使用量」の3画面です。英語のラベルと意味を対で覚えておけば、翻訳しなくても操作できます。</strong></p>
 <h3>デプロイ設定（Build settings）：ビルドコマンドと公開フォルダ</h3>
 <p>GitHubなどのリポジトリと連携するときに、何をどこから公開するかを決める画面です。Project configurationのDeveloper settingsにある、Continuous deploymentの中のBuild settingsで設定します。</p>
@@ -54,7 +57,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>クレジット使用量（Usage &amp; billing）：止まる前に通知を確認</h3>
 <p>いまの料金体系では、毎月付与されるクレジットをデプロイや通信量に応じて消費します。Freeは<strong>月300クレジット</strong>のハード上限で、使い切ると次の請求サイクルが始まるまで、チームの全サイトが「Site not available」の表示になります。</p>
 <p>メールと管理画面への通知は、使用量が50%を超えたあたりから段階的に届き、100%に達したときにも届きます。英文のメールを読み飛ばすと、サイトが止まってから気づくことになります。内訳はUsage &amp; billingでこまめに確かめてください。</p>
-<h2>日本語サイトを公開するときの注意点</h2>
+<h2 id="s4">日本語サイトを公開するときの注意点</h2>
 <p><strong>日本語の本文を載せたサイトは通常どおり公開できます。気をつけたいのは、ファイル名・URL、リダイレクト設定、日本語ドメインの3つです。</strong></p>
 <h3>日本語のファイル名・URLのページ</h3>
 <p>ファイル名に日本語を使うかどうかは、次のリダイレクト設定とつながっています。Netlifyの転送設定では日本語のパスをエンコードして書く必要があるため、ページが増えてからURLを変えると、その分だけ書き換えの手間がかかります。</p>
@@ -65,7 +68,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>日本語ドメイン（.jp の日本語ドメイン等）を使うとき</h3>
 <p>Netlifyでは、「例え.jp」のような日本語ドメイン（国際化ドメイン名）を購入・登録できません。使いたい場合は、日本語ドメインを扱う他社のレジストラで取得してから、Domain managementの「Add a domain you already own」で追加します。</p>
 <p>追加するときにうまく受け付けられない場合は、「xn--」で始まるPunycode（ピュニコード）の形に変換して試す方法があります。変換は、ドメインを取得したレジストラの管理画面や無料の変換ツールで行えます。</p>
-<h2>日本語サポート・請求書・日本からの支払い</h2>
+<h2 id="s5">日本語サポート・請求書・日本からの支払い</h2>
 <p><strong>窓口は英語のフォーラムとメールで、日本語の担当者の記載はありません。請求はUSD建てで、請求書は管理画面から取得できます。</strong></p>
 <h3>問い合わせは英語のフォーラムとメール</h3>
 <ul><li>すべてのプランで、公開のSupport Forumsと、非公開のメールサポート（private email support）を使える</li><li>日本語で対応する担当者や受付時間は公式に示されていない</li></ul>
@@ -76,22 +79,22 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>請求書は Usage &amp; billing から取得する</h3>
 <ul><li>Usage &amp; billing のBilling detailsにあるInvoicesで、請求書の一覧と内訳を確認してダウンロードできる</li><li>日本の適格請求書（インボイス）の登録番号が記載されるかは確認できていない</li></ul>
 <p>海外サービスの利用料にかかる消費税やインボイスの扱いは、事業の状況で変わるため、税理士に確認してください。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>有料プランに進むときは、手元のカードで決済できるかを申し込み画面で確かめてから切り替えてください。</p>
-<h2>日本語の管理画面で使いたいなら：代替候補</h2>
+<h2 id="s6">日本語の管理画面で使いたいなら：代替候補</h2>
 <p><strong>管理画面を日本語に切り替えられるのはCloudflare Pagesです。Vercelは日本語化が公式に示されていませんが、JCBを公式に明記しているので、NetlifyでJCBが通らなかったときの候補になります。</strong></p>
 <p>コードを書かずに日本語の画面だけで作りたいなら、国産のノーコードツールSTUDIOもありますが、ここではNetlifyと同じくコードやGitから公開するサービスに絞ります。</p>
 <h3>Cloudflare Pages：ダッシュボードを日本語に切り替えられる</h3>
 <ul><li>管理画面（ダッシュボード）は日本語に対応しており、プロフィールのSettings &gt; Languageで切り替えられる</li><li>静的なファイルの配信は無料プランでも無制限で、無料枠の主な上限はビルドの<strong>月500回</strong></li><li>支払いはVisa・Mastercard・American Expressなどのカード、PayPal、Apple Pay、Google Payに対応。JCBは公式の一覧に記載がない</li></ul>
 <p>サイトに動的な処理（Pages Functions）を加える場合は、Workersの無料枠を使い、足りなければ<strong>月$5から</strong>の有料プランになります。管理画面は日本語で使えても、サポート窓口が日本語で対応するという記載はありません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://pages.cloudflare.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://pages.cloudflare.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>リンク先では、無料プランの範囲とビルド回数の上限を確認できます。英語を避けたい理由が管理画面だけなら、最初に比べたいサービスです。</p>
 <h3>Vercel：日本語UIはないが、JCBを含むカードを明記</h3>
 <ul><li>公式サイトとドキュメントは英語で、管理画面を日本語にできるという公式の記載はない</li><li>無料のHobbyは非商用の個人利用が条件で、商用のサイトには有料のPro（開発者1人あたり<strong>月$20</strong>）を使う</li><li>支払いはカードのみだが、American Express・JCB・Mastercard・Visaなど6ブランドを公式に明記している</li></ul>
 <p>画面の言語はNetlifyと同じ条件です。NetlifyでJCBが通らなかったときの移り先にはなりますが、商用で使うならProの月$20が毎月かかる点も含めて比べてください。メールサポートもProからで、Hobbyでは使えません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://vercel.com">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://vercel.com">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>料金ページでは、Hobbyの利用条件とProのシート単位の料金を確認できます。副業や受託のサイトをVercelに載せるなら、最初からProの料金で見積もっておきましょう。</p>
-<h2>Netlifyの料金と始め方</h2>
+<h2 id="s7">Netlifyの料金と始め方</h2>
 <p><strong>無料のFreeで始められますが、毎月の枠を使い切ると追加課金ではなくサイトが止まります。</strong></p>
 <h3>料金は無料のFreeから、有料はPersonalとPro</h3>
 <ul><li>Free：<strong>$0/月</strong>。月300クレジットのハード上限で、使い切るとサイトが一時停止する。メンバーはオーナー1人だけ</li><li>Personal：<strong>$9/月</strong>。Freeと同じくメンバーは1人で、個人の運用向け</li><li>Pro：<strong>$20/月から</strong>。チームのメンバー数に上限がなく、サイトのパスワード保護もProから使える</li></ul>
@@ -99,9 +102,9 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>英語画面でも迷わない始め方の流れ</h3>
 <ol><li>公式サイトでアカウントを作る</li><li>サイトを追加する。リポジトリと連携する場合はBuild settings、書き出したフォルダをそのまま載せる場合はNetlify Dropを使う</li><li>発行された公開用のURLを開き、表示を確かめる</li><li>独自ドメインを使うなら、Domain managementで追加する</li></ol>
 <p>2と4の画面は、前半の対訳を見ながら進めれば翻訳なしでも操作できます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Freeは枠を使い切った時点でサイトが止まり、次の請求サイクルかアップグレードまで表示されません。50%や75%の通知が届いた段階で、有料プランに切り替えるかを判断してください。料金ページでは各プランの月額と付与クレジットを見比べられます。</p>
-<h2>Netlifyの日本語対応でよくある質問</h2>
+<h2 id="s8">Netlifyの日本語対応でよくある質問</h2>
 <p>日本語で使ううえで迷いやすい3つの疑問に答えます。</p>
 <h3>英語が苦手でもNetlifyは使えますか？</h3>
 <p>静的なサイトを公開するだけなら、触る画面はデプロイ設定とドメイン設定、使用量の確認くらいです。ブラウザ翻訳で全体をつかみ、入力とエラーの検索だけ原文で行えば、公開まではたどり着けます。ビルドエラーの解決やサポートとのやり取りは、翻訳ツールを併用して時間をかける前提で考えてください。</p>
@@ -109,11 +112,11 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>Netlifyは受け付けるカードブランドの一覧を公開していないため、JCBが使えるかは確かめられていません。まずはNetlifyの申し込み画面で、手元のJCBが通るかを試してください。通らなかった場合は、JCBを公式に明記しているVercelが候補です。ただし商用のサイトでは無料のHobbyを使えず、Pro（開発者1人あたり月$20）が前提になります。</p>
 <h3>Netlify CMSとNetlifyは同じものですか？</h3>
 <p>別物です。Netlify CMSは、サイトの記事をブラウザから編集するためのオープンソースの管理ツールで、2023年2月にDecap CMSという名前に変わりました。Netlifyがなくても使えるツールです。反対に、ホスティングサービスとしてのNetlifyを使うのに、Decap CMSを導入する必要もありません。</p>
-<h2>まとめ：日本語だけで使えるかを確かめてから選ぶ</h2>
+<h2 id="s9">まとめ：日本語だけで使えるかを確かめてから選ぶ</h2>
 <p><strong>管理画面が英語でも、ブラウザ翻訳と3画面の対訳があれば静的サイトの公開はできます。日本語の管理画面が欠かせないなら、Cloudflare Pagesを比べてください。</strong></p>
 <h3>Netlifyが向いている人・別サービスを選びたい人</h3>
 <ul><li>英語の画面を翻訳しながら使えるなら、Netlifyで始めてよい</li><li>管理画面を日本語で使いたいなら、Cloudflare Pagesを比べる</li><li>JCBで支払いたいなら、まずNetlifyの申し込み画面で試し、通らなければVercel（商用はProで月$20/人）も比べる</li></ul>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.netlify.com/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>まずは無料のFreeで自分のサイトを公開し、英語の画面で困らないかを確かめてから、有料プランや他サービスを検討してください。</p></div>
 <div class="nav"><span><a href="bright-data-pricing.html">← Bright Dataの料金プラン｜無料枠・課金…</a></span><span><a href="netlify-pricing.html">Netlifyの料金プラン｜無料枠の制限・有料と… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>

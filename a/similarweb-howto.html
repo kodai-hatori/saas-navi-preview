@@ -12,21 +12,24 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 .body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
 .body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
 .tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
 .nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/similarweb-howto/eyecatch.png" alt="">
 <h1 id="t">サイトのアクセス数を無料で調べる方法｜自社・他社別のツールと推計値の注意点</h1>
-<div class="meta"><span class="badge">マーケ・メール配信・LP・SNS</span> 7,296字</div>
+<div class="meta"><span class="badge">マーケ・メール配信・LP・SNS</span> 7,462字</div>
 <div class="tags">#アクセス解析 #競合分析 #Similarweb #海外SaaS</div>
 <div class="body" id="b"><p>自分のサイトに毎月どれくらい人が来ているのか。競合はうちの何倍くらい集客しているのか。同じ「アクセス数を調べる」でも、自分のサイトか他人のサイトかで、使える手段はまるで違います。自分のサイトならGoogleの無料ツールで実際の数字が見られます。他人のサイトは外から推計するしかなく、同じサイトでもツールによって数字が大きく変わります。</p>
 <p>紹介する有料ツールはいずれも筆者が契約していないため、各社の公式サイトやヘルプの公開情報をもとに整理しました。自分の目的ならどの無料手段で足りるのか、推計の数字をどこまで信じてよいのかを判断する材料にしてください。</p>
-<h2>結論：自社は実測、他社は推計ツールで調べる</h2>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：自社は実測、他社は推計ツールで調べる</a></li><li><a href="#s2">「アクセス数」は何の数字か：訪問数・PV・検索流入の違い</a></li><li><a href="#s3">自社サイトはGA4とSearch Consoleで無料で見る</a></li><li><a href="#s4">他社サイトはSimilarwebの無料版で見る</a></li><li><a href="#s5">検索からの流入を見るならSEOツールの無料枠</a></li><li><a href="#s6">推計値はどこまで当てになるか</a></li><li><a href="#s7">無料で足りないときの費用の目安</a></li><li><a href="#s8">まとめ</a></li></ol></nav><h2 id="s1">結論：自社は実測、他社は推計ツールで調べる</h2>
 <p><strong>自社サイトはGoogleの無料ツールで正確な数字が見られます。他社サイトは推計するしかなく、無料で見るならSimilarweb（シミラーウェブ）が手軽です。</strong></p>
 <ul><li>自社サイトの訪問数・PVを正確に見たい：Google アナリティクス（GA4）</li><li>自社サイトに検索から何人来ているか見たい：Google Search Console</li><li>競合サイトの訪問数の規模をつかみたい：Similarweb（登録なしのチェッカー、Chrome拡張、無料アカウント）</li><li>競合に検索から来る流入を見たい：Ubersuggest・Ahrefsの無料チェッカー、Semrushの無料アカウント</li></ul>
 <p>他社の数字は、どのツールで調べても推計にとどまります。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Similarwebの日本語の公式サイトです。登録なしのチェッカーで物足りなくなったら、ここから無料アカウントを作れます。</p>
-<h2>「アクセス数」は何の数字か：訪問数・PV・検索流入の違い</h2>
+<h2 id="s2">「アクセス数」は何の数字か：訪問数・PV・検索流入の違い</h2>
 <p>「アクセス数」といっても、ツールによって数字の中身は違います。何を知りたいのかを先に決めないと、2つのツールの数字を並べても比べようがありません。</p>
 <h3>訪問数（セッション）・PV・ユーザー数の違い</h3>
 <ul><li>訪問数（セッション）：サイトに来てから離れるまでの一連の閲覧を1回と数える。1人が朝と夜に来れば2回</li><li>PV（ページビュー）：表示されたページの数。1回の訪問で5ページ読まれれば5PV。GA4では「表示回数」という名前で出てくる</li><li>ユーザー数：訪れた人の数。同じ人が何度来ても、原則として1人と数える</li></ul>
@@ -34,20 +37,20 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>アクセス数を調べたくなる場面</h3>
 <ul><li>自社の現状把握：施策の前後で訪問数がどう動いたか、どのページが読まれているかを知りたい</li><li>競合の集客規模の比較：同じ業界のサイトが、自社の何倍くらいの人を集めているのか見当をつけたい</li><li>取引相手の規模確認：広告の出稿先や提携先に、どのくらい人が来ているのか確かめたい</li></ul>
 <p>1つ目は正確な数字が要り、2つ目と3つ目は桁が合っていれば判断できます。この違いが、そのまま使うツールの違いになります。</p>
-<h2>自社サイトはGA4とSearch Consoleで無料で見る</h2>
+<h2 id="s3">自社サイトはGA4とSearch Consoleで無料で見る</h2>
 <p><strong>自分のサイトの数字は、Googleが無料で提供しているGA4とSearch Consoleで見られます。</strong>どちらも自分が管理するサイトに設定して使う仕組みなので、他人のサイトを調べる用途には使えません。</p>
 <h3>GA4で訪問数・PVを見る</h3>
 <p>GA4は、サイトに入れた計測用のタグで訪問者の動きを記録するツールです。タグを入れる前の期間はさかのぼれません。</p>
 <ol><li>Googleアカウントでアナリティクスにログインし、アカウントとプロパティ（計測するサイトの単位）を作る</li><li>発行された計測タグ（Googleタグ）を、サイトの全ページに入れる</li><li>レポートで期間を指定し、訪問数・表示回数・ユーザー数を流入経路別やページ別に見る</li></ol>
 <p>WordPressなら、プラグインやテーマの設定欄を使えば、コードを書き換えずにタグを設置できます。タグを自由に入れられないブログやネットショップのサービスで発信しているなら、GA4の代わりに、そのサービスに備わったアクセス解析の画面で数字を確かめます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://marketingplatform.google.com/about/analytics/">Google アナリティクスの公式サイト</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://marketingplatform.google.com/about/analytics/">Google アナリティクスの公式サイト<span aria-hidden="true"> →</span></a></p>
 <p>GA4の公式ページです。ヘルプは日本語で読めます。</p>
 <h3>Search Consoleで検索からの流入を見る</h3>
 <p>Search Consoleは、Google検索で自分のサイトがどう表示され、どれだけクリックされたかを見るツールです。表示回数やクリック数、掲載順位に加えて、どんな検索語で表示されたのかまでわかります。最初にサイトの所有者であることを確認する手順があるため、調べられるのは自分のサイトだけです。</p>
 <p>GA4の訪問数とSearch Consoleのクリック数は一致しません。Search Consoleが数えるのはGoogle検索からのクリックだけで、SNSやブックマーク、ほかの検索エンジンからの訪問は含まれないからです。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://search.google.com/search-console/about">Google Search Consoleの公式サイト</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://search.google.com/search-console/about">Google Search Consoleの公式サイト<span aria-hidden="true"> →</span></a></p>
 <p>Search Consoleの公式ページです。GA4と連携させておけば、検索語とサイト内での動きをつなげて見られます。</p>
-<h2>他社サイトはSimilarwebの無料版で見る</h2>
+<h2 id="s4">他社サイトはSimilarwebの無料版で見る</h2>
 <p><strong>Similarwebは、登録しなくても1日3回まで他社サイトを調べられます。無料アカウントを作れば期限なしで使えますが、見られるのは過去1〜3か月分、一覧は上位5件までで、国別の絞り込みはできません。</strong></p>
 <h3>登録なしで調べる（ウェブサイトのチェッカーとChrome拡張）</h3>
 <p>いちばん手軽なのは、公式サイトの無料チェッカーに調べたいサイトを入れる方法です。ログインせずに使えるかわりに、調べられるのは1日3回までです。</p>
@@ -58,30 +61,30 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <ul><li>さかのぼれる期間：過去1〜3か月分（直近1・2・3か月から選ぶ）</li><li>一覧の表示：上位5件まで</li><li>国別の絞り込み：できない（世界全体の数字だけ）</li></ul>
 <p>ログイン後の画面は、設定（Settings → Account → Language）から日本語に切り替えられます。</p>
 <p>競合の今の規模を知るだけなら、直近3か月分で足ります。困るのは年末や年度替わりに集客が大きく動く業種で、前年の同じ月と比べられないため、伸びたのか例年並みなのかがわかりません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>日本語の公式サイトから無料アカウントを作れます。同じページには7日間の無料トライアルの案内も並んでいます。トライアルはクレジットカードの登録が必須なので、カード情報の入力を求められたら、無料版ではなくトライアルに申し込もうとしていないか確かめてください。</p>
 <h3>7日間の無料トライアルとは別物</h3>
 <p><strong>無料トライアルは、7日間が終わる前に解約しないと、そのまま有料プランの課金が始まります。</strong>利用規約では、支払った料金は返金しないと定められています。</p>
 <ul><li>クレジットカードの登録が必須</li><li>使えるのは1日15アクションまで</li><li>サイトの分析は世界全体の数字だけで、期間は直近1〜3か月から選ぶ</li></ul>
 <p>期間も国別の絞り込みも無料版と変わらないため、前年との比較や日本だけの数字が自分に必要かどうかは、トライアルでは確かめられません。アクセス数を無料で見たいだけなら、トライアルは要りません。有料プランを試すなら終了日を先に控えておきましょう。月額契約に移ったあとも、解約は更新日の14日前までに申し出る必要があります。</p>
-<h2>検索からの流入を見るならSEOツールの無料枠</h2>
+<h2 id="s5">検索からの流入を見るならSEOツールの無料枠</h2>
 <p><strong>Ubersuggest・Semrush・Ahrefsは、どれも他社サイトに検索から来る流入の推計を無料で確かめられます。</strong>出てくるのは検索結果から来る訪問の推計で、Similarwebの訪問数とは数えている範囲が違います。</p>
 <h3>Ubersuggest：無料アカウントでまず試せる</h3>
 <p>Ubersuggestの無料のウェブサイトトラフィックチェックツールに競合のドメインを入れると、自然検索と広告からの流入の推計、上位のページ、キーワード、被リンクの一部が表示されます。詳しいデータまで見るには有料会員になる必要があります。表示するデータは複数のデータ提供元をもとにした推計値だと、公式が明記しています。</p>
 <p>無料アカウントを作れば、キーワードの提案、週1回の順位追跡、サイトごとのSEO対策の提案も使えます。こちらは主に自社サイト向けの機能です。月額のサブスクリプションには1回限りの7日間無料トライアルがあります。アプリも料金ページも日本語で表示できます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://app.neilpatel.com/ja/pricing">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://app.neilpatel.com/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Ubersuggestの日本語の料金ページです。年払いと買い切りの価格が円で並び、無料アカウントとの機能の差もここで見比べられます。</p>
 <h3>Semrush：無料アカウントは1日10レポートまで</h3>
 <p>Semrushの無料アカウントは、カードを登録せずに作れます。ドメイン概要に他社のドメインを入れれば、自然検索の推計流入が無料でも見られます。ただし主要なツールを合わせて1日10レポートまでで、毎日何十サイトも調べるには足りません。</p>
 <p>直接の訪問やSNSも含めた訪問数全体を推計する「Traffic &amp; Market」は、SEOとは別の有料ツールキットです。無料アカウントでは見本のドメインしか開けません。有料プランを試すための7日間の無料トライアルもあり、期間中はいつでも取り消せます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://ja.semrush.com/prices/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://ja.semrush.com/prices/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Semrushの日本語の料金ページです。ページは日本語でも価格はドル表示で、プランはSEO単体のものと、AI検索での見え方の計測を加えたものに分かれています。</p>
 <h3>Ahrefs：他社は無料チェッカー、自社は無料版で</h3>
 <p>Ahrefsの無料版（Ahrefs Webmaster Tools）で使えるのは、自分が所有するサイトのサイトエクスプローラーとサイト監査で、回数にも上限があります。他社サイトを詳しく分析するのは有料プランの機能で、無料トライアルや割引もありません。</p>
 <p>ただし無料版とは別に、登録なしで使える「Webサイトトラフィックチェッカー」が公開されていて、他社サイトの検索流入の推計はここで無料で確かめられます。競合の検索流入の規模を知りたいならチェッカー、自社サイトの被リンクや検索流入をSearch Consoleとは別の角度から見たいなら無料版、と使い分けます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://ahrefs.com/ja/pricing">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://ahrefs.com/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Ahrefsの日本語の料金ページです。日本からアクセスすると価格が円で表示され、有料プランを解約したあとは無料版に切り替わることも案内されています。</p>
-<h2>推計値はどこまで当てになるか</h2>
+<h2 id="s6">推計値はどこまで当てになるか</h2>
 <p><strong>他社サイトの数字は、規模感と推移をつかむためのものです。1の位まで信じる数字ではありません。</strong></p>
 <h3>ツールごとに数字が違う理由</h3>
 <p>同じサイトでも、SimilarwebとSEOツールでは数字がかなり違います。どちらかが間違っているのではなく、数えているものが違うのです。</p>
@@ -94,7 +97,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>推計値を使うときのコツ</h3>
 <ul><li>同じツール同士で比べる：Similarwebの数字とSemrushの数字を並べない。競合AとBを比べるなら、どちらも同じツールで調べる</li><li>月ごとの推移で見る：ある1か月の数字より、3か月で増えているか減っているかのほうが当てになる</li><li>自社サイトで答え合わせをする：自分のサイトをそのツールで調べ、GA4の実測と比べる。多めに出るのか少なめに出るのかを知っておくと、競合の数字を読むときの目安になる</li></ul>
 <p>ただし、ずれ方はサイトの規模や流入経路の構成で変わるため、競合にそのまま当てはめられるとは限りません。自社サイトの訪問数が少なく数字が出ないなら、答え合わせはできないので、競合同士の大小を比べる程度にとどめます。</p>
-<h2>無料で足りないときの費用の目安</h2>
+<h2 id="s7">無料で足りないときの費用の目安</h2>
 <p><strong>無料版で困るのは、長い期間の推移、国別の数字、上位5件より先の一覧が必要になったときです。</strong>どの制限に本当に困っているのかを先に確かめてから、プランを選びます。</p>
 <h3>有料が必要になる場面</h3>
 <ul><li>3か月より前の推移を見たい（前年の同じ月と比べたい）</li><li>日本からの訪問だけに絞りたい</li><li>上位5件より多くのページや流入元、キーワードを見たい</li><li>複数の競合サイトを毎日のように比べたい</li></ul>
@@ -103,13 +106,13 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>同じ有料プランでも、見られる数字はツールによって違います。価格の安さだけで選ばず、何の数字が要るのかと合わせて見てください。</p>
 <ul><li>Similarweb 個人向け（あらゆる経路の訪問数の推移）：<strong>月額$199から</strong>で、1ドル=157円換算（執筆時点の目安。為替で変動）なら約3万1,000円です。過去データは最大15か月までさかのぼれます。支払いはクレジットカードのみ、サポートは英語のみです</li><li>Similarweb 法人向け（国別の絞り込みまで）：<strong>年額$14,000から</strong>（約220万円）の年契約で、個別見積もりです。請求書払いと日本語の専任サポートに対応します</li><li>Semrush（他社の検索流入とキーワード）：SEOプランの<strong>月額$139</strong>（約2万2,000円。年払いなら月あたり$117.33、約1万8,000円）から。訪問数全体を推計するTraffic &amp; Marketは、このプランには含まれません</li><li>Ahrefs（検索流入が中心）：日本からは円で表示され、Starterの<strong>月額¥4,460</strong>から。支払いはVisa・Mastercard・American Express・UnionPayで、JCBは案内されていません</li><li>Ubersuggest（検索流入が中心）：円表示で、月払い・年払いのほかに買い切りのプランがあります。パーソナルの買い切りは<strong>¥45,990</strong>で、取り消しも返金もできません。年払いの価格は期間限定のキャンペーンで時期によって変わります</li></ul>
 <p>Ubersuggestの支払いは主要なクレジットカード、デビットカード、PayPalに対応しています。月払い・年払いのプランなら、会社宛ての請求書も依頼すれば発行してもらえます。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Similarwebは、個人向けの開始価格のほかは、プランごとの金額を公開していません。法人向けの見積もりは、日本語の公式サイトの問い合わせから依頼します。</p>
 <p>海外のサービスにドルで払う場合、消費税（リバースチャージ）やインボイスの扱いは事業の状況によって変わります。経費として処理する前に、税理士に確認してください。</p>
-<h2>まとめ</h2>
+<h2 id="s8">まとめ</h2>
 <p>自社サイトはGA4とSearch Consoleで実測し、他社サイトは推計ツールで規模感と推移をつかむ。無料で調べるときは、この使い分けが基本です。推計値は同じツール同士で比べ、自社サイトで答え合わせをしておけば、読み違いを減らせます。</p>
 <p>最初の一歩には、Similarwebの登録なしのチェッカーかChrome拡張で、気になる競合を1つ調べてみてください。検索からの流入だけ知りたいなら、UbersuggestやAhrefsの無料チェッカーでも足ります。直近3か月分で足りなければ無料アカウントを作り、それでも期間や件数が足りなくなってから有料を考えても遅くはありません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る</a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.similarweb.com/ja/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
 <p>Similarwebの日本語の公式サイトです。無料アカウントの登録も、法人向けプランの見積もりの依頼も、ここから進めます。</p></div>
 <div class="nav"><span><a href="manychat-pricing.html">← Manychat（メニーチャット）の料金【202…</a></span><span><a href="similarweb-pricing.html">Similarweb無料版でどこまで見られる？無… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>

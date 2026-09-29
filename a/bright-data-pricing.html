@@ -12,112 +12,127 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 .body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
 .body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
 .tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
 .nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/bright-data-pricing/eyecatch.png" alt="">
 <h1 id="t">Bright Dataの料金プラン｜無料枠・課金単位・日本からの支払いを解説</h1>
-<div class="meta"><span class="badge b-draft">note下書き済み</span><span class="badge">開発・インフラ・データ</span> 6,576字</div>
+<div class="meta"><span class="badge b-draft">note下書き済み</span><span class="badge b-warn">仮文10か所</span><span class="badge">開発・インフラ・データ</span> 8,582字</div>
 <div class="tags">#BrightData #プロキシ #Webスクレイピング</div>
-<div class="body" id="b"><p>Bright Dataは製品によって課金単位が異なります。プロキシはGBまたはIP、APIはリクエスト、Scraping BrowserはGBが基準です。まず使う製品を決め、想定する利用量の単位をそろえれば、従量課金と月額コミットを比較できます。</p>
-<h2>結論：用途と課金単位を決めてからプランを選ぶ</h2>
-<p><strong>Bright Dataには、全製品に共通する1枚の料金表はありません。</strong> プロキシを自分で扱うのか、取得処理までAPIに任せるのかによって、料金の見方が変わります。</p>
-<ul><li><strong>プロキシを使う</strong>：Residential・ISPは主にGB、DatacenterはGBまたはIPで料金を見る</li><li><strong>取得処理を任せる</strong>：Web UnlockerとSERP APIはリクエスト、Scraping BrowserはGBで見る</li><li><strong>小さく試す</strong>：API・ブラウザ系の無料クレジット、または対象プロキシのPay as you goを選ぶ</li></ul>
-<p><a target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る</a></p>
-<p>用途が決まっていない段階では、安い単価だけを探すより、必要な製品と課金単位を絞るほうが見積もりやすくなります。</p>
-<h3>プロキシはGB課金かIP課金で選ぶ</h3>
-<p>Residential ProxiesはGB課金です。Datacenter ProxiesはGBとIP、ISP ProxiesにもGBとIPの選択肢があります。通信量が費用を左右する案件なのか、確保するIP数が重要なのかを先に決めます。</p>
-<h3>API・ブラウザ系は成功した処理量で見る</h3>
-<p>Web UnlockerとSERP APIは1,000リクエスト、Scraping BrowserはGBが課金の基準です。同じスクレイピング用途でも、リクエスト数と通信量はそのまま比較できません。</p>
-<h3>少量なら従量課金か無料枠から始める</h3>
-<p>Residential・Datacenter・ISP ProxiesにはPay as you goがあります。Web Unlocker、SERP API、Web Scraper APIなどの対象製品では、新規アカウント向けの共通無料クレジットを使えます。無料分は対象製品で1つの枠を共有し、各製品へ別々に付与される仕組みではありません。</p>
-<h2>Bright Dataの料金プランを製品別に整理</h2>
-<p><strong>料金はUSD建てで、製品ごとに従量課金と月額コミットの条件が違います。</strong> 期間限定の割引表示は通常料金と分け、契約時の総額と単価をセットで読みます。</p>
+<div class="body" id="b"><p>Bright Dataは、製品ごとに課金単位が変わります。プロキシはGBまたはIP、APIはリクエスト、Scraping BrowserはGBです。単価だけを並べても、自分の用途では毎月いくらかかるのか判断しにくいサービスです。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>一人法人でWebデータ収集を手がける私は、自前でプロキシを扱う方法と、取得処理までAPIに任せる方法を比べるためにBright Dataを試しました。料金ページを初めて見たときは、同じ金額のプランでも処理できる量が違い、どの数字を比べればよいのか迷いました。</p>
+<p>製品別の料金目安や無料で試せる範囲、従量課金から月額へ移る基準、日本からの支払いと解約条件を順に整理します。使う製品と課金単位を絞れば、Bright Dataを試すか、他社を選ぶかを判断できます。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Bright Dataの料金プランは6製品・3つの課金単位</a></li><li><a href="#s2">Bright Dataの料金プランを製品別に整理</a></li><li><a href="#s3">無料で使える範囲と無料トライアルの違い</a></li><li><a href="#s4">従量課金と月額プランは利用量で選ぶ</a></li><li><a href="#s5">日本からの支払い方法・請求書・税</a></li><li><a href="#s6">Oxylabs・Decodoと料金の考え方を比べる</a></li><li><a href="#s7">KYC・解約・ダウングレード・返金条件</a></li><li><a href="#s8">Bright Dataの料金でよくある質問</a></li><li><a href="#s9">まとめ：無料枠で確認し、利用量が見えてから有料化する</a></li></ol></nav><h2 id="s1">Bright Dataの料金プランは6製品・3つの課金単位</h2>
+<p><strong>Bright Dataには、全製品に共通する1枚の料金表はありません。</strong> 主な6製品の料金目安、無料枠、課金単位は次のとおりです。</p>
+<ul><li><strong>Residential Proxies</strong>：Pay as you goは$8/GB。月額無料クレジットの対象外で、GB単位の課金</li><li><strong>Datacenter Proxies</strong>：Pay as you goは$0.6/GB、共有IPは10IPで月$14から。月額無料クレジットの対象外で、GBまたはIP単位の課金</li><li><strong>ISP Proxies</strong>：Pay as you goは$8/GB、共有IPは10IPで月$18から。月額無料クレジットの対象外で、GBまたはIP単位の課金</li><li><strong>Web Unlocker</strong>：1,000リクエストあたり$1.5。対象製品共通の月5,000無料クレジットがあり、リクエスト単位の課金</li><li><strong>SERP API</strong>：1,000リクエストあたり$1.5。対象製品共通の月5,000無料クレジットがあり、リクエスト単位の課金</li><li><strong>Scraping Browser</strong>：Pay as you goは$8/GB。対象製品共通の月5,000無料クレジットがあり、GB単位の課金</li></ul>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>料金を見比べるときは、最初に製品を決め、ダッシュボードに使用量がGB、IP、リクエストのどれで表示されるかを確認しました。同じスクレイピング用途でも単位が違います。製品をまたいで単価だけを比べるより、製品ごとに見積もるほうが判断しやすいと感じました。</p>
+<figure><img loading="lazy" src="../img/bright-data-pricing/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<p>公式サイトは日本語表示で、「無料で開始」「クレジットカードは必要ありません」と案内されています。</p>
+<p>迷ったら、API系の無料クレジットとプロキシのPay as you goを両方確認できるBright Dataがおすすめです。料金ページでは、試したい製品を選んでから課金単位を見比べられます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>料金ページでは、製品別の課金単位、従量課金、月額コミットの条件を確認できます。</p>
+<h2 id="s2">Bright Dataの料金プランを製品別に整理</h2>
+<p><strong>料金はUSD建てで、製品ごとに従量課金と月額コミットの条件が違います。</strong> 期間限定の割引表示は、通常料金と分けて考えます。契約時は総額と単価をセットで確認してください。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>料金ページでは製品を切り替え、Pay as you goとScaleの両方を開きました。ResidentialとScraping Browserは、どちらも$8/GBから始まります。ただし、用途も月額プランの中身も違います。製品名と課金単位をメモしてから比べると、混乱せずに済みました。</p>
 <figure><img loading="lazy" src="../img/bright-data-pricing/bright-data-pricing-pricing.png" alt="料金プラン一覧"></figure>
 <h3>Residential・Datacenter・ISP Proxies</h3>
 <ul><li><strong>Residential Proxies</strong>：Pay as you goは<strong>$8/GB</strong>。月額プランは<strong>$499、$999、$1,999</strong>で、通常単価は順に<strong>$7/GB、$6/GB、$5/GB</strong></li><li><strong>Datacenter Proxies</strong>：Pay as you goは<strong>$0.6/GB</strong>。共有IPの月額プランは<strong>10IPで$14</strong>から、専有IPは<strong>10IPで$22</strong>から</li><li><strong>ISP Proxies</strong>：Pay as you goは<strong>$8/GB</strong>。共有IPは<strong>10IPで月$18</strong>から、GB単位の月額プランは<strong>$499</strong>から</li></ul>
-<p>Residentialの月額プランに含まれる通常時のGB数は、割引表示中の画面から確定できません。そのため、ここでは確認できた月額と通常単価だけを掲載しています。Mobile Proxiesも具体的なGB単価を確認できないため、数値を載せていません。</p>
+<p>Residentialの月額プランに通常時に何GB含まれるかは、割引価格が表示された画面だけでは確定できません。そのため、ここでは確認できた月額と通常単価だけを掲載しています。Mobile Proxiesも具体的なGB単価を確認できないため、数値を載せていません。</p>
 <h3>Web Unlocker・SERP API</h3>
 <ul><li><strong>Web Unlocker</strong>：Pay as you goは<strong>1,000リクエストあたり$1.5</strong>。Scaleは<strong>月$499で383,000リクエスト込み</strong>、超過分は<strong>1,000件あたり$1.3</strong></li><li><strong>SERP API</strong>：Pay as you goは<strong>1,000リクエストあたり$1.5</strong>。Scale適用時は<strong>1,000件あたり$1.3</strong></li></ul>
-<p>いずれもリクエスト単位で、プロキシのGB単価とは別に見積もります。SERP APIは、ここで確認できた単価以外の月額条件を補っていません。</p>
+<p>いずれもリクエスト単位なので、プロキシのGB単価とは分けて見積もります。SERP APIについては、確認できた単価のみを記載し、月額条件を推測で補ってはいません。</p>
 <h3>Scraping Browser</h3>
-<p>Scraping BrowserのPay as you goは<strong>$8/GB</strong>、Scaleは<strong>月$499</strong>、Enterpriseは個別問い合わせです。費用を決めるのはブラウザ操作の回数ではなく通信量です。テスト時には、処理件数とGB消費量を一緒に記録します。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る</a></p>
-<p>料金画面では、選んだ製品の課金単位、月額コミット、超過単価が想定量に合うかを確認できます。</p>
-<h2>無料で使える範囲と無料トライアルの違い</h2>
-<p><strong>Bright Data全体を無制限に使える無料プランはありません。</strong> 新規アカウント向けの月5,000無料クレジットは対象製品で共有し、プロキシのトライアルとは別に扱われます。</p>
+<p>Scraping BrowserのPay as you goは<strong>$8/GB</strong>、Scaleは<strong>月$499</strong>、Enterpriseは個別問い合わせです。費用を左右するのは、ブラウザ操作の回数ではなく通信量です。テスト時は、処理件数とGB消費量を一緒に記録してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>料金画面では、選んだ製品の課金単位を確認し、月額コミットと超過単価が想定する利用量に対して無理のない条件かを見極められます。</p>
+<h2 id="s3">無料で使える範囲と無料トライアルの違い</h2>
+<p><strong>Bright Data全体を無制限に使える無料プランはありません。</strong> 新規アカウント向けの無料クレジットは毎月5,000で、対象製品で共有されます。プロキシのトライアルとは別の制度です。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>登録後に無料枠を試した際は、製品ごとに5,000クレジットが付くと思い込まず、対象製品で共有する残高だと確認しました。プロキシは同じ無料枠に含まれないため、試したい製品を選ぶ段階で、無料枠とは別の制度として考える必要がありました。</p>
 <h3>月5,000リクエストまで使える製品</h3>
-<p>Web Unlocker API、SERP API、Web Scraper APIでは、1リクエストまたは1レコードにつき1クレジットを消費します。月5,000無料クレジットの範囲なら、カード登録なしで対象機能を試せます。</p>
+<p>Web Unlocker API、SERP API、Web Scraper APIでは、1リクエストまたは1レコードにつき1クレジットを消費します。月5,000クレジットの無料枠なら、カード登録なしで対象機能を試せます。</p>
 <p>ただし、各製品に5,000ずつ付与される仕組みではありません。同じアカウントの対象製品で共通の枠を使います。</p>
 <h3>Scraping Browserは月5,000クレジットまで</h3>
-<p>Scraping Browserに相当するBrowser APIは、データ量に応じて無料クレジットを消費します。月5,000クレジットで約1GBが目安です。Web UnlockerやSERP APIとは消費単位が異なりますが、無料クレジットの残高は共通です。</p>
+<p>Scraping Browserに相当するBrowser APIは、データ量に応じて無料クレジットを消費します。毎月の5,000クレジットで約1GBが目安です。Web UnlockerやSERP APIとは消費単位が異なりますが、無料クレジットの残高は共通です。</p>
 <h3>プロキシは無料トライアルの条件を申し込み前に確認</h3>
-<p>Datacenter・ISP・Residential Proxiesは月5,000無料クレジットの対象外です。新規登録時の一回限りのトライアルが別に用意されているため、月ごとに復活する無料枠とは区別します。</p>
-<p>Residential Networkや特別なアクセス権限では、KYCが原則です。一方、robots.txtに従うImmediate Residential AccessにはKYC不要の例外があります。試用前に利用方式と審査の要否を照合してください。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る</a></p>
+<p>Datacenter・ISP・Residential Proxiesは、月5,000クレジットの無料枠の対象外です。新規登録時の一回限りのトライアルが別に用意されているため、月ごとに復活する無料枠とは区別します。</p>
+<p>Residential Networkや特別なアクセス権限を利用するには、原則としてKYCが必要です。一方、robots.txtに従うImmediate Residential Accessは、KYC不要という例外です。試用前に利用方式と審査の要否を照合してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
 <p>無料で試すときは、対象製品、クレジットの消費単位、KYCの要否を先に確認すると、試用後の料金を見積もりやすくなります。</p>
-<h2>従量課金と月額プランは利用量で選ぶ</h2>
-<p><strong>Pay as you goの見積額が月額コミットに近づいたときが、プランを比べ直す目安です。</strong> 月額プランを選ぶ際は、単価に加えて、未使用分が繰り越されない条件も判断材料になります。</p>
+<h2 id="s4">従量課金と月額プランは利用量で選ぶ</h2>
+<p><strong>Pay as you goの見積額が月額コミットに近づいたときが、プランを比べ直す目安です。</strong> 月額プランを選ぶ際は、単価に加え、未使用分を繰り越せない点も判断材料になります。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>私は最初から月額プランを選ばず、Pay as you goで利用量の表示を確認しました。月ごとにGBまたはリクエスト数を控えてみると、単価の安さよりも、$499の月額コミットを使い切れるかどうかが判断の中心になりました。</p>
 <h3>利用量が読めない段階はPay as you go</h3>
-<p>Residential・Datacenter・ISP ProxiesのPay as you goは、月額コミットメントなしで始められます。Web Unlocker、SERP API、Scraping Browserにも従量課金があるため、最初の利用期間でGBまたはリクエスト数を記録できます。</p>
-<p>無料クレジットの対象製品なら、先に処理量を測り、無料枠を超えた分をPay as you goの単価で見積もります。プロキシは無料クレジットと同じ制度ではないため、従量課金の条件を別に確認します。</p>
+<p>Residential・Datacenter・ISP ProxiesのPay as you goは、月額コミットメントなしで始められます。Web Unlocker、SERP API、Scraping Browserにも従量課金があります。そのため、使い始めの期間にGBまたはリクエスト数を記録できます。</p>
+<p>無料クレジットの対象製品なら、先に処理量を測り、無料枠を超えた分をPay as you goの単価で見積もります。プロキシは無料クレジットの対象外なので、従量課金の条件を別に確認します。</p>
 <h3>利用量が安定したら月額コミットを検討</h3>
 <p>ResidentialはPay as you goが$8/GBで、月額プランの通常単価は$7/GB、$6/GB、$5/GBです。ただし、最小の月額コミットは$499です。Pay as you goの月間見積額が$499に届かないなら、単価だけを理由に月額へ移ると総支払額が増えます。</p>
-<p>月内を通じて有効だった月額コミットの未使用分は、翌月へ繰り越されません。Web Unlockerなども、月額料金、含有量、超過単価を一組で比べます。利用量が大きい場合やEnterpriseの条件が必要な場合は、公開プランだけで決めず個別見積もりを依頼します。</p>
+<p>月額コミットで月内に使い切れなかった分は、翌月へ繰り越されません。Web Unlockerなども、月額料金、含まれる利用量、超過単価をまとめて比べます。利用量が大きい場合やEnterpriseの条件が必要な場合は、公開プランだけで決めず、個別見積もりを依頼します。</p>
 <h3>キャンペーン価格と通常価格を分けて確認</h3>
-<p>料金画面に割引が出ているときは、割引期間と月額コミットを確認します。割引時の含有量を通常プランの条件と見なすと、更新後の予算がずれます。社内の見積書には通常料金を基準に置き、期間限定の値引きを分けて記載するのが安全です。</p>
-<h2>日本からの支払い方法・請求書・税</h2>
-<p><strong>日本から契約でき、請求通貨はUSDです。</strong> カードやオンライン決済に加え、大口アカウント向けにはWire Transferも案内されています。</p>
+<p>料金画面に割引が出ているときは、割引期間と月額コミットを確認します。割引時の含有量を通常プランの条件と見なすと、更新後の予算がずれます。社内の見積書は通常料金を基準とし、期間限定の値引きは分けて記載するのが安全です。</p>
+<h2 id="s5">日本からの支払い方法・請求書・税</h2>
+<p><strong>日本から契約でき、請求通貨はUSDです。</strong> クレジットカードや各種オンライン決済に対応し、大口アカウント向けにはWire Transferも案内されています。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>一人法人の経費として支払う前に、決済画面の請求通貨と利用できる支払い方法を確認しました。日本語サイトがあっても請求はUSDなので、予算を組むなら為替変動も見込む必要があると感じました。</p>
 <h3>カード・PayPalなど複数の決済方法に対応</h3>
-<p>Bright Dataはクレジットカード、PayPal、Alipay、Payoneer、Google Pay、Apple Payに対応しています。カードの個別ブランドは案内されていないため、JCB対応までは断定できません。</p>
+<p>Bright Dataはクレジットカード、PayPal、Alipay、Payoneer、Google Pay、Apple Payに対応しています。対応するカードブランドは案内されていないため、JCBが使えるかまでは断定できません。</p>
 <p>実際の円支払額は、決済時の換算レートや手数料で変わります。日本円の固定価格ではありません。</p>
 <h3>銀行振込は一定額以上から</h3>
-<p>Wire Transferは大口アカウント向けの選択肢です。公開されている現行案内では具体的な最低金額を確定できないため、利用条件は営業窓口との確認が必要です。</p>
-<p>契約条項には、電子請求書・領収書を受領するとあります。一方、管理画面からの領収書ダウンロード手順や、日本の適格請求書発行事業者番号は公開情報だけでは確認できません。Wire Transferと請求書払いを同じ意味として扱わず、社内で必要な書類を整理して先に伝えます。</p>
+<p>Wire Transferは大口アカウント向けの選択肢です。現在公開されている案内では具体的な最低金額を確定できないため、利用条件は営業窓口に確認する必要があります。</p>
+<p>契約条項には、電子請求書・領収書を受け取れる旨が記載されています。一方、管理画面から領収書をダウンロードする手順や、日本の適格請求書発行事業者番号は、公開情報だけでは確認できません。Wire Transferと請求書払いを同じ意味として扱わず、社内で必要な書類を整理してから営業窓口に伝えます。</p>
 <h3>円換算と税は契約前の表示で確認</h3>
-<p>USD請求のため、円換算額は為替で変動します。社内稟議では換算レートの変動を見込んだ予算上限を置き、決済画面で請求通貨と税の表示を確認します。消費税やリバースチャージ、仕入税額控除の判断が必要なら、税理士に確認してください。</p>
-<h2>Oxylabs・Decodoと料金の考え方を比べる</h2>
-<p><strong>API系の無料クレジットやプロキシの従量課金を優先するならBright Data、Residentialの低額月額を優先するならOxylabsまたはDecodoが候補です。</strong> 法人向けの試用条件を重視する場合はOxylabsも比較対象になります。</p>
+<p>USD請求のため、円換算額は為替で変動します。社内稟議では、換算レートの変動を見込んで予算上限を決め、決済画面で請求通貨と税の表示を確認します。消費税やリバースチャージ、仕入税額控除の判断が必要なら、税理士に確認してください。</p>
+<h2 id="s6">Oxylabs・Decodoと料金の考え方を比べる</h2>
+<p><strong>API系の無料クレジットやプロキシの従量課金を優先するなら、Bright Dataが候補です。Residentialを低額の月額プランで使いたい場合は、OxylabsまたはDecodoも検討できます。</strong> 法人向けの試用条件を重視するなら、Oxylabsも比較対象です。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>3社を比べたときは、プロキシの性能を一つの数字だけで判断せず、無料枠、最初に必要な月額、試用条件を同じ順番で確認しました。私の用途では、APIをカード登録なしで試せることと、プロキシをPay as you goで始められることが、Bright Dataを候補に残した理由です。</p>
 <h3>Bright Data：無料枠と従量課金から始められる製品がある</h3>
 <ul><li>無料：API・ブラウザ系の対象製品で、月5,000クレジットを共通利用</li><li>少量開始：Residential・Datacenter・ISP ProxiesなどにPay as you goがある</li><li>月額契約：ResidentialとISPのGB単位プランは月$499から</li></ul>
-<p>無料クレジットとPay as you goの両方が全製品に付くわけではありません。API・ブラウザ系を試す場合と、プロキシを少量利用する場合で入口を分けて選びます。</p>
+<p>無料クレジットとPay as you goの両方を、すべての製品で使えるわけではありません。API・ブラウザ系を試す場合と、プロキシを少量から使う場合では、開始方法が異なります。</p>
 <h3>Oxylabs：月額の段階プランが中心</h3>
+<figure><img loading="lazy" src="../img/bright-data-pricing/oxylabs.png" alt="Oxylabsの公式サイト"></figure>
+<p>公式サイトは英語表示で、画面上部に「Pricing」と試用開始の案内が見えます。</p>
 <ul><li>無料枠：常設無料プランはなし</li><li>少量開始：Residentialは<strong>5GB・月$30</strong>から</li><li>試用：法人は7日間の無料トライアル、個人は3日間の返金保証</li></ul>
-<p>Oxylabsは、Residentialの少量プランを月額で契約したい場合の候補です。法人向けトライアルと個人向け返金保証は別条件なので、「誰でも7日間無料」ではありません。</p>
+<p>Oxylabsは、Residentialの少量プランを月額で契約したい場合に向いています。法人向けトライアルと個人向け返金保証は別条件なので、「誰でも7日間無料」ではありません。</p>
 <h3>Decodo：少量プランとPay As You Goを選べる</h3>
+<figure><img loading="lazy" src="../img/bright-data-pricing/decodo.png" alt="Decodoの公式サイト"></figure>
+<p>公式サイトは英語表示で、無料で始める案内と、Googleアカウントで登録するボタンが見えます。</p>
 <ul><li>無料枠：常設無料プランはなし</li><li>少量開始：Residentialは<strong>3GB・月$11.25＋VAT</strong>から、Wallet制のPay As You Goは<strong>$4/GB</strong></li><li>試用：Residentialは3日間・100MB。終了後は有料プランへ自動移行</li></ul>
-<p>Decodoは旧Smartproxyの名称です。Residentialの最小月額を抑えたい場合や、1GB単位のPay As You Goを選びたい場合に比較できます。3日間の無料トライアルには、通常プランの14日間返金保証が適用されません。</p>
-<h2>KYC・解約・ダウングレード・返金条件</h2>
-<p><strong>月額契約では、KYCの対象範囲、書面での終了通知、返金不可の条件を確認します。</strong> 特にResidentialは、選ぶアクセス方式によってKYCの要否が異なります。</p>
+<p>Decodoは旧Smartproxyの名称です。Residentialの最小月額を抑えたい場合や、1GB単位のPay As You Goを選びたい場合の候補になります。3日間の無料トライアルには、通常プランの14日間返金保証が適用されません。</p>
+<h2 id="s7">KYC・解約・ダウングレード・返金条件</h2>
+<p><strong>月額契約では、KYCの対象範囲、書面による終了通知、返金不可の条件を確認します。</strong> 特にResidentialは、選ぶアクセス方式によってKYCの要否が異なります。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>Residentialの利用を検討したときは、料金だけを見てそのまま申し込まず、KYCの対象となるアクセス方式と、企業ドメインのメールを用意できるかを先に確認しました。また、解約が管理画面の操作だけで即時に終わるとは考えず、通知方法と契約期間を読み直しました。</p>
 <h3>Residential ProxiesなどはKYCが必要</h3>
-<p>Residential Networkや特別なアクセス権限では、KYCが原則です。申請は登録企業と企業ドメインのメール認証を対象とし、利用目的や連絡先を提出します。審査状況の更新には最大48時間かかります。</p>
-<p>身分証明書やビデオ通話は全員に必須ではなく、追加確認として求められる場合があります。robots.txtに従うImmediate Residential Accessは、KYCなしで利用できる例外です。個人利用の可否は製品とアクセス方式で判断し、Bright Data全体に一律の条件があるわけではありません。</p>
+<p>Residential Networkや特別なアクセス権限を利用するには、原則としてKYCが必要です。申請では、登録企業と企業ドメインのメールが認証対象となり、利用目的や連絡先も提出します。審査状況の更新には最大48時間かかります。</p>
+<p>身分証明書やビデオ通話は全員に必須ではなく、追加確認として求められる場合があります。例外として、robots.txtに従うImmediate Residential AccessはKYCなしで利用できます。個人で利用できるかどうかは製品とアクセス方式で決まり、Bright Data全体に一律の条件があるわけではありません。</p>
 <h3>固定期間のない契約は書面通知で解約できる</h3>
-<p>固定期間を別に定めていない契約は、相手方への事前の書面通知により、通知を受領した暦月の末日で終了します。管理画面で操作した時点ですべての請求が止まる条件ではありません。</p>
-<p>ダウングレードを含め、次回請求日、契約期間、通知方法を契約内容と照合します。</p>
+<p>固定期間を別に定めていない契約は、相手方へ事前に書面で通知すれば、相手方が通知を受領した暦月の末日で終了します。管理画面で操作した時点ですべての請求が止まる条件ではありません。</p>
+<p>ダウングレードする場合も、次回請求日、契約期間、通知方法を契約内容と照合します。</p>
 <h3>サブスクリプション料金は返金不可</h3>
-<p>Master Service Agreementでは、サブスクリプション料金は解約不可・返金不可です。契約終了時には未払額の支払期限が到来し、収集済みでまだ提供されていないデータの対価も含まれます。未収集データの料金が返金されない、という意味ではありません。</p>
-<p>月額コミットへ移る前に、対象製品、契約期間、見込む利用量を確認してください。未使用コミットは翌月へ繰り越されないため、過大な契約は返金で調整できません。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る</a></p>
-<p>Residentialを選ぶ場合は、料金だけでなく、利用方式に応じたKYCと契約終了条件まで確認できます。</p>
-<h2>Bright Dataの料金でよくある質問</h2>
-<p>無料クレジット、支払い、日本語対応、個人契約について、本文で迷いやすい点を整理します。</p>
+<p>Master Service Agreementでは、サブスクリプション料金は解約不可・返金不可です。契約終了時には未払額の支払期限が到来し、収集済みでまだ提供されていないデータの対価も含まれます。未収集データの料金が返金されないという意味ではありません。</p>
+<p>月額コミットへ移る前に、対象製品、契約期間、見込み利用量を確認してください。未使用コミットは翌月へ繰り越されないため、契約額が過大でも返金では調整できません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>Residentialを選ぶなら、料金とあわせて、利用方式に応じたKYCと契約終了条件も確認してください。</p>
+<h2 id="s8">Bright Dataの料金でよくある質問</h2>
+<p>無料クレジット、支払い、日本語対応、個人契約について、契約前に迷いやすい点を整理します。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>私も契約前には、「無料枠は全製品で使えるのか」「日本語サイトがあれば管理画面や問い合わせも日本語なのか」と迷いました。実際に確認すべき項目は、無料枠、サイト表示、管理画面、問い合わせ言語に分かれていました。</p>
 <h3>Bright Dataにずっと使える無料プランはある？</h3>
-<p>全製品共通の月額固定無料プランはありません。新規アカウントには、API・ブラウザ系の対象製品で共有する月5,000無料クレジットがあります。プロキシ製品のトライアルは別制度です。</p>
+<p>全製品で継続して使える無料プランはありません。新規アカウントには、API・ブラウザ系の対象製品で共有する毎月5,000の無料クレジットがあります。プロキシ製品のトライアルは別制度です。</p>
 <h3>日本のカードや日本円で支払える？</h3>
-<p>日本からカードなどで支払えますが、請求通貨はUSDです。JCBなどブランド別の対応は確認できず、日本円の支払額は換算レートや手数料の影響を受けます。</p>
+<p>日本からカードなどで支払えますが、請求通貨はUSDです。JCBなど、カードブランドごとの対応は確認できません。日本円の支払額は、換算レートや手数料の影響を受けます。</p>
 <h3>個人でも契約できる？</h3>
-<p>製品とアクセス方式によって条件が異なります。Residential NetworkなどのKYC申請は登録企業と企業ドメインのメール認証が対象ですが、Immediate Residential AccessにはKYC不要の例外があります。希望する製品がどちらの条件に当たるかを先に確認してください。</p>
+<p>製品とアクセス方式によって条件が異なります。Residential NetworkなどのKYC申請では、登録企業と企業ドメインのメールが認証対象です。一方、Immediate Residential AccessはKYC不要という例外です。希望する製品とアクセス方式でKYCが必要か、先に確認してください。</p>
 <h3>日本語の料金ページやサポートはある？</h3>
 <p>公式日本語サイトと日本語の料金ページがあります。管理画面全体の日本語UI対応範囲は公開情報から確認できません。</p>
 <p>日本市場向けには24時間の専門家支援が案内されていますが、日本語のチャットやメールに対応するかは明記されていません。サイトの日本語表示、管理画面のUI、問い合わせの対応言語は分けて考える必要があります。</p>
-<h2>まとめ：無料枠で確認し、利用量が見えてから有料化する</h2>
-<p><strong>プランは、製品、課金単位、月間量の順に決めると絞れます。</strong> 無料クレジットはAPI・ブラウザ系の対象製品、Pay as you goは対象プロキシを含む各製品で使い分けます。</p>
+<h2 id="s9">まとめ：無料枠で確認し、利用量が見えてから有料化する</h2>
+<p><strong>プランは、製品、課金単位、月間量の順に決めると絞れます。</strong> API・ブラウザ系の対象製品には無料クレジットがあり、対象プロキシを含む各製品にはPay as you goがあります。</p>
+<p><mark>【仮文：投稿前に実態に合わせて書き直し、この表示を消す】</mark>私はAPI系を無料クレジットで試し、プロキシはPay as you goの条件を確認してから、月額コミットが必要かを判断しました。最初に製品を絞ったことで、GBとリクエストを無理に同じ基準へ換算せずに済みました。</p>
 <h3>契約前に確認する5項目</h3>
 <ol><li>用途に合う製品はプロキシ、API、Scraping Browserのどれか</li><li>課金単位はGB、IP、リクエストのどれか</li><li>無料クレジットまたは従量課金で想定利用量を測れるか</li><li>カードなどの支払い方法とUSD請求を社内処理できるか</li><li>KYC、解約通知、返金不可、未使用分の非繰越を受け入れられるか</li></ol>
 <h3>迷ったら無料枠か従量課金から始める</h3>
-<p>API・ブラウザ系なら共通の無料クレジット、Residential・Datacenter・ISP ProxiesなどならPay as you goが最初の候補です。月額へ移るのは、従量課金の見積額が月額コミットに近づき、翌月へ繰り越せない分を含めても必要量が安定してからです。</p>
-<p><a target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る</a></p>
-<p>使いたい製品の課金単位と開始条件を確認し、無料分または従量課金で月間量を測ってから契約額を決められます。</p></div>
+<p>API・ブラウザ系なら共通の無料クレジット、Residential・Datacenter・ISP ProxiesなどならPay as you goが最初の候補です。従量課金の見積額が月額コミットに近づき、未使用分を翌月へ繰り越せないことも踏まえて、月額コミットを使い切れるだけの必要量が見込めるようになったら月額へ移ります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>料金ページでは、使いたい製品の課金単位と開始条件を確認できます。無料分または従量課金で月間量を測ってから、契約額を決めましょう。</p></div>
 <div class="nav"><span><a href="bright-data-guide.html">← Bright Dataとは？機能・料金・使い方と…</a></span><span><a href="netlify-japanese.html">Netlifyは日本語で使える？管理画面の言語・… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
 <script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
