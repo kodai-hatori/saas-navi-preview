@@ -1,0 +1,121 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Webflowは日本語で使える？UIの日本語化とサイト制作・サポートの対応範囲｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/webflow-japanese/eyecatch.png" alt="">
+<h1 id="t">Webflowは日本語で使える？UIの日本語化とサイト制作・サポートの対応範囲</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 7,567字</div>
+<div class="tags">#Webflow #Web制作 #ノーコード #海外SaaS</div>
+<div class="body" id="b"><p>Webflowを候補にして管理画面を開くと、並んでいるのは英語のメニューです。日本語のサイトを本当に作れるのか、チームで運用できるのかと不安になる人は少なくありません。「Webflow 日本語化」で情報を集めても、Chrome拡張、ブラウザ翻訳、公式のLocalizeといった別々の話が混ざって出てきます。</p>
+<p>ここでは「日本語で使える」を管理画面、サイト制作、多言語化、サポートに分け、日本からの契約実務まで整理します。Webflowを無料で試すか、日本語UIのツールと比べるかを決める材料にしてください。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://www.webflow.com">公式サイトで料金を見る</a></p>
+<p>無料のStarterでできる範囲と、独自ドメインで公開するときに必要な有料プランの条件を確認できます。</p>
+<h2>結論：Webflowの日本語対応は用途ごとに異なる</h2>
+<p><strong>Webflowでは日本語のサイト本文やCMSを扱えますが、公式の日本語管理画面と日本語の有人サポートは、公開されている公式情報からは確認できません。</strong>管理画面の表示を補う第三者のChrome拡張と、訪問者向けのWebflow Localizeは別の仕組みです。</p>
+<p>「日本語化」が指す対象ごとに、状況は次のように分かれます。</p>
+<ul><li>公式の管理画面UI：日本語を表示言語として選べるという公式案内は見当たらない</li><li>第三者のChrome拡張：管理画面の英語表示を日本語に置き換える補助手段</li><li>日本語サイトの制作：本文、CMS、フォーム、SEO設定に日本語を使える</li><li>Webflow Localize：公開サイトを言語・地域別に展開する追加機能</li><li>日本語サポート：英語のHelp Centerはあるが、日本語の有人対応は確認できない</li></ul>
+<h3>管理画面の日本語化と日本語サイト制作は別</h3>
+<p>Designerやサイト設定の画面が英語であることと、完成したサイトに日本語を表示できるかは、別の問題です。Webflowのページ本文やCMSの項目には日本語を入力でき、サイトの言語コードも日本語に設定できます。</p>
+<p>導入を決めるときは「操作する人が英語画面で作業できるか」と「公開するサイトを日本語で作れるか」を切り離して考えます。</p>
+<h3>Webflow Localizeは管理画面の翻訳機能ではない</h3>
+<p>Webflow Localizeは、公開サイトの本文や画像、表示条件、SEO設定を言語・地域ごとに切り替える機能です。訪問者が見るページを多言語にするためのもので、管理画面を日本語で操作したい人が契約しても目的は果たせません。</p>
+<h2>Webflowの管理画面を日本語化する方法</h2>
+<p>管理画面を日本語で表示したいなら、第三者が提供するChrome拡張を使う方法があります。拡張を入れない場合は、Chrome標準の翻訳で部分的に補えます。どちらもWebflow公式の言語設定ではないので、導入前に提供元と対応範囲を確かめてください。</p>
+<h3>Chrome拡張「Webflow 日本語化」を導入する</h3>
+<p>Chrome Web Storeで「Webflow 日本語化」を検索すると、IGNITE Co., Ltd.が開発した拡張機能が見つかります。同じ名前の拡張を案内している別の会社もあるため、掲載ページの提供元表示で見分けてください。導入の流れは次のとおりです。</p>
+<ol><li>ChromeでChrome Web Storeを開き、「Webflow 日本語化」の掲載ページを表示する</li><li>提供元がIGNITEであることと、要求される権限を確認してから「Chromeに追加」を選ぶ</li><li>Webflowにサインインし、ダッシュボードとDesignerを開く</li><li>メニューや設定パネルが日本語で表示されているかを確かめる</li></ol>
+<p>開発元のIGNITEは、この拡張を<strong>無料</strong>で提供すると案内しています。日本語になるのはダッシュボード、Designer、Site Settingsなどの画面です。開発元の説明によると、CMS、Body、Div Blockといった用語はあえて英語のまま残しています。英語の公式ヘルプと用語がそろうので、調べものの際に取り違えが起きにくくなります。</p>
+<h3>Chrome標準翻訳で補う</h3>
+<p>拡張を入れたくない場合は、画面上で右クリックして「日本語に翻訳」を選び、Chromeのページ翻訳で表示中のテキストを訳せます。</p>
+<p>ただし汎用の翻訳は、Webflow固有の用語を文脈なしに訳します。「Collection」や「Div Block」が不自然な日本語になったり、パネルの表示が崩れたりするため、意味を知りたい画面だけで使うのが無難です。</p>
+<h3>拡張機能を入れる前に確認すること</h3>
+<p>翻訳拡張は、ログイン後の画面の文字を書き換えて動きます。Chrome Web Storeの掲載ページでは、IGNITEの拡張の最終更新は2026年2月です。Webflowが画面を変えると、翻訳が追いつかない箇所が出る可能性があります。業務アカウントで使うなら、次の2点は導入前に見ておきます。</p>
+<ul><li>掲載ページに表示される権限の内容と、社内のブラウザ拡張の利用ルールに合うか</li><li>翻訳されずに英語のまま残る画面があっても作業に支障がないか</li></ul>
+<p>表示の崩れや動作の不具合が拡張に起因する場合、Webflowの公式サポートは拡張を無効にして確かめるか、提供元に問い合わせるよう案内しています。拡張の不具合はIGNITEに問い合わせる前提で使ってください。</p>
+<h2>Webflowで日本語サイトを作るときの設定と注意点</h2>
+<p>管理画面の言語とは関係なく、Webflowでは日本語の本文、CMS、フォーム、SEO設定を持つサイトを制作できます。仕上がりの品質は、言語コード、フォント、行間、改行、フォームの文言まで確認して整えます。</p>
+<h3>日本語の本文・CMS・フォームを設定する</h3>
+<p>日本語サイトとして公開するなら、日本語にしておくべき要素はページ本文だけではありません。</p>
+<ul><li>ページ本文、ボタン、ナビゲーションの文言</li><li>CMSのコレクションに登録する記事や商品情報</li><li>フォームのラベル、送信ボタン、送信後の成功・エラーメッセージ</li><li>各ページのSEOタイトル、メタディスクリプション、画像のalt</li><li>言語コード：Localizeパネル &gt; Localesで主要ロケール（primary locale）の言語を日本語にすると、jaが割り当てられる</li></ul>
+<p>言語コードはブラウザや検索エンジンにページの言語を伝える設定です。現在のWebflowでは、Site settingsに残る旧来の言語コード欄より、Localizeパネルの主要ロケールの設定が優先されます。英語圏向けのテンプレートを使うなら、フォームやフッターに英語の初期文言が残っていないかも見直します。</p>
+<h3>日本語フォントと改行を端末別に確認する</h3>
+<p>Webflow Marketplaceには無料と有料のテンプレートがあります。有料テンプレートはSite planとは別の一回払いで、ライセンスは原則として1案件に限られます。欧文を前提にデザインされたテンプレートに日本語の本文を流し込むと、見出しが途中で折り返したり、行間が詰まって見えたりしがちです。選ぶ段階で、日本語を入れたときの見え方まで想定しておきます。</p>
+<p>公開前には、パソコンとスマートフォンの両方で、日本語フォントの表示、行間、見出しの折り返し、行頭に句読点が来ていないかを確かめます。</p>
+<h3>多言語サイトにはWebflow Localizeを使う</h3>
+<p>日本語と英語など、複数の言語・地域向けにサイトを出し分けたい場合はWebflow Localizeを使います。locale（言語・地域の設定）ごとに、本文、画像、表示・非表示、SEO設定を切り替えられます。</p>
+<p>日本語に加えて別の言語を出すときは、Site planとは別に有料のLocalizeプランが必要です。料金はEssentialが月$9から、Advancedが月$29からで、利用量によって変わります。日本語だけで公開するサイトなら、有料のLocalizeプランは日本語以外の言語を追加すると決めた段階で検討すれば間に合います。</p>
+<h2>日本語で学べる資料とサポートの範囲</h2>
+<p>公式のWebflow UniversityとHelp Centerは学習と自己解決に使えますが、確認できる公式ページは英語です。国内の日本語解説記事や制作会社の支援は、Webflow公式の日本語サポートとは分けて考えてください。</p>
+<h3>公式教材はブラウザ翻訳も使って学ぶ</h3>
+<p>Webflowの公式リソースは、役割ごとに分かれています。</p>
+<ul><li>Webflow University：動画とレッスンで操作を体系的に学ぶ教材</li><li>Help Center：機能ごとの設定手順や請求の仕組みを調べるヘルプ</li><li>コミュニティフォーラム：ユーザー同士で質問し合う場</li></ul>
+<p>英語が得意でなくても、ページをChromeで翻訳して読み、操作名だけは英語のまま覚えれば学習は進められます。</p>
+<h3>日本語の学習資料と日本語有人サポートは別</h3>
+<p>国内の制作会社や個人による日本語の解説、講座、制作支援は、Webflow公式の窓口ではありません。Webflow公式の日本語有人サポートは公開情報から確認できません。ただ「対応していない」とも言い切れないので、日本語での問い合わせを導入条件にするなら契約前に確かめておきます。</p>
+<h2>料金と始め方：無料プラン、支払い、請求書、解約</h2>
+<p><strong>Starter SiteとStarter Workspaceは無料で始められ、日本からは主要なカードでUSD決済できます。</strong>有料化するときは、サイトごとのSite planとチーム単位のWorkspace planが別契約になる点を押さえておきます。</p>
+<h3>無料のStarterから始める</h3>
+<p>登録すると無料のStarter Workspaceが付与され、サイトは無料のStarter Siteで作り始められます。公開先はWebflow.ioのサブドメインで、静的ページは2ページ、CMSアイテムは50件までです。管理画面の操作感と、日本語の本文やCMSの表示を確かめるには十分な範囲です。無料のStarter WorkspaceはFull seatが1つだけです。複数人で編集するなら、Workspace plan（Core $19/月、Growth $49/月。いずれも年払いの月額換算）に切り替え、必要に応じてseat（Full $39/月、Limited $15/月。年払い）を追加します。</p>
+<p>独自ドメインで公開するには、サイトごとに有料のSite planが必要です。CMSを使わない静的サイトならBasicで、<strong>年払いで月$15</strong>（月払いは$25）。ブログやお知らせなどCMSを使うなら、BasicにはCMSがないためPremiumを選び、<strong>年払いで月$25</strong>（月払いは$39）です。1ドル=159円換算で、Basicは約2,385円、Premiumは約3,975円になります（執筆時点の目安で、為替により変動します）。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://www.webflow.com">公式サイトで料金を見る</a></p>
+<p>Starterの上限、BasicとPremiumの違い、年払いと月払いの差を確認できます。</p>
+<h3>日本からの支払いと請求書</h3>
+<p>Webflowは日本から公式サイトで申し込めます。Visa、Mastercard、American Express、Discover、JCB、Diners Clubのクレジットカード・デビットカードに対応しています。請求はUSDで、表示価格には適用税が別途加算されます。</p>
+<p>請求書は、Workspace設定のBillingからWorkspace、Site、Seat、Add-onごとにPDFでダウンロードできます。表記はUSDのみで、複数のSite planやWorkspace planの請求を1枚にまとめられません。USD建ての請求書を消費税やインボイス制度の上でどう扱うかは、税理士に確認してください。</p>
+<h3>Site planとWorkspace planを解約する</h3>
+<p>解約は、契約ごとに別の設定画面から行います。</p>
+<ul><li>Site plan：Site settings &gt; Plansから無料のStarterへダウングレードする</li><li>Workspace plan：Workspace settings &gt; Plansから無料のStarterへダウングレードする</li><li>別契約の扱い：片方を解約しても、もう片方の契約と自動更新は止まらない</li><li>解約後の利用：原則として当期の終わりまで使える</li></ul>
+<p>SiteまたはWorkspaceを初めて新規購入した場合に限り、購入から14日以内なら返金を申請できます。更新料、Add-on、seat、Marketplaceでの購入は対象外です。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://www.webflow.com">公式サイトで料金を見る</a></p>
+<p>Site planとWorkspace planの区分と請求周期を、契約前に確認できます。</p>
+<h2>日本語運用を優先する場合の代替候補</h2>
+<p>公式の日本語UIと日本語サポートを重視するならStudio、日本語の情報量と運用の自由度を重視するなら、自分でサーバーに設置するWordPress（WordPress.org版）が候補です。Framerは日本語のLocalizationに対応していますが、エディタの日本語UIは確認できないため、日本語化を目的とした乗り換え先とは言い切れません。</p>
+<h3>Studioは公式の日本語UIとサポートを重視する人向け</h3>
+<ul><li>日本語UI：管理画面、エディタ、公式ヘルプが日本語</li><li>日本語サポート：ログイン後のチャットサポート、法人向け相談窓口</li><li>運用方式：ホスティング込み。料金はサイト（プロジェクト）単位</li></ul>
+<p>日本居住者は円建て・税込で契約でき、JCBのカードも使えます。請求書と領収書はダッシュボードのお支払い履歴から取得でき、適格請求書の発行についても案内があります。無料のFreeでも50ページまで公開できますが、独自ドメインを接続するにはMini以上が必要です。Miniは<strong>年払いで月¥590</strong>（税込、月払いは¥1,290）です。支払い済みの料金は原則として返金されません。初回購入から14日以内なら返金を申請できるWebflowとは、この点が異なります。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://studio.design/ja">公式サイトで料金を見る</a></p>
+<p>プランごとのページ数やCMSの上限を、日本語の料金ページで見比べられます。独自ドメインで公開する前に、作りたいページ数が収まるプランかを確かめておくと安心です。</p>
+<h3>WordPressは日本語情報と運用自由度を重視する人向け</h3>
+<ul><li>日本語UI：日本語ローカライズ版を配布し、日本語の公式サイトとドキュメントがある</li><li>日本語サポート：日本語のサポートフォーラム。コミュニティによる回答で、有償の有人サポートではない</li><li>運用方式：自前のホスティングとドメインが必要</li></ul>
+<p>ソフトウェア本体はGPLで公開されており、商用利用でもライセンス料はかかりません。その代わり、サーバーとドメインは各事業者と別に契約し、更新、バックアップ、セキュリティ対策も構成に応じて自分で担います。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://ja.wordpress.org/">公式サイトで料金を見る</a></p>
+<p>費用の大半はサーバーとドメインの契約で決まります。使う予定のレンタルサーバーの料金と並べて見積もると、Webflowの月額と比べやすくなります。</p>
+<h3>Framerは日本語UIの代替と決めつけない</h3>
+<ul><li>日本語UI：エディタを日本語表示にできるかは確認できない</li><li>日本語サポート：日本語での問い合わせ対応は確認できない</li><li>運用方式：ホスティング込み。料金はUSD基準で表示</li></ul>
+<p>FramerのLocalizationは日本語を含む238の言語・地域に対応し、公開サイトを多言語化できます。ただしWebflow Localizeと同じく訪問者向けの機能で、英語の画面を避けたいという理由で乗り換えても、状況は変わらない可能性があります。料金は無料のFreeのほか、独自ドメインを使えるBasicが年払いで月$10です。日本発行のカードやJCBで支払えるかは、公式情報に明記がありません。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://www.framer.com/">公式サイトで料金を見る</a></p>
+<p>独自ドメインを使えるプランと、プランごとのCMSコレクション数・帯域の違いを見比べられます。</p>
+<h2>Webflowの日本語対応でよくある質問</h2>
+<p>公式の言語設定、拡張機能の安全性、問い合わせの窓口について補足します。</p>
+<h3>Webflowに公式の日本語切り替え設定はありますか？</h3>
+<p>公開されている公式情報からは、管理画面の表示言語を日本語に切り替える設定を確認できません。公式のHelp Centerも英語版だけで、日本語版のページは用意されていません。「存在しない」とまでは言い切れないものの、日本語で操作したいなら、現時点ではIGNITEの拡張かChromeのページ翻訳を前提に考えるのが現実的です。</p>
+<h3>Chrome拡張は無料で安全ですか？</h3>
+<p>料金は無料です。開発元のIGNITEは、利用者のデータを収集・使用しないと表明しています。ただし、これは開発元の説明で、第三者が安全性を保証したものではありません。会社のアカウントで使うなら、掲載ページに表示される権限を社内のルールと照らし合わせてから入れてください。</p>
+<h3>日本語で問い合わせできますか？</h3>
+<p>公式の窓口は、Support Portalから送った問い合わせにメールで回答する方式と、AIのサポートアシスタントによるチャットです。チャットで担当者につながるかは、内容と時間帯によります。電話やビデオでの対応はEnterpriseだけなので、ほとんどの利用者は英語のメールかチャットで問い合わせることになります。</p>
+<h2>まとめ：日本語にしたい対象を決めてから選ぶ</h2>
+<p><strong>日本語サイトを作ることが目的なら、Webflowは候補に残せます。</strong>管理画面は第三者のChrome拡張で補えますが、公式の日本語UIや日本語の有人サポートを必須にするなら、StudioやWordPressとも比べてから決めてください。</p>
+<h3>Webflowが向く人</h3>
+<p>次の条件に当てはまるなら、無料のStarterから試す価値があります。</p>
+<ul><li>日本語の本文やCMSを、デザインの自由度を保ったまま作りたい（CMSを使うならPremiumの費用を見込める）</li><li>英語の管理画面か、第三者拡張による日本語表示で作業できる</li><li>英語の公式教材とヘルプを、翻訳を使いながら参照できる</li><li>USD建てのカード決済と、契約ごとに分かれた請求書で経理処理できる</li></ul>
+<h3>日本語UIを優先して比較したい人</h3>
+<p>次のような条件があるなら、Webflowに決める前にほかのツールも比べたほうが確実です。</p>
+<ul><li>チーム全員が日本語の画面で操作する必要がある</li><li>日本語で公式窓口に問い合わせられることが導入の条件</li><li>円建ての請求や適格請求書が経理上必要</li></ul>
+<p>この場合はStudioとの比較から始め、サーバーの運用まで担えるならWordPressも候補に加えます。Webflowも並行して試すなら、無料枠で操作感を確かめてから有料化を判断できます。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://www.webflow.com">公式サイトで料金を見る</a></p>
+<p>無料のStarterでできる範囲、独自ドメインで公開する条件、年払いと月払いの請求周期を確かめてから申し込めます。</p></div>
+<div class="nav"><span><a href="webflow-guide.html">← Webflow（ウェブフロー）とは？できること・…</a></span><span><a href="webflow-pricing.html">Webflowの料金プラン【2026年版】無料版… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

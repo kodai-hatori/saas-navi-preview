@@ -1,0 +1,101 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>ElevenLabsは日本語で使える？音声の自然さとVOICEVOX・CoeFontとの違い｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/elevenlabs-japanese/eyecatch.png" alt="">
+<h1 id="t">ElevenLabsは日本語で使える？音声の自然さとVOICEVOX・CoeFontとの違い</h1>
+<div class="meta"><span class="badge b-draft">note下書き済み</span><span class="badge">AI・コンテンツ制作</span> 5,562字</div>
+<div class="tags">#ElevenLabs #AI音声 #音声合成 #海外SaaS</div>
+<div class="body" id="b"><p>動画のナレーションや研修の読み上げをAIに任せるとき、候補に挙がるのがElevenLabs（イレブンラボ）です。ただ海外のサービスだけに、日本語の読み上げは自然か、支払いやサポートは日本語で済むか、VOICEVOXやCoeFontで足りるのではないかが気になります。</p>
+<p>公式の仕様と公開レビューをもとに、日本語で使える範囲と2つのツールとの違いを整理しました。無料プランから試すかどうかの判断に使ってください。</p>
+<h2>結論：ElevenLabsは日本語の音声を作れる、公式サイトも日本語対応</h2>
+<p><strong>ElevenLabsは日本語の音声を作れます。</strong>読み上げに使うモデルが日本語に対応しており、公式サイトも日本語で読めます。</p>
+<ul><li>音声生成：表現力を重視したEleven v3は、日本語を含む<strong>70以上</strong>の言語に対応している</li><li>表示言語：公式サイトと料金ページは日本語。ログイン後に音声を作る画面を日本語表示にする案内は、公式ヘルプに見当たらない</li><li>無料プラン：毎月<strong>10,000クレジット</strong>で、日本語なら<strong>1万字</strong>まで試せる。商用で使えるのは月<strong>$6</strong>のStarterから</li></ul>
+<p>注意したいのは、料金がUSD建てで請求され、日本語の問い合わせ窓口が明記されていない点です。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る</a></p>
+<p>リンク先の日本語サイトから料金ページに進むと、プランごとのクレジットと商用ライセンスの有無を見比べられます。</p>
+<h2>ElevenLabsの日本語対応の範囲（音声生成・音声クローン・文字起こし）</h2>
+<p>日本語での利用はテキスト読み上げが中心で、音声クローンは有料プランから使えます。</p>
+<h3>音声生成（テキスト読み上げ）と音声クローンの日本語対応</h3>
+<p>テキスト読み上げは日本語に対応するモデルが3つあり、ブラウザとスマホアプリから利用できます。</p>
+<p>録音から声を再現する音声クローンは2種類です。1〜2分の録音で作るInstant Voice CloningはStarter以上、最低30分（推奨2〜3時間）の録音で作るProfessional Voice CloningはCreator以上で使えます。後者は日本語を含む39言語に対応しています。</p>
+<h3>文字起こし（Speech to Text）・ダビングの日本語対応</h3>
+<p>録音を文字にするSpeech to Text（Scribe v2）は90以上の言語に対応し、公式の精度区分では日本語が高精度のグループに入ります。動画を別の言語に吹き替えるダビング（Dubbing v2）も、日本語に対応しています。</p>
+<h2>日本語音声の自然さはモデルで変わる</h2>
+<p>日本語のナレーションなら、まずEleven v3で試すのが順当です。</p>
+<h3>モデルによる違い（Eleven v3・Multilingual v2・Flash v2.5）</h3>
+<p>対応言語はEleven v3が70以上、Multilingual v2が29、Flash v2.5が32です。v3は表現力を重視したモデルとして、2026年2月に正式リリースされました。</p>
+<p>ある技術ブログは、日本語ではv3が安定し、Flash v2.5は速度を優先するぶん抑揚が粗くなる傾向があると書いています。</p>
+<h3>公式サンプル・デモで確認できること</h3>
+<p>ElevenLabs公式の日本語読み上げページには、よく使われている音声が並んでいます。無料プランで試す声を絞り込む手がかりになります。</p>
+<p>公開レビューの評価は分かれます。noteの解説記事は、v3で日本語の読み上げが格段に良くなったとしています。一方、自分で試した結果を載せた個人ブログは、英語は人の声とほぼ区別がつかないが、日本語はイントネーションに違和感が残る箇所があったと書いています。使ったモデルや時期の違いかもしれません。</p>
+<p>どちらが当てはまるかは、自分の原稿を読ませてみないと分かりません。無料プランでは、声の好みより先に次の点を聞いてください。</p>
+<ul><li>文脈で読みが変わる漢字（「今日」「一日」「行った」など）の読み分け</li><li>日付・金額・割合など数字の読み方</li><li>英字の略語や、社名・商品名の読み</li><li>長い一文での息継ぎの位置と、文末の上がり下がり</li></ul>
+<h2>料金プランと商用利用の条件、日本語のクレジット消費</h2>
+<p><strong>ログイン後の画面（ダッシュボード）で作る場合、日本語の原稿はどのモデルでも1文字＝1クレジットです。</strong>v3を選んでも、読ませられる量は変わりません。</p>
+<h3>Free〜Enterpriseのプランとクレジット数</h3>
+<p>料金はUSD建ての税抜表示で、1ドル=157円換算（執筆時点の目安。為替で変動）ではStarterの月$6が約942円、Creatorの月$22が約3,454円です。個人のナレーションなら次の3つが候補です。</p>
+<ul><li>Free：$0、月10,000クレジット（約1万字）、商用ライセンスなし</li><li>Starter：月$6（年払いなら月$5相当）、月30,000クレジット（約3万字）、商用ライセンス付き</li><li>Creator：月$22（新規契約は初月$11）、月121,000クレジット（約12万字）、商用ライセンス付き</li></ul>
+<p>上位にはPro（月$99）、チーム向けのScaleとBusiness、個別見積もりのEnterpriseがあります。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja/pricing">公式サイトで料金を見る</a></p>
+<p>Pro以上のプランのクレジット数や、年払いにした場合の月あたりの金額も、料金ページで確かめられます。</p>
+<p>使う量に合わせたプランの選び方は、料金に絞った別のnoteで詳しく扱います。</p>
+<h3>商用利用の条件と日本語入力のクレジット消費</h3>
+<p>収益化しているYouTube動画や、仕事で納品するナレーションのような使い方には、商用ライセンスが必要です。</p>
+<p>料金ページの比較表には、プランごとに「含まれる分数」の目安も載っています。Freeは約10分、Starterは約30分、Creatorは約121分で、音声1分を約1,000文字として数えた値です。日本語の原稿は1文字＝1クレジットなので、必要なクレジットは原稿の字数からそのまま見積もれます。モデルによる料金の差が出るのはAPIで従量課金する場合だけで、1,000文字あたりv3とMultilingual v2が$0.10、FlashとTurboが$0.05です。</p>
+<h2>画面・支払い・サポートは日本語でどこまで使えるか</h2>
+<p>契約前の情報は日本語で集められ、解約や請求書の取り出しも画面で完結します。会社で導入するなら、カード払いと請求書の扱いが経理で通るかが分かれ目です。</p>
+<h3>公式サイトは日本語、生成画面（ダッシュボード）の表示は？</h3>
+<p>日本語で読めるのは、公式サイトと料金ページ、それにヘルプの一部です。ログイン後に音声を作る画面（ダッシュボード）を日本語表示に切り替える案内は、公式ヘルプには見当たりません。英語で表示されるときは、ブラウザの翻訳機能で読む方法もあります。</p>
+<h3>支払い方法・請求書・インボイスの扱い</h3>
+<p>画面から申し込むプランの支払い方法はクレジットカード、Apple Pay、Google Payで、請求書払い（銀行振込）の案内はありません。カードブランドの一覧がないため、JCBが通らないときに備えてVisaかMastercardも用意しておくと、手戻りを減らせます。プリペイドカードは公式に非推奨です。</p>
+<p>ヘルプによると、支払った分の請求書と領収書はSubscription→Billing→View invoicesからPDFで取り出せ、登録メールアドレスにも届きます。ただ、日本の適格請求書発行事業者の登録番号が載るという案内はありません。利用料を経費にする際の消費税の扱いは、税理士に確認してください。</p>
+<h3>日本語サポート窓口の実態</h3>
+<p>ElevenLabsは2025年4月に東京で日本法人ElevenLabs Japan G.K.を設立し、公式ブログで日本語音声のローカライズを強化するとしています。とはいえ、ヘルプセンターを見ても、問い合わせに日本語で対応するとは書かれていません。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る</a></p>
+<p>返金は支払いから14日以内でクレジット未使用が条件なので、音声を1本でも作ると対象外です。無料プランで読み方を確かめてから、有料プランは月払いで始めると、合わなかったときの負担が1カ月分で済みます。</p>
+<h2>日本語対応の代替ツールとの違い（VOICEVOX・CoeFont）</h2>
+<p>ソフト自体が無料のVOICEVOXに対し、ElevenLabsとCoeFontは無料枠で試してから有料プランに進む形です。自分や講師の声を再現するElevenLabsの音声クローンは、Instant Voice CloningならStarter以上で使えます。</p>
+<h3>VOICEVOXとの違い</h3>
+<p>VOICEVOXは、オープンソースをもとにした無料のテキスト読み上げ・歌声合成ソフトです。ダウンロードして使うため、ブラウザやスマホアプリで使うElevenLabsとは作業環境が違います。やめるときは、アンインストールするだけです。</p>
+<p>商用利用も無料ですが、「VOICEVOX:ずんだもん」のようなクレジット表記が必須で、声（キャラクター）ごとの利用規約にも従います。ずんだもんなどの共通規約では、表記なしで商用利用するには1キャラクターにつき40万円（税別）の個別契約が必要です。VOICEVOXを選ぶかどうかは、クレジット表記を入れられるかで決まります。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://voicevox.hiroshiba.jp">公式サイトを見る</a></p>
+<p>配布元のサイトも利用規約も日本語です。使い方の質問は、開発が公開されているGitHubのissueに書き込みます。</p>
+<h3>CoeFontとの違い</h3>
+<p>CoeFontの無料プランは月800文字までの非商用利用で、「Voiced by coefont.cloud」のクレジット表記を求められます。商用で使えるのは月$20（税込）・月80,000文字のStandardからで、上位のPlusは月$350（税込）・月1,000,000文字・最大5ユーザーです。</p>
+<p>量ではElevenLabsが上回ります。無料枠はElevenLabsの月10,000クレジット（日本語で1万字）に対して、CoeFontは月800文字です。価格の近いElevenLabsのCreator（月$22）とCoeFontのStandard（月$20）で比べても、121,000クレジットと80,000文字の差があります。</p>
+<p>商用で使える最安のプラン同士を1年分で比べると、ElevenLabsのStarterは年払いで$60（税抜）、CoeFontのStandardは12カ月分で$240（税込）です。ただし、Starterは月30,000クレジット（日本語で3万字）で、Standardの80,000文字より少なくなります。毎月3万字を超えるなら、Standardと比べる相手はStarterではなくCreatorです。</p>
+<p>StandardとPlusはカード払いのみで、年間契約はありません。銀行振込が使えるのは、年間契約に限られるEnterpriseだけです。領収書やインボイスの登録番号については、CoeFontのよくある質問ページと利用規約に記載が見当たりません。</p>
+<p><a target="_blank" rel="nofollow noopener" href="https://coefont.cloud">公式サイトを見る</a></p>
+<p>解約はアカウント設定からFreeプランに戻す形で、ダウングレードの理由を入力すると、翌月以降の課金が止まります。</p>
+<p>ElevenLabs以外の海外製なら、日本語の音声を用意しているMurf AIも候補です。どこまで日本語で使えるかは、個別のnoteで整理します。</p>
+<h2>よくある質問</h2>
+<ul><li>無料プランには、クレジットの量のほかにどんな制限がありますか？</li></ul>
+<p>使い残したクレジットは翌月に繰り越せません。長い原稿をまとめて音声にするStudioは3プロジェクトまでで、Starterに上げると20プロジェクトまで使えます。</p>
+<ul><li>社員や講師の声で音声クローンを作ってもよいですか？</li></ul>
+<p>Instant Voice Cloning（Starter以上）なら、声を複製する権利と本人の同意があることを、作成時にチェックボックスで確認したうえで作れます。Professional Voice Cloning（Creator以上）は自分の声でしか作れず、本人の同意があっても他人の声は登録できません。社員や講師の声をProfessional Voice Cloningで使うなら、本人が自分のアカウントで作り、共有リンクで受け取ります。退職や契約終了のあとでもめないよう、用途と期間は書面で取り決めておくのが無難です。</p>
+<ul><li>支払いは日本円でできますか？</li></ul>
+<p>ブラウザから申し込んだ場合、請求はUSD建てです。円での引き落とし額はカード会社の換算レートで決まり、月ごとに変わります。年払いにすれば、為替の影響を受ける請求は年1回にまとまります。</p>
+<ul><li>解約したらすぐに料金は止まりますか？</li></ul>
+<p>設定画面から自分で解約すると次回以降の請求が止まり、支払い済みの期間が終わるとFreeプランに移ります（残ったクレジットは失効）。スマホアプリで契約した場合は、解約も返金の申請も、AppleやGoogleの購読管理が窓口です。</p>
+<p>画面ごとの手順は、解約と返金を扱うnoteで説明します。</p>
+<h2>まとめ｜ElevenLabsを選ぶ基準</h2>
+<p>VOICEVOX・CoeFontとの選び分けは、次の条件で決められます。</p>
+<ul><li>費用をかけず、動画や音声にクレジットを表記できるならVOICEVOX（声ごとの利用規約に従う）</li><li>無料で多めに試したい、英語など他の言語も作る、月額を抑えたいならElevenLabs（無料枠は月10,000クレジット、有料は月$6から）</li><li>ElevenLabsの読みが原稿に合わないときは、同じ原稿をCoeFontの無料枠（月800文字）で試し、合えばStandard（月$20・税込）で商用に使う</li></ul>
+<p><a target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る</a></p>
+<p>有料プランに進む前に、無料枠で自分の原稿を1本読ませ、読み間違いの出方と減ったクレジットを確かめておくと、必要なプランの見当がつきます。</p></div>
+<div class="nav"><span><a href="consensus-japanese.html">← Consensus AIは日本語で使える？英語の…</a></span><span><a href="elevenlabs-pricing.html">ElevenLabsの料金プラン【2026年版】… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
