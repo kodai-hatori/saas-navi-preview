@@ -1,0 +1,110 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>AIでスライドを自動作成する方法｜Gammaで資料を作る手順と直し方｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/gamma-howto-76f5/eyecatch.png" alt="">
+<h1 id="t">AIでスライドを自動作成する方法｜Gammaで資料を作る手順と直し方</h1>
+<div class="meta"><span class="badge">AI・コンテンツ制作</span> 5,207字</div>
+<div class="tags">#Gamma #AIプレゼン #スライド作成 #PowerPoint #海外SaaS</div>
+<div class="body" id="b"><p>AIにテーマを渡しただけでは、そのまま会議や提案で使えるスライドにならないことがあります。文章は整っていても結論が遅い、元資料と数字が違う、PowerPointへ移したらフォントが変わるといった手直しが残るためです。</p>
+<p>遠回りを避けるには、作業を「構成」「デザイン」「仕上げ」に分けます。目的と素材を人が用意し、Gammaで初稿を作ったら、納品形式に合わせて最終確認します。Gammaは編集部で契約していないため、以下は公式情報に基づく説明です。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://gamma.app/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>カード不要のFreeと円建ての有料プラン、AIクレジットや書き出し機能の違いを確認できます。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：AIスライドは構成・デザイン・仕上げの3段階で作る</a></li><li><a href="#s2">自動作成を始める前に、目的と素材を揃える</a></li><li><a href="#s3">どこまでAIに任せるかで使う方法を選ぶ</a></li><li><a href="#s4">Gammaでスライドを自動作成する手順</a></li><li><a href="#s5">生成したスライドを人の目で直す</a></li><li><a href="#s6">PowerPointに書き出し、表示の違いを直す</a></li><li><a href="#s7">無料版の範囲と、作れないときの対処</a></li><li><a href="#s8">まとめ：AIの初稿を人が直して1本を完成させる</a></li></ol></nav><h2 id="s1">結論：AIスライドは構成・デザイン・仕上げの3段階で作る</h2>
+<p><strong>AIスライドは、目的と素材を固めて構成を作り、Gammaでデザインし、納品形式に合わせて仕上げます</strong>。PPTXで渡すならPowerPointで表示を確認し、共有リンクやPDFで完結するならGamma上で事実と見た目を整えます。</p>
+<figure><img loading="lazy" src="../img/gamma-howto-76f5/gamma-howto-76f5-three-steps.png" alt="AIスライドを作る3段階"></figure>
+<h3>構成はAIに任せても、目的と読み手は人が決める</h3>
+<p>AIには、箇条書きの整理や長文の要約、章立ての案出しを任せられます。一方、「誰が読むのか」「読後に何を決めてもらうのか」「最も伝えたい結論は何か」は人が決めます。この三点が、生成後の構成を残すか直すかの基準です。</p>
+<h3>デザインはGammaで作り、PPTX出力後に確認する</h3>
+<p>Gammaは、日本語のプロンプトや手元の資料から、構成とデザインをまとめて生成できるAIプレゼンツールです。アプリのUIは日本語へ切り替えられ、FreeでもPPTXへ書き出せます。</p>
+<p>ただし、Gamma上の表示とPowerPoint上の表示が完全に同じとは限りません。最終成果物がPPTXなら、出力後の確認までを制作工程に含めます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://gamma.app/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Freeの内容と現行プランを確認しておくと、ロゴの有無やクレジットの条件が事前に分かります。</p>
+<h2 id="s2">自動作成を始める前に、目的と素材を揃える</h2>
+<p><strong>入力前に「相手」「目的」「結論」と根拠資料を揃えることが、生成後の修正を減らす近道です</strong>。不要な個人情報、社外秘、利用権限が不明な画像や文章は入れません。</p>
+<h3>誰に何を決めてもらう資料かを1文にする</h3>
+<p>まず、資料の目的を「経営会議で新しい顧客管理ツールの試験導入を承認してもらう」のような一文にします。そのうえで、AIへ渡すメモを次の順で揃えます。</p>
+<ul><li>読み手の役職や前提知識</li><li>読後に決めてほしいこと</li><li>最初に伝える結論</li><li>必要なページ数の目安</li><li>堅め、簡潔、親しみやすいなどのトーン</li></ul>
+<h3>メモ・Word・PDF・URLから使う情報を選ぶ</h3>
+<p>会議メモ、Word、PDF、既存のPPTX、参照先のURLから、結論を支える情報を選びます。「必ず使う事実」「参考にする説明」「使わない情報」に分け、古い数値と重複した説明を外しておくと、生成後に元資料と照合できます。</p>
+<h3>機密情報と引用素材を入力前に確認する</h3>
+<p>顧客名、個人情報、未公開の業績、契約書の内容は、社内の生成AI利用ルールと資料の機密区分を確認してから扱います。個人向けワークスペース（Free・Plus・Pro・Ultra）は、入力コンテンツをAI機能の改善に使う設定が既定で有効ですが、Data Controlsからオプトアウトできます。Team・Business・Enterpriseのワークスペースは学習対象から自動的に除外されます。機密資料を扱う場合は、手動で設定を変える運用で足りるか、組織向けワークスペースが必要かを先に決めます。</p>
+<p>画像や文章を再利用するときは、社内資料だから自由に使えるとは限りません。利用許諾、引用の範囲、出典の表示方法を確かめ、権利が不明な素材は入力候補から外します。</p>
+<h2 id="s3">どこまでAIに任せるかで使う方法を選ぶ</h2>
+<p><strong>任せたい範囲によって、選ぶツールは変わります。構成だけなら対話型AI、構成からデザインまでならGamma、手作業での仕上げを重視するならCanva、自動レイアウトの別案ならBeautiful.aiが候補です</strong>。本稿では、Gammaで初稿を作る方法へ進みます。</p>
+<h3>ChatGPTなどで構成だけ作り、既存ソフトで仕上げる</h3>
+<p>ChatGPT、Gemini、Claude、Microsoft Copilotに、「各ページのタイトル、主張、根拠」をテキストで出してもらいます。それを社内のPowerPointテンプレートへ移す方法です。既存のデザイン規定を優先したい場合に合います。</p>
+<h3>Gammaで構成とデザインをまとめて作る</h3>
+<p>Gammaでは、プロンプト、貼り付けたメモ、添付資料をもとに、構成案からスライドの見た目までまとめて作れます。生成前のプランで結論、並び順、ページ数、トーンを直してからデザインへ進みます。</p>
+<h3>CanvaやBeautiful.aiを補助候補にする条件</h3>
+<p>Canvaは日本語UIと常設の無料プランがあり、PPTXへ書き出せます。プレゼン以外の画像や動画も同じ場所で作り、細部を手で整えたい場合の候補です。</p>
+<p>Beautiful.aiは自動レイアウトを別案として比べたい場合に検討できます。常設の無料プランではなく、Pro／Teamの14日間トライアルはカード登録が必要で、期限内に解約しなければ自動課金されます。公式の日本語UIは確認できず、編集可能なPowerPoint書き出しはPro・Team・Enterpriseが対象です。</p>
+<h2 id="s4">Gammaでスライドを自動作成する手順</h2>
+<p><strong>Gammaでは、作りたい資料を入力し、目的や読み手に関する質問へ答え、生成前のプランを直してから初稿を作ります</strong>。あとから直す手間を減らすなら、デザインを生成する前に話の順序を固めておきます。</p>
+<h3>アカウントを作り、プロンプトや資料を入力する</h3>
+<p>アカウントを作成してダッシュボードから新規作成を始めます。短い企画ならプロンプト、本文があるならメモの貼り付け、根拠資料がまとまっているならファイル添付を選び、準備した目的メモを先頭に置きます。</p>
+<p><mark>[画像を挿入: Gammaの作成画面]</mark></p>
+<h3>質問に答え、生成前のプランを確認する</h3>
+<p>Gammaに読み手、目的、重視点などを尋ねられたら、元資料に沿って回答します。生成前のプランでは、結論の位置、根拠とのつながり、不要な章、ページ数、トーンを確認し、元資料にない事例や数値を削除します。</p>
+<h3>テーマを選び、初稿を生成する</h3>
+<p>構成が固まったら、用途に合うテーマと画像の方針を選んで生成します。初稿では話の流れを先に見ます。順序を大きく変えるときはGammaに指示し、固有名詞や数値は手作業で直します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://gamma.app/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>カードなしで始められるFreeと、有料プランで増えるクレジットや利用条件を確認できます。</p>
+<h2 id="s5">生成したスライドを人の目で直す</h2>
+<p><strong>初稿ができたら、結論の位置、根拠、事実、各ページの情報量を確認します</strong>。大きく直す部分はAIに指示し、固有名詞、数値、引用、最終表現は元資料と照合して手で直します。</p>
+<figure><img loading="lazy" src="../img/gamma-howto-76f5/gamma-howto-76f5-review-checks.png" alt="生成後に確認する項目"></figure>
+<h3>結論と根拠の順番を整える</h3>
+<p>資料全体が「課題、結論、根拠、次の行動」の順につながっているかを読み直します。背景説明が長ければ、Gammaへ「結論を冒頭へ移し、重複する説明をまとめる」と指示し、不要なページを先に削ります。</p>
+<h3>事実・数字・引用元を元資料と照らす</h3>
+<p>会社名、商品名、日付、金額、割合、引用文を元資料と照合し、条件や対象期間まで確認します。固有名詞、社内用語、引用の範囲、出典URLは手作業で直し、確認できない数字は削除します。</p>
+<h3>文字量・画像・配色を発表環境に合わせる</h3>
+<p>各ページの主張を一つに絞り、画像は理解を助けるものだけ残します。会議室で投影するなら文字の大きさとコントラストを、オンラインで共有するなら小さな画面での可読性を確かめます。ブランド色やロゴは社内ガイドに合わせます。</p>
+<h2 id="s6">PowerPointに書き出し、表示の違いを直す</h2>
+<p><strong>GammaからPPTXを書き出したら、PowerPointで全ページを開き、フォント、表、特殊効果、スピーカーノートを確認します</strong>。Googleスライドへ移す場合は、埋め込みフォントが置き換わらないかも確かめます。</p>
+<h3>共有またはメニューからPPTXを書き出す</h3>
+<p>Gammaの共有または書き出しメニューからPowerPoint形式を選び、必要なスライドをPPTXとして保存します。Freeを含む全プランでPPTX出力を利用できますが、Freeから書き出したファイルにはGammaのロゴが入ります。</p>
+<p>受け渡し前に、ページの欠落と並び順を確認します。</p>
+<h3>フォント・表・特殊効果・ノートを確認する</h3>
+<p>GammaはテーマのフォントをPPTXへ埋め込みます。ただし、フォントの取得に失敗した場合やPowerPoint側が対応していない場合は、代替フォントになることがあります。タイトルの改行、本文のはみ出し、図形との重なりを全ページで確認します。</p>
+<p>表は編集可能な状態で出力される一方、角丸がPowerPointでは角になるなど、見た目が変わる箇所があります。グラデーションや一部の視覚効果、画像の解像度、リンク、スピーカーノートも確認します。</p>
+<figure><img loading="lazy" src="../img/gamma-howto-76f5/gamma-howto-76f5-export-check.png" alt="PPTX出力後の確認項目"></figure>
+<h3>Googleスライドへ移す場合はフォント置換に注意する</h3>
+<p>Googleスライドは、PPTXに埋め込まれたフォントをそのまま使わない場合があります。アップロード後にタイトルや本文のフォントが置き換わったら、文字サイズ、改行、行間、図形との位置関係を見直します。</p>
+<p>PowerPointとGoogleスライドの両方で配布するなら、両方を開いて最終確認します。</p>
+<h2 id="s7">無料版の範囲と、作れないときの対処</h2>
+<p><strong>GammaのFreeはカード不要で始められ、PPTXへ出力できますが、AIクレジットは毎月補充されず、書き出したPPTXとPDFにはロゴが入ります</strong>。作成できないときは、入力内容、残りクレジット、出力先の違いを順に切り分けます。</p>
+<h3>FreeでもPPTXへ書き出せるがロゴが入る</h3>
+<p>Freeは<strong>￥0</strong>でカード登録が不要、登録時に<strong>400クレジット</strong>が付与されます。初回のCreate with AIジェネレーターは1プロンプト最大<strong>10枚</strong>ですが、Agentによる追加生成にはこの10枚の固定上限は適用されません。PDF、PPTX、PNG、Googleスライドへの書き出しも可能です。</p>
+<p>Gammaに従来型の有料機能トライアルはなく、Freeで試します。400クレジットは毎月補充されず、Freeから出力したPPTXとPDFにはロゴが入ります。単発の社内試作ならFree、ロゴなしの社外提出や継続的な生成ならPlus以上が目安です。Plusは月払い<strong>￥1,800</strong>、年払いは1ユーザーあたり月換算<strong>￥1,440</strong>です。</p>
+<h3>クレジット切れ、出力違い、情報不足を切り分ける</h3>
+<p>生成できないときは残りクレジットを確認します。Freeは自動補充がないため、紹介でクレジットを得るか、有料プランへ移ります。生成内容が意図と違うなら、生成前のプランを見直します。PPTXだけ見た目が違うなら、フォントや特殊効果の確認へ戻ります。</p>
+<h3>日本語UIと日本語ヘルプを使って設定を確認する</h3>
+<p>GammaはプロフィールのLanguage SettingsからUIを日本語へ切り替えられ、日本語で資料を生成できます。日本語版ヘルプもありますが、問い合わせ窓口が日本語で回答するかは明記されていません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://gamma.app/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Freeのクレジット、ロゴ、円建ての各プランを確認できます。</p>
+<h2 id="s8">まとめ：AIの初稿を人が直して1本を完成させる</h2>
+<p><strong>まず目的と素材を揃え、Gammaの生成前プランを確認して、最初の1本を作ってみましょう</strong>。初稿の事実を照合し、納品形式に合わせて表示を整えると、どこを直すべきかが明確になります。</p>
+<h3>素材を揃え、Gammaで作り、PowerPointで確認する</h3>
+<p>読み手、読後の行動、結論、根拠資料を一枚のメモにまとめ、生成前のプランで順番を直してから初稿を作ります。数字と引用を照合し、PPTXで渡す場合だけPowerPointで全ページを確認します。共有リンクやPDFで完結するなら、Gamma上の最終表示を整えれば十分です。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://gamma.app/ja/pricing">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>無料枠と現行プランを確認し、まずは公開情報だけの資料で流れを試せます。</p>
+<h3>比較や料金の疑問は関連するnoteで深掘りする</h3>
+<p>Gammaの登録方法、料金、日本語対応を先に知りたい場合や、他のAIプレゼン作成ツールも比べたい場合は、目的に合うテーマから読み進めてください。</p></div>
+<div class="nav"><span><a href="elevenlabs-pricing.html">← ElevenLabsの料金プラン【2026年版】…</a></span><span><a href="gamma-japanese.html">Gamma AIを日本語にする方法｜画面設定・日… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
