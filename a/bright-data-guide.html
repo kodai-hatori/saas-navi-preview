@@ -18,110 +18,120 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/bright-data-guide/eyecatch.png" alt="">
 <h1 id="t">Bright Dataとは？機能・料金・使い方と日本から契約するときの注意点を解説</h1>
-<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,826字</div>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,316字</div>
 <div class="tags">#BrightData #Webデータ収集 #プロキシ #海外SaaS</div>
-<div class="body" id="b"><p>スクレイピングの接続元を分散したい。ブロックへの対応を外部に任せたい。検索結果をAPIで取得したい。こうした要望を一つのサービス名で調べ始めると、Bright Dataの製品数と料金単位の多さに戸惑います。</p>
-<p>Bright Dataは、プロキシだけを販売するサービスではありません。公開Webデータへアクセス・取得するためのプロキシ、Web Unlocker、Browser API（旧称・Scraping Browser）、SERP APIなどを提供する基盤です。何を取得するか、自社でどこまで実装するか、どの単位で費用を管理するかを決めると、選ぶ製品が見えてきます。</p>
-<p>当メディアの運営者はBright Dataを契約・利用しています。この記事では実測値や成果を示さず、公式情報に基づいて選定に必要な情報を整理します。</p>
+<div class="body" id="b"><p>Bright Dataは、企業や開発チームが公開Webデータを集めるためのサービスです。プロキシに加え、ブロック対応・ブラウザ実行・検索結果取得のAPIも提供しています。</p>
+<p>製品ごとに課金単位と無料枠が異なるため、料金の仕組みは少し複雑です。この記事では、機能と料金、日本語対応、登録後の流れを紹介します。</p>
 
-<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：Bright Dataは複数のWebデータ取得手段を一つの基盤で選びたい事業者向け</a></li><li><a href="#s2">Bright Dataとは？プロキシだけではない製品の全体像</a></li><li><a href="#s3">Bright Dataでできることと製品の選び方</a></li><li><a href="#s4">料金と無料枠は製品ごとに課金軸が違う</a></li><li><a href="#s5">メリット・注意点・公開レビューから分かること</a></li><li><a href="#s6">日本語対応と日本からの契約・支払い</a></li><li><a href="#s7">Bright Dataの始め方：製品選択から小さなテストまで</a></li><li><a href="#s8">Bright Dataが合わない場合の代替候補</a></li><li><a href="#s9">まとめ：用途・課金軸・契約条件を決めてから選ぶ</a></li></ol></nav><h2 id="s1">結論：Bright Dataは複数のWebデータ取得手段を一つの基盤で選びたい事業者向け</h2>
-<p><strong>Bright Dataが向くのは、プロキシ、ブロック対応、ブラウザ実行、検索結果取得を用途に応じて選び、Webデータ取得の仕組みを継続運用したい事業者です。</strong> 日本語の公式サイトと料金ページはありますが、管理画面の日本語対応範囲と日本語による有人サポートは明示されていません。一部の利用方法ではKYCも必要です。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>製品ごとに課金軸、無料枠、利用条件が異なります。最初に全体像を確認し、必要な製品だけを候補に残してください。</p>
-<h3>Bright Dataが向いている人</h3>
-<ul><li>複数の公開サイトから継続的にデータを取得したい事業者</li><li>接続元の管理は自社で行い、Residential、Datacenter、ISPの各プロキシを用途で使い分けたい開発チーム</li><li>ブロック対応やブラウザ実行をサービス側に任せる選択肢も持ちたい人</li><li>検索結果の取得に特化したAPIを探している人</li></ul>
-<h3>別サービスも比較したい人</h3>
-<p>少量から単純な料金体系で試したい場合は、代替サービスも比較対象です。管理画面の日本語対応範囲が分からないことや、KYCが必要になることを負担に感じる場合も同様です。用途がプロキシだけなら、最低利用額や契約単位を優先して比べます。</p>
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Bright Dataの主要6製品と3つの課金単位</a></li><li><a href="#s2">Bright Dataとは？プロキシだけではない製品の全体像</a></li><li><a href="#s3">Bright Dataでできることと製品の選び方</a></li><li><a href="#s4">料金と無料枠は製品ごとに課金軸が違う</a></li><li><a href="#s5">メリット・注意点・公開レビューから分かること</a></li><li><a href="#s6">日本語対応と日本からの契約・支払い</a></li><li><a href="#s7">Bright Dataの始め方：製品選択から小さなテストまで</a></li><li><a href="#s8">Bright Dataが合わない場合の代替候補</a></li><li><a href="#s9">まとめ：取得したいデータ・課金単位・契約条件で選ぶ</a></li></ol></nav><h2 id="s1">Bright Dataの主要6製品と3つの課金単位</h2>
+<ul><li>Residential：$8/GB／初回$2クレジット</li><li>Datacenter：$0.6/GB〜／初回$2クレジット</li><li>ISP：$8/GB／初回$2クレジット</li><li>Web Unlocker・SERP：$1.5/1,000件</li><li>Browser API：$8/GB</li><li>API無料枠：月5,000クレジットを共有</li></ul>
+<p>IPを自社で制御するなら、各プロキシが候補です。ブロック対応を任せるならWeb Unlocker、検索結果だけを集めるならSERP APIが向いています。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>公式サイトでは、各製品の機能と無料で始められる対象が分かります。</p>
 <h2 id="s2">Bright Dataとは？プロキシだけではない製品の全体像</h2>
-<p>Bright Dataとは、公開Webデータへの接続と取得を複数の方法で提供するサービスです。「BrightData」というスペースなし表記や「ブライトデータ」というカタカナ表記も同じサービスを指します。</p>
+<figure><img loading="lazy" src="../img/bright-data-guide/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<p>公式トップは日本語で表示されます。「無料で開始」と「クレジットカードは必要ありません」という案内もあります。</p>
+<p>このサービスには、公開Webデータへ接続して取得する方法が複数あります。スペースなしの「BrightData」やカタカナの「ブライトデータ」も、同じサービスを指します。</p>
 <figure><img loading="lazy" src="../img/bright-data-guide/bright-data-guide-product-map.png" alt="Bright Dataの製品全体像"></figure>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>料金ページでは、製品ごとに異なる課金単位とプランを確認できます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>料金ページでは、製品ごとの課金単位とプランが分かります。</p>
 <h3>IP接続を自分で制御するプロキシネットワーク</h3>
-<p>Residential Proxies、Datacenter Proxies、ISP Proxiesは、自社の取得処理をプロキシ経由で接続したい場合の選択肢です。製品によってGB課金とIP課金があり、同じ「プロキシ」でも予算の立て方が違います。</p>
-<p>取得処理は利用者側で用意し、Bright Dataから接続経路となるIPを調達する構成です。</p>
+<p>プロキシはResidential／Datacenter／ISPの3種類。利用者側で取得処理を用意し、Bright Dataから接続用のIPを調達します。製品によってGB課金とIP課金があるため、予算の立て方も変わります。</p>
 <h3>ブロック回避やブラウザ実行を任せるWeb Unlocker・Scraping Browser</h3>
-<p>Web Unlockerはリクエスト数、Browser APIは転送量のGBを基準に費用を見ます。HTTPリクエストを中心に処理するのか、ブラウザ実行が必要なのかによって、選ぶ製品が変わります。</p>
-<p>Web UnlockerはHTTPリクエスト、Browser APIはブラウザ実行を伴う取得を担います。</p>
-<h3>検索結果の取得を用途化したSERP API</h3>
-<p>SERP APIは検索結果の取得に用途を絞った製品です。費用はリクエスト数を基準に計算します。</p>
+<p>Web Unlockerの料金はリクエスト数、Browser APIは転送量のGBが基準です。HTTPリクエストが中心ならWeb Unlocker、ブラウザ実行が必要ならBrowser APIを選びます。</p>
+<h3>検索結果の取得に特化したSERP API</h3>
+<p>SERP APIは、検索結果の取得に特化した製品です。料金はリクエスト数で決まります。</p>
 <h2 id="s3">Bright Dataでできることと製品の選び方</h2>
-<p>候補は「取得対象」「自社で持つ処理」「課金単位」の順に絞ります。以下のうち、自社の要件に最も近い入口から検討してください。</p>
+<p>候補は「取得対象」「自社で担う処理」「課金単位」の順に絞ります。まず、自社の要件に最も近い項目を選んでください。</p>
 <h3>接続先やIPを細かく管理したいならプロキシ</h3>
-<p>取得処理を自社で用意し、接続経路を制御するならプロキシネットワークが候補です。転送量とIP数のどちらが費用を左右するかを見積もります。</p>
+<p>取得処理を自社で用意し、接続経路を細かく制御したい場合はプロキシが候補です。転送量とIP数のどちらが費用を左右するかを見積もります。</p>
 <h3>ブロック対応まで任せたいならWeb Unlocker・Scraping Browser</h3>
-<p>ブロック対応を任せるHTTPリクエストならWeb Unlocker、ブラウザ実行まで必要ならBrowser APIが候補です。</p>
+<p>HTTPリクエストのブロック対応を任せるなら、Web Unlockerが候補です。ブラウザ実行まで必要ならBrowser APIを選びます。</p>
 <h3>検索結果を取得したいならSERP API</h3>
 <p>検索結果だけが必要ならSERP APIを選び、検索語数と取得頻度からリクエスト数を見積もります。</p>
 <h2 id="s4">料金と無料枠は製品ごとに課金軸が違う</h2>
-<p>全製品を同じ条件で使える月額固定の無料プランはありません。対象APIとBrowser APIで共有する月5,000クレジットと、プロキシ向けの一回限りのトライアルクレジットは別の仕組みです。</p>
+<p>全製品を同じ条件で使える月額固定の無料プランはありません。対象APIとBrowser APIには、月5,000クレジットの共通枠があります。プロキシ向けの一回限りのトライアルクレジットは別枠。</p>
 <figure><img loading="lazy" src="../img/bright-data-guide/bright-data-guide-billing-models.png" alt="Bright Dataの課金軸"></figure>
 <ul><li>プロキシ：ResidentialはPay as you goが$8/GB。DatacenterにはGB課金とIP単位の月額プランがあり、ISPにもGB課金とIP課金があります。</li><li>Web Unlocker／SERP API：通常のPay as you goはそれぞれ$1.5/1,000リクエストです。無料利用分は対象製品で共有するクレジットから消費します。</li><li>Browser API：Pay as you goは$8/GBで、月額固定のScaleプランもあります。無料利用分は同じ共通クレジットの対象です。</li></ul>
-<p>取得量を課金単位に当てはめて見積もります。期間限定の割引表示と通常単価は、混同しないように分けて確認してください。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>共通クレジットの消費量と、有料利用へ移った後の課金単位は製品ごとに異なります。使う製品を決めてから、該当する料金ページを確認してください。</p>
-<h3>プロキシはGB課金とIP課金を用途で選ぶ</h3>
-<p>ResidentialはGB単位の従量課金と月額プラン、DatacenterとISPはGB単位に加えてIP単位のプランもあります。転送量と確保するIP数のどちらが予算を左右するかを確認します。</p>
+<p>取得量を課金単位に当てはめて見積もります。期間限定の割引表示と通常単価は、分けて見てください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>共通クレジットの消費量と、有料利用へ移った後の課金単位は製品ごとに異なります。使う製品を決めたら、該当する料金ページと照らし合わせてください。</p>
+<h3>プロキシは転送量とIP数で課金方式を選ぶ</h3>
+<p>ResidentialにはGB単位の従量課金と月額プランがあります。DatacenterとISPでは、GB単位に加えてIP単位のプランも選べます。予算を左右するのは、転送量かIP数か。先に見極めましょう。</p>
 <h3>Web UnlockerとSERP APIはリクエスト数で考える</h3>
-<p>Web UnlockerとSERP APIの有料利用は1,000リクエスト単位です。無料クレジットでは、どちらも1リクエストにつき1クレジットを消費します。</p>
-<h3>無料で試せる対象とクレジットカード要否を確認する</h3>
-<p>新規アカウントには、クレジットカード登録不要で月5,000の無料クレジットが付与されます。Web UnlockerとSERP APIでは1リクエストにつき1クレジット、Browser APIでは1MBにつき5クレジットを消費するため、全量をBrowser APIで使うと約1GB相当です。この5,000クレジットは、一つのアカウントで対象製品の利用分を共有します。</p>
-<p>Residential、Datacenter、ISPの各プロキシは月額無料クレジットの対象外です。別枠で、新規登録時に一回限り$2のトライアルクレジットが付きます。クレジットの有効期間は7日間です。支払い方法を追加すると$5のボーナスが付き、30日間利用できます。</p>
+<p>有料利用は、Web UnlockerもSERP APIも1,000リクエスト単位です。無料枠では、どちらも1リクエストにつき1クレジットを消費します。</p>
+<h3>無料で試せる製品とカード登録の条件</h3>
+<p>新規アカウントには、カード登録不要で月5,000クレジットが付与されます。Web UnlockerとSERP APIは、1リクエストあたり1クレジットを消費します。Browser APIは1MBあたり5クレジット。全量をBrowser APIに使うと約1GB相当で、対象製品は一つのアカウントで無料枠を共有します。</p>
+<p>Residential／Datacenter／ISPの各プロキシは月額無料クレジットの対象外です。別枠として、新規登録時に一回限り$2のトライアルクレジットが付きます。有効期間は7日間。支払い方法を追加すると$5のボーナスが付き、30日間利用できます。</p>
 <h2 id="s5">メリット・注意点・公開レビューから分かること</h2>
-<p>評価するときは、Bright Dataの製品の多さに加えて、料金管理、日本語UIの対応範囲、KYC、返金条件まで判断材料に含める必要があります。</p>
-<p>メリットとして挙げられるのは、次の3点です。</p>
+<p>製品が多いため、選び方を誤ると料金を見積もりにくくなります。日本語UIの範囲に加え、KYCと返金条件も契約前に見ておきましょう。</p>
+<p>主なメリットは次の3点です。</p>
 <ul><li>プロキシ、Web Unlocker、Browser API、SERP APIを同じブランド内で検討できる</li><li>自社で制御する範囲とサービス側へ任せる範囲を分けられる</li><li>従量課金から始められる製品と、クレジットカード不要の無料枠がある製品を選べる</li></ul>
-<p>一方、契約前に押さえたい注意点は4つあります。</p>
+<p>契約前には、次の4点も押さえておきましょう。</p>
 <ul><li>製品ごとにGB、IP、リクエスト数と課金軸が変わる</li><li>日本語の公式サイトと料金ページはあるが、管理画面の日本語対応範囲は公開情報だけでは判断できない</li><li>Residential Proxiesなど一部製品ではKYCが必要になる</li><li>サブスクリプション料金は解約しても返金されない条件がある</li></ul>
-<h3>複数の取得手段を用途に合わせて選べる</h3>
-<p>接続経路を自社で制御する方法と、取得処理をサービス側へ任せる方法の両方を検討できます。検索結果だけが必要なら、SERP APIに絞れます。</p>
+<h3>自社で担う処理に合わせて取得方法を選べる</h3>
+<p>接続経路を自社で制御するか、取得処理をサービス側へ任せるかで製品を選べます。検索結果だけが必要なら、SERP APIに絞ると迷いません。</p>
 <h3>料金管理と初期設定には学習コストがかかる</h3>
-<p>月額だけでは費用を判断できません。転送量、IP数、リクエスト数のどれが増えるかを見積もり、選んだ製品の設定項目を把握する手間も含めて検討します。</p>
-<h3>KYC・利用規約・返金条件を契約前に確認する</h3>
-<p>通常のResidential ProxiesでKYCを申請する場合は、登録企業と企業ドメインのメールが対象となり、利用目的の確認を受けます。身分証明書の提出やビデオ通話は追加で求められる場合があり、申請後48時間以内にステータスが更新されます。一方、robots.txtに従うImmediate Residential AccessはKYCなしで利用できます。固定期間の定めがない契約は、事前の書面通知を相手方が受領した暦月の末日で終了しますが、サブスクリプション料金は返金されません。</p>
-<p>Webデータを取得するときは、対象サイトの利用規約、適用法令、Bright Data側の用途審査をそれぞれ確認してください。「合法」「安全」と一律には判断できません。</p>
+<p>月額だけでは費用を判断できないため、転送量／IP数／リクエスト数のうち増えるものを見積もります。選んだ製品の設定を覚える時間も見込んでください。</p>
+<h3>KYC・利用規約・返金条件は契約前に見る</h3>
+<p>通常のResidential ProxiesでKYCを申請する場合、登録企業と企業ドメインのメールが対象です。申請時には、利用目的を確認されます。追加で求められる場合があるのは、身分証明書の提出やビデオ通話。ステータスは申請後48時間以内に更新されます。</p>
+<p>robots.txtに従うImmediate Residential AccessはKYC不要。固定期間の定めがない契約は、事前の書面通知を相手方が受領した暦月の末日で終了します。ただし、サブスクリプション料金は返金されません。</p>
+<p>Webデータを取得するときは、対象サイトの利用規約と適用法令を確かめてください。サービス側の用途審査もあるため、「合法」「安全」と一律には判断できません。</p>
 <h3>公開レビューは利用者属性と投稿経路を見て読む</h3>
-<p>ITreviewでは、小規模企業で有償利用するIT管理者が、プロキシを使った定期収集について、管理画面内の案内が製品選びや初期設定の助けになった一方、細かな設定はチャットやドキュメントだけでは分かりにくいと述べています。別の小規模企業による有償利用の投稿では、SERP APIをクライアント向けシステムへ組み込みやすかった点と、日本向けのWebサイトや製品マニュアルのローカライズ不足が挙げられています。</p>
+<p>ITreviewには、小規模企業のIT管理者による有償利用の投稿があります。管理画面の案内は、製品選びや初期設定に役立ったとのこと。細かな設定は、チャットや文書だけでは分かりにくかったそうです。</p>
+<p>別の小規模企業は、SERP APIを顧客向けシステムへ組み込みやすかったと評価しています。日本向けサイトや製品マニュアルの翻訳不足も挙げました。</p>
 <p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.itreview.jp/products/data-collector/reviews">ITreviewでBright Dataの公開レビューを見る<span aria-hidden="true"> →</span></a></p>
-<p>投稿には販売関係者によるものも含まれます。すべての利用者に共通する評価とは捉えず、利用製品、契約規模、投稿者の立場が自社に近いレビューを判断材料にしてください。</p>
+<p>投稿には販売関係者によるものも含まれるため、全利用者の評価を代表するわけではありません。自社と利用製品や契約規模が近く、投稿者の立場も似たレビューを参考にしてください。</p>
 <h2 id="s6">日本語対応と日本からの契約・支払い</h2>
-<p>日本語の公式サイトがあっても、契約と運用のすべてを日本語だけで完結できるとは限りません。サイト、管理画面、有人サポート、決済を分けて確認する必要があります。</p>
+<p>日本語の公式サイトがあっても、申込み後の設定まで日本語だけで進められるとは限りません。日本語で使える範囲はサイトと管理画面で異なり、有人サポートと決済にも別の条件があります。</p>
 <h3>日本語サイトと料金ページはあるが、管理画面の日本語UIは未確認</h3>
-<p>brightdata.jpでは製品紹介やサポート案内に加え、日本語の料金ページでUSD単価を確認できます。製品名やUSDの単位には英語表記が残るものの、料金ページの説明は日本語で読めます。</p>
-<p>管理画面全体の日本語UI対応範囲は公開情報だけでは判断できません。日本語UIが必須なら、契約前に実際の画面で必要な設定項目を確認する必要があります。</p>
+<p>brightdata.jpには、製品紹介やサポート案内があります。日本語の料金ページにはUSD単価も載っており、説明は日本語で読めます。製品名やUSDの単位は英語表記です。</p>
+<p>管理画面全体の日本語UI対応範囲は、公開情報だけでは判断できません。日本語UIが必須なら、必要な設定項目を契約前に実際の画面で確かめてください。</p>
 <h3>日本語サポートの個別明記は確認できない</h3>
-<p>日本企業向けページには、主要言語での24時間サポートが案内されています。ただし、日本語チャットや日本語メール対応の個別明記は確認できません。標準サポートは営業日ベースのメール、PremiumとEnterpriseは24時間対応です。Enterpriseには専用Slackチャンネルがあります。</p>
-<p>日本語の有人対応が必須なら、契約前に対応言語と窓口を確認してください。</p>
+<p>日本企業向けページには、主要言語での24時間サポートとの案内があります。日本語チャットやメール対応の記載は見当たりません。標準サポートは営業日ベースのメール。PremiumとEnterpriseは24時間対応で、Enterpriseには専用Slackチャンネルもあります。</p>
+<p>日本語の有人対応が必須なら、契約前に対応言語と窓口を問い合わせてください。</p>
 <h3>日本からの支払い方法と請求書の条件</h3>
-<p>支払いはクレジットカード、PayPal、Alipay、Payoneer、Google Pay、Apple Payに対応しています。大口アカウントではWire transferも選べます。ただし、具体的な最低金額は示されていません。Wire transferは、日本企業が想定する請求書払いと同じ仕組みとは限りません。カードブランド別の対応可否も記載がないため、JCBが使えるとは断定できません。</p>
-<p>領収書のダウンロード可否や日本の適格請求書に必要な登録番号の記載も確認できていません。税務上の処理が必要な場合は、契約内容と証憑をそろえて税理士に確認してください。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>使いたいカードブランドや日本語の有人対応が必須なら、申し込む前に個別条件まで確認してください。</p>
+<p>セルフサービスでは、次の支払い方法を選べます。</p>
+<ul><li>クレジットカード</li><li>PayPal／Alipay／Payoneer</li><li>Google Pay／Apple Pay</li></ul>
+<p>大口アカウントではWire transferも選べます。具体的な最低金額は記載されていません。日本企業が想定する請求書払いと同じ仕組みかどうかも不明。カードブランドも記載されておらず、JCBが使えるとは断定できません。</p>
+<p>領収書をダウンロードできるかどうかは公開情報で分からず、日本の適格請求書に必要な登録番号も記載されていません。税務上の処理が必要な場合は、契約内容と証憑をそろえて税理士に相談してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>使いたいカードブランドや日本語の有人対応が必須なら、申し込む前に対応可否を問い合わせてください。</p>
 <h2 id="s7">Bright Dataの始め方：製品選択から小さなテストまで</h2>
-<p>製品を決めたら、アカウント作成後の設定、必要に応じたKYC、動作確認の順に進みます。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>対象製品が決まっていれば、登録後にプロキシ、API、ブラウザ系のどこから設定すべきか迷わずに済みます。</p>
-<h3>用途と製品を先に決める</h3>
-<p>登録前に選んだ製品名と課金軸を控え、アカウント作成後はその製品のセットアップへ進みます。その際、無料クレジットの対象か、プロキシ向けトライアルの対象かも確認します。</p>
+<p>製品を決めたら、アカウント作成後の設定を進めます。KYCが必要なら対応し、最後に動作を確かめます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>対象製品が決まっていれば、登録後にプロキシ／API／ブラウザ系のどこから設定するか迷いません。</p>
+<h3>取得したいデータから製品を決める</h3>
+<p>登録前に選んだ製品名と課金軸を控え、アカウント作成後はその製品のセットアップへ進みます。無料クレジットか、プロキシ向けトライアルの対象かも確かめておきましょう。</p>
 <h3>ZoneまたはAPI tokenを設定する</h3>
-<p>Web Unlocker、SERP API、Browser APIではzoneを作成し、API呼び出しではBearer API keyを使います。認証情報を発行したら、本番の取得処理へ組み込む前に、テスト用として分けて管理します。</p>
+<p>3つのAPI製品ではzoneを作成し、API呼び出しにはBearer API keyを使います。認証情報は、テスト用と本番用に分けて管理してください。</p>
 <h3>KYCが必要な場合は対応し、小さなテストから始める</h3>
-<p>KYCを求められた場合は、登録企業の情報、企業ドメインのメール、利用目的を提出し、追加確認として身分証明書やビデオ通話を求められる可能性があります。Web Unlocker、SERP API、Browser APIは月5,000の共通クレジットから、プロキシは一回限りのトライアルクレジットから、少量で動作を確かめます。</p>
+<p>KYCを求められた場合は、登録企業の情報と利用目的を提出します。企業ドメインのメールも必要で、身分証明書やビデオ通話を追加で求められる可能性があります。</p>
+<p>3つのAPI製品は、月5,000の共通クレジットから試せます。プロキシでは一回限りのトライアルクレジットを使い、少量で動作を確かめます。</p>
 <h2 id="s8">Bright Dataが合わない場合の代替候補</h2>
-<p>法人向けの月額段階プランと試用条件を比べるならOxylabs、少量の月額契約や従量課金を優先するならDecodoが候補です。両者では、向いている契約のしかたが異なります。</p>
+<p>Oxylabsは、法人向けの月額段階プランと試用条件を比べたい場合の候補です。少量の月額契約や従量課金を優先するなら、Decodoが向いています。</p>
 <h3>Oxylabs：月額プランと法人向けサポートを比較したい場合</h3>
-<p>Oxylabsでは、Residential、ISP、Datacenter、Mobileの月額段階プランが基本です。ResidentialのStarterは5GBで月$30からです。Bright DataのResidentialが月額コミットメントなしの$8/GBから始められるのに対し、Oxylabsは月額の最小契約量を先に確保する形です。</p>
-<p>常設の無料プランはありません。企業登録を確認できる法人には7日間、個人には3日間の返金保証があり、試せるのは1アカウントにつき1回です。日本語UIと日本語サポートは確認できません。</p>
+<figure><img loading="lazy" src="../img/bright-data-guide/oxylabs.png" alt="Oxylabsの公式サイト"></figure>
+<p>公式トップは英語表示です。メニューにはプロキシ／スクレイピング／データセットが並びます。</p>
+<p>OxylabsはResidential／ISP／Datacenter／Mobileの月額段階プランが基本です。ResidentialのStarterは5GBで月$30から。最小契約量を月額で先に確保します。これに対し、Bright DataのResidentialは月額契約なしの$8/GBから始められます。</p>
+<p>常設の無料プランはありません。企業登録を確認できる法人には7日間、個人には3日間の返金保証があります。試せるのは1アカウントにつき1回だけ。日本語UIと日本語サポートは確認できません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://oxylabs.io">Oxylabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>公式サイトでは、プロキシの種類と月額プランの入口を確認できます。</p>
 <h3>Decodo：小容量や従量課金から検討したい場合</h3>
-<p>DecodoのResidentialは、月額3GBで$11.25+VATから始められ、Pay As You Goは1GB単位で$4/GBです。月額の最小容量と従量課金の単位が小さい点は、Bright DataやOxylabsと比べるポイントです。Residentialには3日間・100MBの無料トライアルがありますが、終了後は有料プランへ自動移行し、通常プランの14日間返金保証は適用されません。</p>
-<p>少量の月額プランや1GB単位の購入を優先するなら、比較候補に入ります。一方、公式サイトの日本語切り替えと日本語サポートの明記は確認できません。</p>
-<h2 id="s9">まとめ：用途・課金軸・契約条件を決めてから選ぶ</h2>
+<figure><img loading="lazy" src="../img/bright-data-guide/decodo.png" alt="Decodoの公式サイト"></figure>
+<p>公式トップは英語表示です。プロキシとスクレイピング製品を無料で始めるボタンがあります。</p>
+<p>DecodoのResidentialは、月額3GBで$11.25+VATから始められます。Pay As You Goは1GB単位で$4/GB。月額の最小容量と従量課金の単位は、Bright DataやOxylabsより小さめです。</p>
+<p>Residentialには3日間・100MBの無料トライアルがあります。終了後は有料プランへ自動移行。この場合、通常プランの14日間返金保証は適用されません。</p>
+<p>少量の月額プランや1GB単位の購入を優先するなら、比較候補に入ります。ただし、公式サイトの日本語切り替えと日本語サポートの記載は見当たりません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://decodo.com">Decodoの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>公式サイトでは、無料開始の入口と各プロキシ製品を見比べられます。</p>
+<h2 id="s9">まとめ：取得したいデータ・課金単位・契約条件で選ぶ</h2>
 <p>契約前には、Bright Dataについて次の5点だけを最終確認します。</p>
-<ul><li>取得対象：一般の公開ページか、検索結果か</li><li>実装範囲：接続を自社で制御するか、取得処理を任せるか</li><li>課金軸：GB、IP、リクエスト数のどれで予算を管理するか</li><li>日本語：日本語の料金ページで足りるか、管理画面の日本語対応範囲を事前に確かめる必要があるか</li><li>契約条件：自社の利用方法でKYCが必要か、返金されない料金条件を受け入れられるか</li></ul>
+<ul><li>取得対象：一般の公開ページか、検索結果か</li><li>実装範囲：接続を自社で制御するか、取得処理を任せるか</li><li>課金軸：GB、IP、リクエスト数のどれで予算を管理するか</li><li>日本語：日本語の料金ページで足りるか、管理画面の日本語対応範囲を事前に確かめるか</li><li>契約条件：自社の利用方法でKYCが必要か、返金されない料金条件を受け入れられるか</li></ul>
 <h3>契約前の最終チェック</h3>
-<p>日本語対応、支払い方法、KYC、返金条件が自社の条件に合い、選んだ課金軸で利用量を見積もれるなら、Bright Dataは候補になります。いずれかが合わなければ、OxylabsやDecodoを同じ用途と契約単位で比べてください。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>製品と契約条件を確認したうえで、無料枠または必要最小限の範囲から試してください。</p></div>
+<p>最初に見るのは、日本語対応と支払い方法。KYCと返金条件に問題がなく、利用量も見積もれるなら、Bright Dataは候補です。合わない項目があれば、OxylabsやDecodoを同じ利用場面と契約単位で比べてください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>製品と契約条件を確かめ、無料枠または必要最小限の範囲から試してください。</p></div>
 <div class="nav"><span><a href="crm-best-1625.html">← CRM比較【2026年】中小企業向け海外CRM6…</a></span><span><a href="bright-data-pricing.html">Bright Dataの料金プラン｜無料枠・課金… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
 <script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
