@@ -18,118 +18,116 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/elevenlabs-pricing/eyecatch.png" alt="">
 <h1 id="t">ElevenLabsの料金プラン【2026年版】無料枠・API費用・日本からの支払い方法</h1>
-<div class="meta"><span class="badge">AI・コンテンツ制作</span> 6,658字</div>
+<div class="meta"><span class="badge b-draft">note下書き済み</span><span class="badge">AI・コンテンツ制作</span> 6,095字</div>
 <div class="tags">#ElevenLabs #AI音声 #音声生成 #海外SaaS</div>
-<div class="body" id="b"><p>ElevenLabs（イレブンラボ）の料金は、月額プランだけを見ても決められません。無料で試すのか、生成した音声を商用利用するのか、APIで組み込むのかによって、見るべき条件が変わるからです。</p>
-<p>判断に必要な通常プランとAPIの課金単位、日本からの決済・請求書、解約条件を順に整理します。ElevenLabsは未契約のため、公式情報に基づく料金判断としてお読みください。</p>
+<div class="body" id="b"><p>ElevenLabs（イレブンラボ）は、文章からナレーションを作るAI音声サービスです。音声認識や吹き替えにも対応。個人が試す場合にも、企業がAPIを組み込む場合にも使えます。</p>
+<p>無料枠と有料プランでは、商用利用の可否や月間クレジットが異なります。記事で比べるのは、月払いと年払い、API料金。日本からの支払いと解約条件も扱います。</p>
 
-<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">結論：無料・商用利用・APIの3つに分けてプランを選ぶ</a></li><li><a href="#s2">ElevenLabsの料金プランを月払い・年払いで整理</a></li><li><a href="#s3">無料プランでできること・できないこと</a></li><li><a href="#s4">クレジットの仕組みとAPI・機能別の料金</a></li><li><a href="#s5">有料プランで解放される商用利用・音声クローン</a></li><li><a href="#s6">日本からの支払い方法・請求書・税</a></li><li><a href="#s7">VOICEVOX・CoeFont・Murf AIと料金の考え方を比べる</a></li><li><a href="#s8">解約・ダウングレード・返金前に確認すること</a></li><li><a href="#s9">よくある質問と契約前の最終チェック</a></li></ol></nav><h2 id="s1">結論：無料・商用利用・APIの3つに分けてプランを選ぶ</h2>
-<p><strong>試用はFree、商用利用はStarter以上、API利用は機能ごとの課金単位で選ぶ</strong>のが基本です。まず、自分がどの分岐に当たるかを決めましょう。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>通常プランの無料枠と有料プランは、公式サイトで確認できます。APIを使う場合は、同サイト内のAPI料金ページまで確認してください。</p>
-<h3>まず品質を確かめるならFree</h3>
-<ul><li>月<strong>10,000クレジット</strong>が付与される</li><li>商用ライセンスは付かないため、非商用の試用に使う</li></ul>
-<p>日本語音声を作って用途に合うか確かめたい段階なら、Freeから始められます。公式料金表が示す音声生成量は約10分です。</p>
-<h3>商用利用するならStarter以上</h3>
-<ul><li>Starterは<strong>$6/月</strong>で、商用ライセンスが解放される</li><li>音声クローンの種類や月間クレジットで上位プランを検討する</li></ul>
-<p>広告、販売コンテンツ、顧客向け動画などに音声を使うには、Starter以上の契約が必要です。Freeで生成した音声は、後から有料化しても商用利用できません。</p>
-<h3>API利用は機能ごとの課金単位を先に確認</h3>
-<p>API利用分も、契約プランに含まれるワークスペースの割当から消費されます。TTS（Text to Speech）は入力テキスト量、Scribeの音声認識は時間、DubbingやAgentsは分など、機能によってワークスペース割当の換算方法が異なります。</p>
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">ElevenLabsの料金プランは無料を含む7種類</a></li><li><a href="#s2">ElevenLabsの料金プランを月払い・年払いで整理</a></li><li><a href="#s3">無料プランでできること・できないこと</a></li><li><a href="#s4">クレジットの仕組みとAPI・機能別の料金</a></li><li><a href="#s5">有料プランで解放される商用利用・音声クローン</a></li><li><a href="#s6">日本からの支払い方法・請求書・税</a></li><li><a href="#s7">VOICEVOX・CoeFont・Murf AIと料金の考え方を比べる</a></li><li><a href="#s8">解約・ダウングレード・返金の条件</a></li><li><a href="#s9">よくある質問</a></li><li><a href="#s10">まとめ：無料は試用、商用利用はStarter以上</a></li></ol></nav><h2 id="s1">ElevenLabsの料金プランは無料を含む7種類</h2>
+<ul><li>Free：$0／月10,000クレジット</li><li>Starter：$6/月／商用利用に対応</li><li>Creator：$22/月／月121,000クレジット</li><li>Pro：$99/月／月600,000クレジット</li><li>Scale・Business：$299/月・$990/月</li><li>Enterprise：個別見積もり</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>無料枠と各プランの月額、付与クレジットを一覧で見られます。</p>
 <h2 id="s2">ElevenLabsの料金プランを月払い・年払いで整理</h2>
-<p>ElevenLabsにはFreeからBusinessまでの定額プランと、個別見積もりのEnterpriseがあります。年払いは月払いの10か月分相当で、月額換算では安くなります。</p>
+<p>定額プランはFreeからBusinessまで。Enterpriseは個別見積もりです。年払いは月払いの10か月分相当で、月額換算では安くなります。</p>
+<figure><img loading="lazy" src="../img/elevenlabs-pricing/eleven-labs-inc.png" alt="ElevenLabsの公式サイト"></figure>
+<p>画面上部は日本語で表示され、「料金」と「新規登録」への入口があります。</p>
 <figure><img loading="lazy" src="../img/elevenlabs-pricing/elevenlabs-pricing-pricing.png" alt="料金プラン一覧"></figure>
 <h3>Free・Starter・Creatorは個人の試用から商用化まで</h3>
 <ul><li>Free：<strong>$0</strong>、月10,000クレジット、Studio 3プロジェクト、商用ライセンスなし</li><li>Starter：<strong>$6/月</strong>、年払いは$5/月相当、月30,000クレジット、商用ライセンス、Studio 20プロジェクト</li><li>Creator：<strong>$22/月</strong>、年払いは$18.33/月相当、月121,000クレジット</li></ul>
-<p>Creatorには新規契約の初月を50％オフの$11にする案内があります。2か月目以降は通常価格を基準に検討します。</p>
-<p>公式料金表が示す音声生成量は、Freeが約10分、Starterが約30分、Creatorが約121分です。モデルなどで変わる目安ですが、月に作る音声の合計尺を出し、近い枠と比べるとプランを絞れます。Professional Voice Cloningが必要な場合は、生成量にかかわらずCreator以上です。</p>
+<p>Creatorには、新規契約の初月を50％オフの$11にする案内があります。2か月目以降は通常価格です。</p>
+<p>公式料金表が示す音声生成量は、Freeが約10分、Starterが約30分、Creatorが約121分です。あくまでモデルなどで変わる目安。月に作る音声の合計尺と比べると、選びやすくなります。Professional Voice Cloningが必要なら、生成量にかかわらずCreator以上です。</p>
 <h3>Pro・Scale・Businessは大量生成やチーム利用向け</h3>
 <ul><li>Pro：<strong>$99/月</strong>、年払いは$82.50/月相当、月600,000クレジット</li><li>Scale：<strong>$299/月</strong>、年払いは$249.17/月相当、月1,800,000クレジット、3シート</li><li>Business：<strong>$990/月</strong>、年払いは$825/月相当、月6,000,000クレジット、10シート</li></ul>
-<p>Proは、1人でCreatorの付帯量を超える音声を生成するときの候補です。ScaleとBusinessは生成量に加えて複数席が必要な組織向けで、Scaleは3シート、Businessは10シートを含みます。</p>
+<p>Proは、Creatorの付帯量を1人で使い切る場合の候補です。ScaleとBusinessは複数人のチーム向けで、Scaleは3シート、Businessは10シートを含みます。</p>
 <h3>Enterpriseは個別見積もり</h3>
-<p>Enterpriseに固定価格はなく、問い合わせによる個別見積もりです。既定プランで足りない組織は、要件を伝えて金額を確認します。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>表示額はUSDの税抜価格です。実際の円建て請求額は、契約時の為替と加算される税によって変わります。</p>
+<p>Enterpriseには固定価格がなく、問い合わせによる個別見積もりです。既定プランで足りない場合は、要件を伝えて見積もりを依頼します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>月払いと年払いを切り替え、各プランのUSD価格を比べられます。</p>
 <h2 id="s3">無料プランでできること・できないこと</h2>
-<p>Freeは音声生成を試せますが、商用利用の入口ではありません。公開方法やクレジットの扱いにも条件があります。</p>
+<p>Freeなら音声生成を試せますが、商用利用はできません。公開時の帰属表示や、クレジットの繰り越しにも条件があります。</p>
 <h3>月10,000クレジットで日本語音声を試せる</h3>
-<p>できることは、月10,000クレジットの範囲で音声を生成し、Studioに3件までプロジェクトを作ることです。Freeのクレジットは翌月へ繰り越せません。</p>
+<p>月10,000クレジットの範囲で音声を生成でき、Studioには3件までプロジェクトを作れます。Freeのクレジットは翌月へ繰り越せません。</p>
 <h3>Freeで作ったコンテンツは商用利用できない</h3>
-<p>Freeまたは未ログインで作ったコンテンツは商用利用できません。非商用で公開する場合も、タイトルなどに「elevenlabs.io」または「11.ai」の帰属表示が必要です。</p>
-<p>有料プランへ切り替えた後も、Free期間中の生成物がさかのぼって商用利用可能になるわけではありません。本番で使う音声は、必要な権利を保有したうえで、有料契約中に生成します。</p>
-<h3>無料APIキー・吹き替えの範囲は公式条件で確認する</h3>
-<p>Freeを含む各プランでアカウントからAPIキーを作成でき、大半のAPIエンドポイントを利用できます。利用分はワークスペースの割当から消費されます。</p>
-<p>Dubbing v1はFreeで透かし付き約2.53分が目安です。透かしなしのDubbingとDubbing v2には、Freeの付帯分が表示されていません。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>Freeの月間割当で試用を済ませ、商用ライセンスや生成量が必要になる段階で有料化を判断します。</p>
+<p>Freeまたは未ログインで作ったコンテンツは商用利用できません。非商用で公開する場合も、タイトルなどに「elevenlabs.io」または「11.ai」の帰属表示が必要。</p>
+<p>有料プランへ切り替えても、Free期間中の生成物は商用利用できません。本番用の音声は、必要な権利を保有し、有料契約中に生成します。</p>
+<h3>無料APIキーと吹き替えで使える範囲</h3>
+<p>Freeを含む各プランでAPIキーを作成でき、大半のAPIエンドポイントを利用できます。利用分はワークスペースの割当から消費されます。</p>
+<p>Dubbing v1は、Freeで透かし付き約2.53分が目安です。透かしなしのDubbingとDubbing v2は、Freeの付帯分が表示されていません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>Freeの月間クレジットと有料プランで追加される機能が一覧で分かります。</p>
 <h2 id="s4">クレジットの仕組みとAPI・機能別の料金</h2>
-<p>APIで処理した分も、まずワークスペースの割当を消費します。ただし機能ごとに換算単位が違うため、TTSの入力テキスト量だけではScribeやDubbingの利用量まで見積もれません。</p>
+<p>APIで使った分もワークスペースの割当から消費されますが、換算単位は機能ごとに異なります。TTSの入力テキスト量だけでは、ScribeやDubbingの利用量まで見積もれません。</p>
 <h3>TTSは入力テキスト量とモデルで見る</h3>
-<p>セルフサービスのクレジット換算は、Multilingual v2が<strong>1文字＝1クレジット</strong>、Flash／Turboが<strong>1文字＝0.5クレジット</strong>です。Eleven v3のダッシュボード上の換算率は、公開情報では確定できません。</p>
-<p>API料金は、v3・Multilingual v2が<strong>1,000字あたり$0.10</strong>、Flash／Turboが<strong>1,000字あたり$0.05</strong>です。ダッシュボードのクレジット換算と、API料金表の単価は分けて見ます。</p>
+<p>セルフサービスでは、Multilingual v2が<strong>1文字＝1クレジット</strong>。Flash／Turboは<strong>1文字＝0.5クレジット</strong>です。Eleven v3のダッシュボード上の換算率は、公開情報では確定できません。</p>
+<p>v3とMultilingual v2のAPI料金は、<strong>1,000字あたり$0.10</strong>です。Flash／Turboは<strong>1,000字あたり$0.05</strong>で、ダッシュボードのクレジット換算とは分けて考えます。</p>
 <h3>Scribeは音声の時間で見る</h3>
-<p>Scribeは音声をテキスト化するSTTで、入力した音声の時間を基準に見積もります。Scribe v2は90以上の言語に対応し、日本語は公式評価でExcellent（WER 5％以下）です。API単価は<strong>1時間あたり$0.22</strong>、Freeの付帯量は<strong>4時間30分</strong>です。</p>
+<p>Scribeは音声をテキスト化するSTTで、入力時間を基準に見積もります。Scribe v2は90以上の言語に対応し、日本語は公式評価でExcellent（WER 5％以下）です。API単価は<strong>1時間あたり$0.22</strong>、Freeの付帯量は<strong>4時間30分</strong>。</p>
 <h3>Dubbing・Agents・Musicは同じ単位ではない</h3>
-<p>DubbingとAgentsは分、Musicなどは生成内容に応じた単位で扱われます。TTSの「1文字＝1クレジット」をそのまま当てはめず、使う機能を決めてから公式の計算画面で個別に見積もってください。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja/pricing/api">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>APIで使う機能と月間の利用量を選び、プランの割当へどう換算されるかを機能別に見積もります。追加利用を検討するときは、API料金ページで適用条件と単価を確認してください。</p>
+<p>DubbingとAgentsは分単位。Musicなどは、生成内容に応じた単位です。TTSの「1文字＝1クレジット」をそのまま当てはめず、使う機能を決めてから公式の計算画面で見積もってください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja/pricing/api">ElevenLabsのAPI料金ページを見る<span aria-hidden="true"> →</span></a></p>
+<p>APIで使う機能と月間の利用量を入力すると、プランの割当消費量を見積もれます。追加利用の条件と単価も、API料金ページで確認してください。</p>
 <h2 id="s5">有料プランで解放される商用利用・音声クローン</h2>
-<p>有料化の分岐は、クレジット量だけではありません。商用ライセンスはStarter以上、Professional Voice CloningはCreator以上という機能差があります。</p>
+<p>有料化の分岐は、クレジット量だけではありません。商用ライセンスはStarter以上、Professional Voice CloningはCreator以上で使えます。</p>
 <h3>商用利用はStarter以上</h3>
-<p>Starter以上で、有料契約中に生成したコンテンツは、必要な知的財産権を保有して規約を守る限り商用利用できます。契約終了後も、その条件を満たす生成物は継続利用できます。</p>
+<p>Starter以上では、有料契約中に生成したコンテンツを商用利用できます。条件は、必要な知的財産権を保有し、規約を守ること。契約終了後も、条件を満たす生成物は継続して使えます。</p>
 <h3>Instant Voice CloningはStarter以上</h3>
-<p>Instant Voice CloningはStarter以上で利用でき、必要な音声は<strong>1〜2分</strong>です。利用時には音声に対する権利・同意の確認があるため、料金プランだけで他人の声を自由に複製できるわけではありません。</p>
+<p>Instant Voice CloningはStarter以上で利用でき、必要な音声は<strong>1〜2分</strong>。利用には、音声に対する権利や同意が必要です。料金プランだけで、他人の声を自由に複製できるわけではありません。</p>
 <h3>Professional Voice CloningはCreator以上</h3>
-<p>Professional Voice CloningはCreator以上で、最低30分、推奨2〜3時間の音声が必要です。対象は自分の声に限られ、本人の同意があっても他人の声は作成できません。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>商用利用では、生成時点の契約プランに加えて、素材となる声や原稿を利用する権利も必要です。契約前に、両方を満たせるか確認しておきます。</p>
+<p>Professional Voice CloningはCreator以上の機能です。必要な音声は最低30分、推奨2〜3時間。対象は自分の声に限られ、本人の同意があっても他人の声は作成できません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>商用ライセンスと音声クローンに対応するプランを見比べられます。</p>
 <h2 id="s6">日本からの支払い方法・請求書・税</h2>
-<p>日本からもカードなどで契約できますが、請求はUSDです。円での負担額、税、社内精算用の書類を分けて確認しましょう。</p>
+<p>日本からもカードなどで契約できますが、請求はUSDです。円換算額と税を見たうえで、社内精算に使う書類も準備しましょう。</p>
 <h3>請求はUSDで、税は表示価格に含まれない</h3>
-<p>表示価格には税金、課徴金、関税が含まれていません。<strong>1ドル=157円換算（執筆時点の目安。為替で変動）</strong>では、Starterの月払い$6は約942円、Creatorの月払い$22は約3,454円です。カード会社の換算レートや手数料、税が加わるため、実際の明細額とは一致しません。</p>
+<p>表示価格に、税金・課徴金・関税は含まれていません。<strong>1ドル=157円で計算すると</strong>、Starterの月払い$6は約942円です。同じ換算なら、Creatorの月払い$22は約3,454円。為替やカード会社の手数料、税により、実際の明細額は変わります。</p>
 <h3>カード・Apple Pay・Google Payに対応</h3>
-<p>支払い方法はクレジットカード、Apple Pay、Google Payです。カードブランドの個別名は案内されておらず、PayPalと通常プランの請求書払いも確認できません。プリペイドカードは決済がブロックされる例があるとして非推奨です。</p>
+<p>クレジットカードに対応し、Apple PayとGoogle Payも使えます。カードブランドの個別名は案内されておらず、PayPalと通常プランの請求書払いも案内されていません。プリペイドカードは、決済がブロックされる例があるため非推奨。</p>
 <h3>請求書PDFは管理画面から取得できる</h3>
-<p>請求書・領収書は登録メールへ届きます。管理画面では「Subscription」から請求情報の管理へ進み、「Invoice History」でPDFを表示・ダウンロードできます。</p>
-<p>日本の適格請求書発行事業者登録番号は確認できません。海外サービス利用時の消費税や経理処理は、必要に応じて税理士に確認してください。</p>
+<p>請求書と領収書は登録メールへ届きます。PDFは、管理画面の「Subscription」にある「Invoice History」で表示・ダウンロード可能。</p>
+<p>日本の適格請求書発行事業者の登録番号は、公開情報からは分かりません。海外サービスの消費税や経理処理は、必要に応じて税理士へ相談してください。</p>
 <h2 id="s7">VOICEVOX・CoeFont・Murf AIと料金の考え方を比べる</h2>
-<p>無料ソフト、国内サービス、海外SaaSでは、無料の意味も商用利用の条件も違います。音声品質の優劣は比較の対象から外し、費用と利用条件を基準にします。</p>
-<p>キャラクター音声を無料で使うならVOICEVOX、日本語UIと入力文字量での管理を重視するならCoeFont、時間単位でナレーション量を見たいならMurf AI、APIや音声クローンまで使うならElevenLabsが比較の起点です。入力文字量、時間、クレジットはそのまま換算できないため、単純な最安順位は付けられません。</p>
+<p>無料ソフト・国内サービス・海外SaaSでは、無料で使える範囲も商用利用の条件も違います。音声品質は比べず、費用と利用条件で選びます。</p>
+<p>候補は、必要な機能と料金単位から絞ります。</p>
+<ul><li>キャラクター音声を無料で使う：VOICEVOX</li><li>日本語UIと入力文字量を重視：CoeFont</li><li>ナレーション量を時間で見る：Murf AI</li><li>APIや音声クローンまで使う：ElevenLabs</li></ul>
+<p>入力文字量・時間・クレジットは、そのまま換算できません。料金単位が異なるため、単純な最安順位は付けられません。</p>
 <h3>VOICEVOX：ソフトは無料だがクレジットと個別規約がある</h3>
-<ul><li>エディタ、エンジン、音声ライブラリを期間制限なく無料で利用できる</li><li>ソフトウェア自体は商用・非商用を問わず無料だが、クレジット表記が必要</li><li>生成音声の利用条件はキャラクターごとの規約も確認する</li></ul>
-<p>月額料金をかけずにキャラクター音声を使いたい場合の候補です。ただし、無料でも商用利用の条件は残るため、使う音声ライブラリの個別規約まで読む必要があります。</p>
+<ul><li>エディタとエンジンに加え、音声ライブラリも期間制限なく無料で利用できる</li><li>ソフトウェア自体は商用・非商用を問わず無料だが、クレジット表記が必要</li><li>生成音声の利用条件はキャラクターごとの規約も確認する</li></ul>
+<p>月額料金をかけずにキャラクター音声を使いたい人向け。ただし、商用利用には条件があります。使う音声ライブラリごとに規約を読みましょう。</p>
 <h3>CoeFont：Freeは非商用、Standard以上で商用利用</h3>
 <ul><li>Freeは月800文字までで、非商用限定かつクレジット表記が必要</li><li>Standardは<strong>$20/月</strong>、月80,000文字で商用利用に対応</li><li>Plusは<strong>$350/月</strong>、月1,000,000文字、最大5ユーザー</li></ul>
 <p>StandardとPlusはクレジットカード払いで、銀行振込と年間契約には対応していません。日本語UIを使い、入力した文字の量で月間使用量を管理したい人には、比べやすい料金設計です。</p>
 <h3>Murf AI：無料トライアルと時間単位の有料プラン</h3>
 <ul><li>Free Trialはカード不要で、音声生成10分と文字起こし10分を試せるがダウンロード不可</li><li>Creatorは$29/月、または年払いで$19/月相当、音声生成は2時間/月または24時間/年</li><li>Businessは$99/月、または年払いで$66/月相当、8時間/月または96時間/年</li></ul>
-<p>Murf AIは時間で付帯量を示すため、ナレーションの完成尺からプランを見たい場合に比べやすい設計です。無料トライアルでは音声をダウンロードできないため、ファイルを持ち出す前に有料契約が必要です。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>期間制限のない無料ソフト、非商用の無料枠がある国内サービス、USD建ての海外SaaSでは、同じ「無料」「有料」でも含まれる権利と利用量が異なります。</p>
-<h2 id="s8">解約・ダウングレード・返金前に確認すること</h2>
-<p>解約やダウングレードは当期の請求サイクル終了時に反映されます。Freeへ戻ると未使用クレジットが失効するため、手続き日だけでなく期末も確認します。</p>
+<p>Murf AIは時間で付帯量を示すため、ナレーションの完成尺からプランを見たい場合に比べやすい設計です。無料トライアルでは音声をダウンロードできず、音声ファイルを保存するには有料契約が必要。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>無料枠と有料プランを、他サービスの条件と照らし合わせられます。</p>
+<h2 id="s8">解約・ダウングレード・返金の条件</h2>
+<p>解約やダウングレードは、現在の請求サイクルが終わると反映されます。Freeへ戻ると未使用クレジットが失効するため、期末日も把握しておきましょう。</p>
 <h3>解約・ダウングレードは請求サイクル終了時に反映</h3>
-<p>「Subscription」から自分で解約できます。手続き後も当期末までは有料機能を利用でき、期末前なら「Resume subscription」で解約を撤回できます。</p>
+<p>解約手続きは「Subscription」から。現在の請求期間が終わるまでは、有料機能を利用できます。解約を撤回するには、期末前に「Resume subscription」を選びます。</p>
 <h3>Free移行時に未使用クレジットは失効</h3>
-<p>請求サイクルが終わるとFreeへ移行し、残っているクレジットは失効します。解約前に残量を確認し、必要な生成を終えられる日程かを判断してください。</p>
+<p>請求サイクルが終わるとFreeへ移行し、残っているクレジットは失効します。解約前に残量を確認し、期末までに使い切れるか判断してください。</p>
 <h3>返金は14日以内かつ対象クレジット未使用が条件</h3>
-<p>返金の条件は、支払いから14日以内で、対象期間のクレジットを使っていないことです。解約しても自動返金にはなりません。クレジットを使った後は、返金も前提にできません。</p>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>有料化する前に請求サイクルを把握し、解約時に残クレジットが失効しても制作日程に支障が出ないかまで確認しておきます。</p>
-<h2 id="s9">よくある質問と契約前の最終チェック</h2>
-<p>キャンペーン名や特定ボイスの情報だけでプランを決めず、常設の料金条件と利用目的を基準に判断します。</p>
+<p>返金の条件は、支払いから14日以内で、対象期間のクレジットを使っていないこと。解約しても自動では返金されません。クレジットを使うと、返金条件を満たしません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>プラン別の月額と年払い価格を見直し、ダウングレード先の候補を絞れます。</p>
+<h2 id="s9">よくある質問</h2>
+<p>プラン選びでは、キャンペーン名や特定ボイスより、常設の料金条件を優先します。実際に使いたい機能も基準にしましょう。</p>
 <h3>3か月無料やPro無料の常設プランはある？</h3>
-<p>3か月無料やPro無料は、常設プランとして案内されていません。常設されている無料枠はFreeです。料金情報として確認できる割引は、Creatorの新規契約で初月50％オフの$11という案内です。</p>
+<p>3か月無料やPro無料の常設プランはなく、無料枠として常設されているのはFreeです。Creatorの新規契約には、初月50％オフの$11という案内があります。</p>
 <h3>APIキーは無料で取得できる？</h3>
-<p>FreeアカウントでもAPIキーを作成でき、大半のAPIエンドポイントを利用できます。利用分はFreeのワークスペース割当から消費されるため、TTS、Scribe、Dubbingなど使う機能ごとの換算を確認します。</p>
+<p>FreeアカウントでもAPIキーを作成でき、大半のAPIエンドポイントを利用できます。利用分はFreeのワークスペース割当から消費されるため、機能ごとに見積もります。</p>
 <h3>Adam VoiceやEleven v3も無料で使える？</h3>
-<p>Adam Voiceは公式Voice Libraryに掲載されていますが、Freeで使えるか、クレジット倍率がどうなるかは公開ページだけでは確定できません。ログイン後に対象ボイスの利用可否と倍率を確認してください。Eleven v3はAPIで<strong>1,000文字あたり$0.10</strong>ですが、ダッシュボード上の換算率は公開情報で確定できません。</p>
+<p>Adam Voiceは公式Voice Libraryに掲載されています。Freeで使えるかは、公開情報だけでは分かりません。クレジット倍率も同様。ログイン後に、対象ボイスの利用可否と倍率を確認してください。Eleven v3のAPI料金は<strong>1,000文字あたり$0.10</strong>。ダッシュボード上の換算率は、公開情報だけでは分かりません。</p>
 <h3>unlimited free APKは使える？</h3>
-<p>非公式の「unlimited free APK」は案内しません。アカウントや生成物の扱いが不明な配布物は避け、公式サイトのFreeを利用してください。Redditなど第三者の投稿より、契約時の公式条件を優先します。</p>
-<h3>契約前の最終チェック</h3>
+<p>非公式の「unlimited free APK」は案内の対象外。アカウントや生成物の扱いが分からない配布物は避け、公式サイトのFreeを利用してください。Redditなど第三者の投稿より、契約時の公式条件を優先します。</p>
+<h3>契約前に確認したい5項目</h3>
 <p>次の5点を順に決めると、必要なプランを絞れます。</p>
-<ul><li>音声生成、Scribe、Dubbing、APIのどれを使うか</li><li>生成物を商用利用するか</li><li>月間の入力テキスト量、音声の時間、利用分数はどの程度か</li><li>USD請求に使う決済手段を用意できるか</li><li>解約時に残クレジットが失効しても問題ないか</li></ul>
-<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
-<p>公式料金表の分数目安と月間の制作量を比べ、商用利用や音声クローンなど、必要な機能条件も照らし合わせて選びます。APIについては、機能別の換算単位でワークスペース割当の消費量を見積もってください。</p></div>
+<ul><li>音声生成・Scribe・Dubbing・APIのどれを使うか</li><li>生成物を商用利用するか</li><li>月間の入力テキスト量・音声の時間・利用分数はどの程度か</li><li>USD請求に使う決済手段を用意できるか</li><li>解約時に残クレジットが失効しても問題ないか</li></ul>
+<h2 id="s10">まとめ：無料は試用、商用利用はStarter以上</h2>
+<p>音質を確かめるだけならFree、商用利用ならStarter以上が基準です。Professional Voice Cloningを使うならCreator以上。APIを使う場合は、機能ごとの換算単位まで見て判断しましょう。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://elevenlabs.io/ja">ElevenLabsの公式サイトを見る<span aria-hidden="true"> →</span></a></p>
+<p>無料枠と有料プランの機能差、年払いの月額換算を契約前に見比べられます。</p></div>
 <div class="nav"><span><a href="elevenlabs-japanese.html">← ElevenLabsは日本語で使える？音声の自然…</a></span><span><a href="gamma-howto-76f5.html">AIでスライドを自動作成する方法｜Gammaで資… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
 <script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
