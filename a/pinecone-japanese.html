@@ -1,0 +1,122 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Pineconeは日本語で使える？UI・文書検索・サポートの対応状況｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/pinecone-japanese/eyecatch.png" alt="">
+<h1 id="t">Pineconeは日本語で使える？UI・文書検索・サポートの対応状況</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 5,303字</div>
+<div class="tags">#Pinecone #ベクトルデータベース #RAG #海外SaaS</div>
+<div class="body" id="b"><p>Pineconeは、RAGや類似検索に使うベクトルデータベースです。日本語文書を検索できるかどうかと、管理画面の表示言語は別の問題です。</p>
+<p>この記事では、UI、文書検索、検索方式、サポートを分けて整理し、日本から導入するときの支払いと請求書も紹介します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Pineconeの日本語対応状況（UI・文書・検索・サポート）</a></li><li><a href="#s2">管理画面と公式ドキュメントは日本語化できる？</a></li><li><a href="#s3">日本語の文書と質問はdense検索で扱える</a></li><li><a href="#s4">sparse検索・ハイブリッド検索は日本語対応の条件が変わる</a></li><li><a href="#s5">日本語データを入れる前に確認したいこと</a></li><li><a href="#s6">日本語サポートと日本からの支払い・請求書</a></li><li><a href="#s7">料金と始め方は無料枠から確認する</a></li><li><a href="#s8">Pineconeが向く人、ほかの選択肢も比べたい人</a></li><li><a href="#s9">まとめ：日本語データとUI・サポートを分けて判断する</a></li></ol></nav><h2 id="s1">Pineconeの日本語対応状況（UI・文書・検索・サポート）</h2>
+<p>Pineconeの日本語対応は、Console、公式Docs、検索モデル、サポートの4項目で状況が異なります。</p>
+<ul><li>管理画面：公式の日本語UI・言語切替は確認できない</li><li>公式文書：日本語版は公式情報で確認できない</li><li>dense検索：日本語対応モデルを選ぶ</li><li>sparse検索：公式Docsで日本語対応を確認できない</li><li>サポート：契約上の対応言語は英語</li><li>請求書：ConsoleからPDF取得可</li></ul>
+<h3>「画面が日本語」と「日本語を検索できる」は別</h3>
+<p>Consoleはインデックスや請求を管理する画面です。日本語文書のベクトル化は、Consoleの表示言語ではなく、選んだ埋め込みモデルが担います。</p>
+<p>ブラウザで画面を翻訳しても、保存済みのベクトルや検索結果には影響しません。問い合わせには、契約上のサポート言語が適用されます。</p>
+<h3>公式確認できたこと、まだ断定できないこと</h3>
+<p>料金、無料枠、支払い方法、PDF請求書の取得方法は公式情報で確認できます。一方、日本語UIと公式の言語切替は公開情報で確認できません。</p>
+<p>契約上のサポート言語は英語です。日本語窓口の提供も、公式情報では確認できません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.pinecone.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Starterを含む現行プランと、提供サービスの全体像を公式サイトで見られます。</p>
+<h2 id="s2">管理画面と公式ドキュメントは日本語化できる？</h2>
+<p>公式の公開情報では、日本語UIや言語切替の案内を確認できません。ただし、非搭載とは言い切れません。ConsoleとDocsを英語で扱えるかも含めて検討します。</p>
+<h3>Consoleの表示言語は公式設定の有無を先に見る</h3>
+<p>Consoleの日本語表示や言語切替は、公式の公開情報で確認できません。日本語UIを必須条件にするなら、契約前に提供元へ確認しておきたい項目です。</p>
+<p>ブラウザの翻訳機能は補助に使えますが、Pinecone公式の日本語UIとは異なります。自動翻訳では、製品名や専門用語まで置き換わる場合があります。</p>
+<h3>英語のDocsは画面名とエラー文を原文で照合する</h3>
+<p>公式Docsの日本語版は、公式の公開情報で確認できません。英語ページを読むときも、API名、設定名、エラーメッセージは訳さずに残します。</p>
+<p>エラー文を原文のまま検索すれば、公式Docsやサポート情報と照合しやすくなります。コードや設定値は原文のままにして、社内向けの説明だけを日本語にすると扱いやすくなります。</p>
+<h2 id="s3">日本語の文書と質問はdense検索で扱える</h2>
+<p>Pineconeはdense vectorを保存し、近いベクトルを探します。元の文書が日本語でも、日本語を扱う埋め込みモデルを選べば検索の仕組みを構成できます。</p>
+<h3>日本語対応の埋め込みモデルを選ぶ</h3>
+<p>dense検索では、日本語の文章を意味に応じた数値列へ変換します。変換を担うのはPineconeの保存先ではなく、埋め込みモデルです。</p>
+<p>モデルを選ぶときは、「多言語対応」と書かれているだけで判断しません。自社で扱う商品名、社内用語、略称を含む文書と質問を用意し、期待する文書が上位に出るかを測ります。</p>
+<p>Pinecone Inferenceでは、multilingual-e5-largeが多言語モデルとして掲載されています。短い質問から1〜2段落ほどの文章を探す場面に適したモデルですが、日本語は対応言語として明記されていません。</p>
+<h3>文書と質問を同じ条件でベクトル化する</h3>
+<p>multilingual-e5-largeを使う場合、文書側のinput_typeはpassage、質問側はqueryです。同じモデルでも、Pineconeへ渡す役割は分けます。</p>
+<p>統合埋め込みでは、インデックス作成時にモデルとテキスト項目を指定します。モデルに合わない次元数や距離指標のインデックスは使えません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.pinecone.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Database、Inference、Assistantの現在の提供範囲は、公式サイトからたどれます。</p>
+<h2 id="s4">sparse検索・ハイブリッド検索は日本語対応の条件が変わる</h2>
+<p>sparse検索では、単語の分割や重み付けも結果に影響します。dense検索で日本語を扱えても、同じ条件でsparse検索が使えるとは限りません。</p>
+<h3>dense検索は埋め込みモデルの言語対応を見る</h3>
+<p>dense検索は、文章の意味を表すベクトル同士の近さを使います。日本語に対応したモデルを選び、実データで評価するのが基本です。</p>
+<p>似た意味の言い換えを拾いたい場合に向きますが、製品コードや固有の略称まで必ず正しく扱えるとは限りません。意味検索と完全一致に近い検索では、評価する質問を分けます。</p>
+<h3>sparse検索は分かち書きとモデルの対応言語を見る</h3>
+<p>sparse検索は、文中の語やその重みを利用します。英語と日本語では語の区切り方が異なるため、トークナイザーとモデルの日本語対応が結果を左右します。</p>
+<p>pinecone-sparse-english-v0は現行の公式Docsに掲載されていますが、日本語対応は確認できません。日本語向けのモデルと決めつけず、dense検索とは別に検証します。</p>
+<p>第三者の記事にある回避策も参考にはなります。ただし、過去のライブラリを変更した例を、そのまま現行の公式仕様とはみなさないでください。</p>
+<h3>ハイブリッド検索は両方を組み合わせる</h3>
+<p>ハイブリッド検索は、denseとsparseの結果を組み合わせます。意味の近さとキーワードの一致を補い合えますが、片方だけ日本語に合っていても十分ではありません。</p>
+<p>まずdenseとsparseを別々に評価し、その後で重みを調整します。どの質問にどちらが効いたかを記録すれば、調整理由をチーム内で説明できます。</p>
+<h2 id="s5">日本語データを入れる前に確認したいこと</h2>
+<p>Pineconeの統合埋め込みを使う場合、インデックスへモデルとfield_mapを設定します。設定後も読み書きのパラメータは変えられますが、モデル自体は変更できません。</p>
+<h3>文字コードとチャンク分割をそろえる</h3>
+<p>公式例では、multilingual-e5-largeのfield_mapでレコードのtext項目を指定します。upsert_recordsを使うと、その項目の埋め込みと保存を1回の処理で行えます。</p>
+<p>同モデルは、1〜2段落ほどの文章を返す短い質問向けです。長い日本語文書はこの長さを目安に分け、実際の項目名をfield_mapへ対応させます。</p>
+<h3>日本語の評価質問で検索結果を測る</h3>
+<p>統合埋め込みの検索では、index.searchのinputs.textへ質問を渡し、top_kで返す件数を指定します。想定した文書が結果に含まれるかを質問ごとに記録します。</p>
+<p>設定済みのモデルは変更できません。別モデルと比べる場合は、Starterで作れる最大5インデックスの範囲でテスト用インデックスを分けます。</p>
+<h2 id="s6">日本語サポートと日本からの支払い・請求書</h2>
+<p>問い合わせ言語と決済方法は切り分けて見ます。契約上のサポート言語は英語です。カード払い、対象プランのクラウドマーケットプレイス、PDF請求書には対応しています。</p>
+<h3>契約上のテクニカルサポートは英語</h3>
+<p>公式Support Policyでは、契約上のサポート言語を英語と定めています。日本語窓口の提供は、公式情報で確認できません。</p>
+<p>技術サポートを導入条件にする企業は、利用プランごとの対象範囲も見てください。英語で問い合わせる場合は、質問文とログをまとめる担当者を決めておくと進行が止まりません。</p>
+<h3>カードとクラウドマーケットプレイスに対応する</h3>
+<p>Pineconeはクレジットカードとデビットカードに対応しています。StandardとEnterpriseでは、AWS、Google Cloud、Microsoftの各Marketplaceも利用できます。Builderはカード決済のみです。</p>
+<p>カードのブランドや発行国、PayPalの対応範囲は公式に明記されていません。社内で指定の購買経路がある場合は、希望するプランでもその経路を使えるか、契約前に照合します。</p>
+<h3>PDF請求書はConsoleから取得できる</h3>
+<p>請求履歴は、Pinecone ConsoleのSettingsからBilling、Overviewへ進んで確認します。請求期間ごとの明細を含む請求書をPDFでダウンロードできます。</p>
+<p>日本の適格請求書発行事業者登録番号については、公式Docsに記載がありません。税務上の処理は、取得したPDFの記載内容を確認したうえで税理士に相談してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.pinecone.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>プラン別のサポート範囲と問い合わせ窓口は、公式サイトで確認できます。</p>
+<h2 id="s7">料金と始め方は無料枠から確認する</h2>
+<p>Starterは無料です。1プロジェクトで最大5インデックスを作れるため、本番契約の前に小規模な構成を試せます。</p>
+<h3>Starterで日本語検索を小さく試す</h3>
+<p>StarterのDatabase On-Demandは、1プロジェクト、2ユーザー、最大5インデックスまでです。無料枠の容量は合計2GBです。加えて、月100万Read Units、月200万Write Units、月1GB egressが含まれます。</p>
+<p>最初は代表的な文書だけを登録します。月間のRead Units、Write Units、egressが無料枠に収まるかも同時に見積もれます。</p>
+<p>無料枠では、APIキーの発行からインデックス作成までを試せます。</p>
+<h3>本番移行の前に料金と上限を確認する</h3>
+<p>有料プランは、Builderが月$20、Standardが月$50の最低利用額、Enterpriseが月$500の最低利用額です。Standardには21日間、$300クレジットの試用がありますが、対象外の組織もあります。</p>
+<p>1ドル=157円換算（執筆時点の目安。為替で変動）では、Builderは月約3,140円、Standardの最低利用額は月約7,850円です。Enterpriseの最低利用額は月約78,500円になります。</p>
+<p>StandardとEnterpriseは、最低利用額を超えた分が従量課金されます。Builderは超過課金がなく、上限を超えたリクエストがブロックされる仕組みです。</p>
+<p>無料枠と有料プランは、上限と課金方法を分けて比べると選びやすくなります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.pinecone.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>公式料金ページでは、無料枠と有料プランの現在の違いを確認できます。</p>
+<h2 id="s8">Pineconeが向く人、ほかの選択肢も比べたい人</h2>
+<p>採用前に、英語のConsoleとサポートを扱える担当者がいるか、希望する支払い経路を使えるかを確認します。</p>
+<h3>英語環境でも検索基盤を自分で組める人に向く</h3>
+<p>次の条件を満たせるチームなら、Pineconeが候補になります。</p>
+<ul><li>公式の日本語UIを確認できなくても作業できる</li><li>英語のサポートへ問い合わせられる</li><li>統合埋め込みのモデルと項目を設計できる</li><li>Read UnitsやWrite Unitsを見積もれる</li><li>USDでの支払いとPDF請求書に対応できる</li></ul>
+<p>開発担当者だけでなく、英語での問い合わせや請求処理を担う担当者まで決めておくと導入後に止まりません。</p>
+<h3>日本語UIや日本語窓口が必須なら比較し直す</h3>
+<p>管理画面の日本語表示や、日本語の有人サポートを必須条件にするなら、公式確認が取れるまでPineconeの採用を保留します。</p>
+<p>ほかの候補と比べるときは、日本語UI、問い合わせ言語、無料枠、支払いを同じ軸で並べます。</p>
+<p>ベクトルデータベースの比較では、製品名より先に必要条件をそろえることが大切です。</p>
+<h2 id="s9">まとめ：日本語データとUI・サポートを分けて判断する</h2>
+<p>Pineconeは、英語のConsoleとサポートを扱え、Starterで必要な構成を試せるチームなら候補になります。</p>
+<h3>日本語検索は小さく試して精度を測る</h3>
+<p>有料プランへ移る前に、Starterで必要なインデックス数と使用量を確かめます。Standard以上では、最低利用額と従量課金も判断材料です。</p>
+<h3>UIとサポートの条件が合わなければ比較へ進む</h3>
+<p>公式の日本語UIと言語切替は確認できず、契約上のサポート言語は英語です。この条件が合わなければ、Pineconeの採用は保留します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.pinecone.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>無料枠から始める方法と現在のサービス構成は、公式サイトで確認できます。</p></div>
+<div class="nav"><span><a href="nocode-best-abba.html">← ノーコードツール一覧【2026年】用途別のおすす…</a></span><span><a href="pinecone-pricing.html">Pineconeの料金プラン｜無料枠の範囲と有料… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
