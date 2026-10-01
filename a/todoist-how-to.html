@@ -1,0 +1,154 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Todoistの使い方【初心者向け】登録・初期設定から基本操作・連携まで｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/todoist-how-to/eyecatch.png" alt="">
+<h1 id="t">Todoistの使い方【初心者向け】登録・初期設定から基本操作・連携まで</h1>
+<div class="meta"><span class="badge">業務効率・PM・タスク</span> 6,759字</div>
+<div class="tags">#Todoist #タスク管理 #ToDoリスト #仕事効率化 #海外SaaS</div>
+<div class="body" id="b"><p>Todoistは、仕事や生活のタスクを登録し、予定日や優先度を付けて管理するサービスです。Web版、パソコン、スマートフォンのどれからでも同じタスクを扱えます。</p>
+<p>この記事では、端末選びと登録から、毎日の基本操作、Googleカレンダー連携までを画面の流れに沿って紹介します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Todoistを使い始める最短手順</a></li><li><a href="#s2">Web・デスクトップ・スマホアプリの始め方</a></li><li><a href="#s3">最初のタスクを登録し、プロジェクトとセクションに分ける</a></li><li><a href="#s4">予定日・繰り返し・優先度・リマインダーを設定する</a></li><li><a href="#s5">「今日」・ラベル・フィルター・テンプレートで日々の確認を楽にする</a></li><li><a href="#s6">Googleカレンダーと外部サービスを連携する</a></li><li><a href="#s7">無料版で足りる範囲と有料プランを考える場面</a></li><li><a href="#s8">ログインできない・連携できないときの確認順</a></li><li><a href="#s9">MCP・APIでAIや自作ツールからTodoistを操作する</a></li></ol></nav><h2 id="s1">Todoistを使い始める最短手順</h2>
+<p>最初はWeb版かデスクトップ版でプロジェクトや予定日を設定します。外出先でタスクを追加・完了するなら、スマートフォンが便利です。まずインボックスへ1件入れ、「今日」に表示されたタスクを終えるところまで進めましょう。</p>
+<ul><li>WebまたはPCアプリで登録する</li><li>インボックスへ最初の1件を入れる</li><li>予定日と繰り返しを設定する</li><li>プロジェクトとセクションに分ける</li><li>「今日」で実行するタスクを見る</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.todoist.com/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>無料で始める入口と、利用できる端末を確認できます。</p>
+<figure><img loading="lazy" src="../img/todoist-how-to/todoist-inc.png" alt="Todoistの公式サイト"></figure>
+<h2 id="s2">Web・デスクトップ・スマホアプリの始め方</h2>
+<p>最初の設定には、画面が広いWeb版かデスクトップアプリが向きます。移動中にタスクを追加・完了するなら、スマホアプリが便利です。</p>
+<ul><li>Web版：インストールせずに登録したい場合</li><li>Windows・Mac版：通知や常駐を使いたい場合</li><li>iPhone・Android版：外出先で追加・完了したい場合</li></ul>
+<h3>Web版はインストールせずに始められる</h3>
+<p>公式トップの「無料で開始する」から登録画面へ進みます。登録方法は、メールアドレスとパスワード、Google、Apple、Facebookなどから選べます。</p>
+<p>メールで登録した場合は、届いた認証メールで手続きを完了させます。登録後は日本語UIで初期設定へ進めます。</p>
+<h3>Windows・Macのデスクトップアプリを入れる</h3>
+<p>パソコンで常にTodoistを開いておきたい場合は、公式のダウンロード画面からOSに合うアプリを選びます。TodoistデスクトップアプリはWindowsとMacに対応しています。</p>
+<p>ブラウザだけで足りるなら、インストールは不要です。通知や独立した画面が必要かで選びます。</p>
+<h3>iPhone・Androidアプリを入れて同期する</h3>
+<p>スマホでは、公式ストアからTodoistアプリを入れます。パソコンで作ったアカウントと同じ方法でログインすれば、登録済みのタスクが同期されます。</p>
+<p>PCとスマホで別々のアカウントを作らないようにします。タスクが見つからない場合は、メールアドレスを見直してください。</p>
+<h3>登録時と同じ方法でログインする</h3>
+<p>Todoistへログインするときは、登録時の認証方法を選びます。Google、Apple、Facebookで登録した人は、同じ認証方法でログインするのが基本です。</p>
+<p>認証方法を取り違えると、別アカウントに入ったように見える場合があります。詳しい切り分けは後半で扱います。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.todoist.com/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>ブラウザ版と各端末アプリの入口を選べます。</p>
+<h2 id="s3">最初のタスクを登録し、プロジェクトとセクションに分ける</h2>
+<p>思いついたタスクは、先にインボックスへ入れます。あとからプロジェクトやセクションへ移せるため、最初から分類を細かく作る必要はありません。</p>
+<ul><li>インボックス＝分類前のタスクの仮置き場</li><li>プロジェクト＝仕事や生活のまとまり</li><li>セクション＝プロジェクト内の進み具合</li></ul>
+<h3>インボックスへタスクを1件追加する</h3>
+<p>Web版かデスクトップ版で「クイック追加」を選びます。キーボードならQキーでも開けます。最初は「提案書の初稿を作る」のように、行動が分かる名前を付けます。</p>
+<ol><li>「クイック追加」を開く</li><li>「提案書の初稿を作る」と入力する</li><li>必要なら「明日 10時」などを続けて入れる</li><li>「タスクを追加」を選ぶ</li><li>終わったらタスク左側の丸を押す</li></ol>
+<p>追加先を指定しなければ、タスクはインボックスに入ります。どこに置くか迷った内容も、いったんここへ集めて構いません。</p>
+<h3>プロジェクトで仕事や生活のまとまりを分ける</h3>
+<p>継続的にタスクが増える仕事や活動は、プロジェクトにまとめます。左側の「マイプロジェクト」にある＋を押し、「営業」と入力して作成します。</p>
+<p>インボックスの「提案書の初稿を作る」を開きます。右側のプロジェクト名を押し、移動先に「営業」を選べば分類は完了です。</p>
+<h3>セクションでプロジェクト内の段階を分ける</h3>
+<p>Todoistのセクションは、1つのプロジェクト内を区切る機能です。「営業」を開き、タスク一覧の下に表示される「セクションを追加」を押します。「未着手」「進行中」「確認待ち」と作れば、作業の進み具合を一覧で把握できます。</p>
+<p>タスクを開き、右側のプロジェクト名から「営業」の「未着手」へ移します。次からはクイック追加で「#営業 /未着手」と入れて、作成時に配置する方法もあります。</p>
+<h3>大きな作業はサブタスクに分ける</h3>
+<p>一度では終わらない作業だけをサブタスクにします。「提案書の初稿を作る」を開き、「サブタスクを追加」を選びます。「構成を決める」「数字を集める」「初稿を書く」の順に登録します。</p>
+<p>今日取りかかれる大きさまで分けたら、それ以上は階層を増やしません。</p>
+<h2 id="s4">予定日・繰り返し・優先度・リマインダーを設定する</h2>
+<p>タスクを登録したら、次は「いつ取り組むか」を決めます。この節で扱う予定日と時刻はBeginnerでも使えます。「期限」は外部の締切を記録するProまたはBusinessの機能です。</p>
+<h3>予定日と時刻を日本語で入力する</h3>
+<p>ここで入力する日付と時刻は、Todoistでは予定日として保存されます。タスク名と一緒に入力すると、Todoistが日付部分を認識します。すぐに試せる入力例は次のとおりです。</p>
+<ul><li>提案書を送る 明日 10時</li><li>週報を書く 毎週月曜</li><li>請求書を確認する 月末</li><li>面談の準備 9月15日 午後2時</li></ul>
+<p>入力後は、文字が日付として認識されているかを見てから保存します。想定と違う場合は、日付選択画面から選び直してください。</p>
+<h3>繰り返しタスクを設定する</h3>
+<p>毎週や毎月の仕事には、繰り返しの予定日を使います。「週報を書く 毎週月曜」のように入力し、認識された周期を見て保存する流れです。</p>
+<p>完了すると、予定日が次回分に切り替わります。日付の変更と、繰り返し規則の変更は分けて操作します。</p>
+<h3>優先度を付けて「今日」で順番を決める</h3>
+<p>予定日は取り組む日を決め、優先度は同じ日に並んだタスクの順番を示します。今日中に終えたい仕事に高い優先度を付けると、「今日」の上部で見つけられます。</p>
+<p>すべてを最優先にせず、先に着手する仕事だけに旗を付けます。</p>
+<h3>リマインダーが必要なら無料版の範囲を確かめる</h3>
+<p>Beginnerでも、日付と時刻を設定したタスクには自動リマインダーが付きます。通知時刻などを自分で決めるカスタムリマインダーはProの機能です。</p>
+<p>カレンダー連携とは別の設定です。通知を受け取りたいなら、まずタスクに時刻が設定されているか確認します。</p>
+<h2 id="s5">「今日」・ラベル・フィルター・テンプレートで日々の確認を楽にする</h2>
+<p>毎朝は「今日」を開き、先の予定は「近日予定」で見渡します。分類項目を一度に増やさず、ラベルとフィルターを1つずつ追加すると崩れにくくなります。</p>
+<ul><li>プロジェクト：継続する仕事をまとめる</li><li>セクション：同じ仕事の段階を分ける</li><li>ラベル：場所や作業条件を付ける</li><li>フィルター：複数条件で表示を絞る</li></ul>
+<h3>「今日」と「近日予定」で実行日を確認する</h3>
+<p>「今日」には、全プロジェクトから当日のタスクが集まります。終われば完了、難しければ予定日を変更します。</p>
+<p>「近日予定」では先のタスクを日付順に見て、仕事量が偏る日から前後へ移します。</p>
+<h3>ラベルでプロジェクトをまたぐ条件を付ける</h3>
+<p>ラベルは「外出」「5分」「電話」のように、複数のプロジェクトへまたがる条件に使います。営業と個人の両方にある外出タスクを、同じラベルで集められます。</p>
+<p>場所や道具など、プロジェクトをまたいで見たい条件だけに絞ります。</p>
+<h3>フィルターで必要なタスクだけを呼び出す</h3>
+<p>フィルターは、日付、優先度、プロジェクト、ラベルなどの条件を組み合わせた保存済みの表示です。たとえば「今日 &amp; @外出」なら、今日行う外出タスクに絞れます。</p>
+<p>Beginnerでも利用できます。まずは毎日見る条件を1つ作ります。</p>
+<h3>繰り返す仕事はテンプレートにする</h3>
+<p>Todoistテンプレートは、公式ギャラリーから選ぶか、自分のプロジェクトから作成します。定例会議や月末処理に向く機能です。</p>
+<p>自作テンプレートから作ったプロジェクトは、元の内容と同期しません。変更はそれぞれに反映します。</p>
+<h2 id="s6">Googleカレンダーと外部サービスを連携する</h2>
+<p>予定とタスクをまとめて確認したいなら、まずGoogleカレンダー連携を検討します。古い同期画面ではなく、現在の「設定」内にあるカレンダーから接続します。</p>
+<h3>Googleカレンダーを接続する</h3>
+<p>Web版では、次の順に進みます。</p>
+<ol><li>左上のアバターから「設定」を開く</li><li>「カレンダー」を選ぶ</li><li>Googleカレンダーへの接続を選ぶ</li><li>必要な権限を許可する</li><li>Todoistに表示するカレンダーを選ぶ</li></ol>
+<p>接続後、予定は「今日」と「近日予定」に表示されます。編集時はGoogleカレンダーが開きます。</p>
+<p>時間付きタスクをカレンダーへ同期する設定もあります。接続はBeginnerでも使えますが、Todoist内のカレンダーレイアウトはProの機能です。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.todoist.com/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Todoistで使える連携先と機能の全体像を確認できます。</p>
+<h3>Googleカレンダーと連携できないときに見る場所</h3>
+<p>接続したGoogleアカウント、許可した権限、表示対象のカレンダーを順に確認します。</p>
+<p>タスクが表示されない場合は、時刻の設定も確認します。直らなければ、Todoistの設定から再接続します。</p>
+<h3>Notion連携は目的によって方法が異なる</h3>
+<p>Notion内でTodoistを見たいだけなら、Notionの「/embed」にTodoistのURLを入れます。プロジェクト、フィルター、ラベルの画面も埋め込み可能です。公式ヘルプでは、Webブラウザでの利用が案内されています。</p>
+<p>タスク自体を動かす場合は別の仕組みです。2syncはTodoistとNotionの項目を対応させ、一方向または双方向で同期します。Zapierは特定の出来事をきっかけに、Todoistへタスクを作るような自動化に使います。</p>
+<h3>メール・Google ToDo・Zapierとの連携は必要なものだけ選ぶ</h3>
+<ul><li>Gmail：Chrome拡張またはWorkspaceアドオンでメールをタスク化</li><li>Outlook：アドインからメールをタスク化</li><li>Google ToDo：公式の直接同期は連携一覧に掲載なし</li><li>Zapier：別サービスの動きをきっかけにタスクを作成</li></ul>
+<p>Google ToDoのタスクがTodoistと自動で同期されるとは限りません。公式の一括移行手順も案内されていないため、直接同期を前提にしないほうが安全です。外部の自動化サービスを使う場合は、同期方向と引き継がれる項目をサービス側で確かめます。</p>
+<h2 id="s7">無料版で足りる範囲と有料プランを考える場面</h2>
+<p>使い始めの基本操作は、継続利用できる無料プランのBeginnerから試せます。一人で使い、Beginnerでは機能が足りなくなったらProを検討します。共有ワークスペースや権限管理、一元請求が必要なチームはBusinessが候補です。</p>
+<h3>Beginnerで試せる主な範囲</h3>
+<ul><li>個人プロジェクトは5件</li><li>カスタムフィルターは3件</li><li>アクティビティ履歴は1週間</li><li>日付と時刻付きタスクの自動リマインダー</li></ul>
+<p>インボックスへの登録、プロジェクトとセクションによる分類、「今日」と「近日予定」の確認から始めるなら、まずBeginnerで使い方を固められます。</p>
+<h3>Proを検討する機能</h3>
+<ul><li>個人プロジェクトは300件</li><li>カスタムフィルターは150件</li><li>アクティビティ履歴は全期間</li><li>カレンダーレイアウトとタスク所要時間</li><li>カスタムリマインダー</li></ul>
+<p>Proの公式JPY価格は月払い894円、年払い8,064円です。USDでは月払い$7、年払い$60（月$5相当）。7日間のProトライアルは、期間内に解約しなければ有料契約へ自動で移ります。無料のBeginnerとは別なので、開始前に請求条件を見ておきます。</p>
+<p>Businessはユーザー単位の契約です。共有チームワークスペース、役割・権限、請求の一元管理が必要な場合に検討します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.todoist.com/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>BeginnerとProで使える機能の違いを確認できます。</p>
+<h2 id="s8">ログインできない・連携できないときの確認順</h2>
+<p>最初にアカウントを確かめます。次にアプリ、連携権限、稼働状況を切り分けます。別アカウントを作るのは最後にします。</p>
+<ul><li>ログイン不可→登録時の認証方法</li><li>タスクがない→接続中のメールアドレス</li><li>カレンダーがない→Google側の権限と表示対象</li><li>日付が違う→保存前の認識結果</li><li>全体が動かない→Todoistの公式ステータス</li></ul>
+<h3>ログインできないとき</h3>
+<p>まず、メール、Google、Apple、Facebookなど、どの方法で登録したかを確かめます。メール登録なら入力したアドレスとパスワードを見直し、必要ならパスワード再設定へ進みます。</p>
+<p>デスクトップアプリだけログインできない場合は、ブラウザ認証やマジックリンクを試します。複数の端末で同じ問題が起きるなら、公式ステータスも見ます。</p>
+<h3>Googleカレンダー連携が動かないとき</h3>
+<p>Google側で許可したアカウントと、普段使うカレンダーのアカウントが一致しているかを見ます。続けて、Todoistに必要な権限、表示するカレンダー、タスクの時刻を順に確かめます。</p>
+<p>問題が見つからなければ再接続します。現在の「設定」から「カレンダー」へ進んでください。</p>
+<h3>日付や繰り返しが意図どおりにならないとき</h3>
+<p>日本語で日付を入れた後、Todoistが強調表示した部分と日付表示を見ます。認識されていなければ、日付選択画面から設定するのが確実です。</p>
+<p>予定日は取り組む日を示し、Beginnerでも使えます。外部の締切を示す「期限」はProまたはBusinessの機能です。Beginnerでは予定日で代用できますが、着手日と最終締切を別々には持てません。</p>
+<p>繰り返しでは、完了後に次回の予定日が意図した周期へ移ったかも見直します。</p>
+<h2 id="s9">MCP・APIでAIや自作ツールからTodoistを操作する</h2>
+<p>ClaudeやCodexなどのAIからTodoistを操作するならMCP、自作のPythonプログラムから連携するならAPIが入口です。どちらも初心者の基本操作には必須ではありません。</p>
+<h3>MCPはClaude・CodexなどのAIアシスタント向け</h3>
+<p>Claudeなどの対応クライアントでは、Todoist公式のMCPサーバーを追加し、OAuthでアクセスを許可します。GitHub上の非公式MCPサーバーとは別物です。</p>
+<ul><li>Claudeなど：公式MCPサーバーの接続ガイドから設定</li><li>Codex：ChatGPTで公式Todoistプラグインを接続</li><li>認証：Todoistの画面でアクセスを許可</li></ul>
+<p>Codexでは、ChatGPTに接続したTodoistプラグインをそのまま利用できます。手動で接続したい場合は、Todoistの公式ガイドにあるChatGPT向けMCP接続を選びます。</p>
+<h3>APIはPythonなどの自作連携向け</h3>
+<p>Todoist APIは、タスクやプロジェクトを自作ツールから扱う仕組みです。公式のPython・TypeScript SDKもあります。</p>
+<ul><li>向いている人：社内ツールや個人スクリプトを作る人</li><li>最初に見る場所：Todoist Developers</li><li>認証：個人利用はAPIトークン、他者向けはOAuth</li></ul>
+<p>「API key」とも検索されますが、公式名称はAPIトークンです。「連携機能」から開発者向け画面へ進みます。</p>
+<h3>古いAPI v2の記事やコードをそのまま使わない</h3>
+<p>現行ドキュメントはAPI v1です。REST API v2の古いPythonコードは、現在と合わない場合があります。</p>
+<p>実装前にTodoist Developersを読み、公式SDKを基準にします。通常の画面で操作の流れを固めてからMCPやAPIへ広げましょう。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.todoist.com/ja">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>通常のタスク管理から始め、必要に応じて開発者向け連携へ進めます。</p></div>
+<div class="nav"><span><a href="time-best-00fa.html">← 工数管理ツールおすすめ4選｜時間記録・稼働把握・…</a></span><span><a href="todoist-pricing.html">Todoistの料金プラン【2026年版】無料版… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

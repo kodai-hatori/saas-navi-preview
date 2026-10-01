@@ -1,0 +1,107 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Runpodの料金はどう決まる？無料枠とGPU・ストレージの課金を解説｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/runpod-pricing/eyecatch.png" alt="">
+<h1 id="t">Runpodの料金はどう決まる？無料枠とGPU・ストレージの課金を解説</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 4,993字</div>
+<div class="tags">#Runpod #GPUクラウド #AI開発 #海外SaaS</div>
+<div class="body" id="b"><p>Runpodは、AI開発や画像生成に必要なGPUを、使った時間に応じて借りられるクラウドサービスです。料金は固定月額制ではありません。GPUの種類や稼働時間、保存容量によって請求額が変わります。</p>
+<p>無料で試せるのか、停止後も料金がかかるのかは迷いやすいところです。この記事では、PodsとServerlessの違いから日本での支払いまで説明します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Runpodの料金はPods・Serverless・Clustersの3系統</a></li><li><a href="#s2">PodsはGPUの稼働時間とストレージに課金される</a></li><li><a href="#s3">Serverlessは処理時間とGPUの種類で料金が変わる</a></li><li><a href="#s4">Runpodの無料プラン・無料トライアルは公式文書で確認できない</a></li><li><a href="#s5">利用時間ごとの総額はGPU料金と保存料金を分けて計算する</a></li><li><a href="#s6">日本からの支払い方法・請求書・消費税の扱い</a></li><li><a href="#s7">課金を止めるにはPod停止後の保存領域まで確認する</a></li><li><a href="#s8">ほかのGPUクラウドと料金を比べるときのチェック項目</a></li><li><a href="#s9">まとめ：Runpodは利用時間と保存料金を見積もってから始める</a></li></ol></nav><h2 id="s1">Runpodの料金はPods・Serverless・Clustersの3系統</h2>
+<p><strong>Runpodの公式料金はPods・Serverless・Clustersの3系統です。この記事で具体的な単価を扱うのは、Secure CloudのPodsとServerless Flexです。</strong></p>
+<ul><li>Pods：GPUとストレージに課金（本文対象）</li><li>Serverless：処理時間に課金（本文対象）</li><li>Clusters：大規模利用向け（本文対象外）</li><li>請求：USDのプリペイド方式</li><li>無料枠：公式文書では確認できず</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.runpod.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>3系統の区分と、Secure CloudのPods・Serverless Flexの最新単価を同じ料金ページで確認できます。</p>
+<p>Runpodには、一般的なSaaSのような月額プラン一覧がありません。GPUを常時動かすのか、リクエスト時だけ処理するのかで、見るべき料金欄が変わります。</p>
+<p>対話的にGPU環境を立ち上げて作業するならPodsが候補です。APIへのリクエストに応じて断続的に処理するなら、Serverlessを検討します。選ぶ基準は、個人・法人の区分よりも実行方式です。</p>
+<p>この記事では、単価を公式確認できたSecure CloudのPodsとServerless Flexに絞ります。ClustersとCommunity Cloudの料金は対象外です。</p>
+<h2 id="s2">PodsはGPUの稼働時間とストレージに課金される</h2>
+<p><strong>Podsの総額は、GPUの単価だけでは決まりません。</strong> 稼働中のGPU料金に加え、ContainerやVolumeなどの保存料金を見込みます。</p>
+<p>代表的なSecure CloudのGPU単価は次のとおりです。</p>
+<ul><li>RTX A5000：<strong>$0.27／時</strong></li><li>RTX 4090：<strong>$0.74／時</strong></li><li>A100 PCIe／SXM：<strong>$1.59／時</strong></li><li>H100 PCIe：<strong>$2.89／時</strong></li></ul>
+<p>ストレージはGPUとは別に計算されます。</p>
+<ul><li>稼働中のContainer／Volume：<strong>$0.10／GB／月</strong></li><li>停止中のVolume：<strong>$0.20／GB／月</strong></li><li>Network Volume（1TB未満）：<strong>$0.07／GB／月</strong></li><li>Network Volume（1TB超）：<strong>$0.05／GB／月</strong></li><li>データ転送料：なし</li></ul>
+<figure><img loading="lazy" src="../img/runpod-pricing/runpod-pricing-pods.png" alt="Runpod Podsの料金の見方"></figure>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.runpod.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>GPUごとの在庫と時間単価を、現在の選択画面で見比べられます。</p>
+<h3>GPUの料金は秒単位で計算される</h3>
+<p>PodsのGPU料金は秒単位の従量課金です。たとえばRTX 4090を30分動かした場合、GPU部分の計算上の目安は$0.37。2時間なら$1.48です。</p>
+<p>時間単価が低くても、処理に長くかかれば総額は増えます。GPUを比べるときは、1時間あたりの価格だけでなく、予定する作業が終わるまでの時間も考えます。</p>
+<p>なお、上記はSecure Cloudの代表例です。Community Cloudの料金はこの記事では扱いません。</p>
+<h3>停止後もVolumeとNetwork Volumeの保存料金は残る</h3>
+<p>Podを停止すると、計算資源の課金は止まります。一方、VolumeやNetwork Volumeにデータを残すと、保存料金は継続します。</p>
+<p>注意したいのは、稼働中のVolumeが$0.10／GB／月、停止中は$0.20／GB／月になる点です。GPUを止めた後も環境を残すなら、その期間を含めて予算を組みます。</p>
+<p>学習済みモデルや生成物を保持するなら、Network Volumeも選択肢です。完全に不要になったデータは、保存先を確かめてから削除します。</p>
+<h3>Savings planはGPU利用料の前払いで、ストレージは対象外</h3>
+<p>Pod Savings planは、GPU利用料を3か月または6か月分前払いする仕組みです。ストレージ料金は対象に含まれません。</p>
+<p>継続してGPUを使う予定があっても、前払い額だけで総費用を見積もるのは不十分です。必要な保存容量を出し、GPUとは別に加えてください。購入済みのSavings planは返金されません。</p>
+<h2 id="s3">Serverlessは処理時間とGPUの種類で料金が変わる</h2>
+<p><strong>Serverless Flexも秒単位の従量課金です。</strong> 常時起動するPodより、呼び出しが断続的なAPI処理の費用を考えるときに適しています。</p>
+<p>主なGPU区分の単価は次のとおりです。</p>
+<ul><li>16GB：<strong>$0.58／時</strong></li><li>24GB：<strong>$0.69／時</strong></li><li>RTX 4090：<strong>$1.10／時</strong></li><li>48GB：<strong>$1.22／時</strong></li><li>A100：<strong>$2.72／時</strong></li><li>H200：<strong>$5.93／時</strong></li><li>B300：<strong>$9.98／時</strong></li></ul>
+<p>同じRTX 4090でも、PodsのSecure Cloudは$0.74／時、Serverless Flexは$1.10／時です。ただし、単価だけでどちらが安いとは決まりません。</p>
+<p>開発環境を立ち上げたまま作業するならPods、APIを呼んだ分だけ処理するならServerlessが候補です。利用時間と呼び出し方をそろえて比べます。</p>
+<h2 id="s4">Runpodの無料プラン・無料トライアルは公式文書で確認できない</h2>
+<p><strong>常設の無料プランと無料トライアルは、公式の料金・請求文書では確認できません。</strong> セルフサービスで試す場合も、先にプリペイド残高を追加します。</p>
+<ul><li>常設無料プラン：確認できず</li><li>常設無料トライアル：確認できず</li><li>最初の入金：最小<strong>$10</strong>から案内</li><li>新規Pod：選択した構成の1時間分以上の残高が必要</li></ul>
+<p>「Runpodを無料で使える」という案内を見かけたら、常設の無料枠か、紹介・イベントによる一時的なクレジットかを分けて考えてください。この記事では条件を確認できないクレジット額や入手方法は扱いません。</p>
+<p>まず使いたいGPUの1時間分と、必要なストレージ料金を見積もります。その合計が最初に入れるクレジットの目安です。</p>
+<h2 id="s5">利用時間ごとの総額はGPU料金と保存料金を分けて計算する</h2>
+<p><strong>日本円の目安を出すときは、GPUの時間単価だけを月額へ置き換えません。</strong> 利用時間と保存容量を決め、USDの合計を円へ換算します。</p>
+<p>ここではGPU料金と任意の保存料金を分けて示します。Secure CloudのRTX 4090を使い、稼働中のContainer／Volumeを50GB、1か月保持すると仮定します。1ドル=157円換算（執筆時点の目安。為替で変動）です。</p>
+<p>GPUを1時間使い、50GBを1か月保持する場合：</p>
+<ul><li>GPU：$0.74×1時間＝$0.74</li><li>保存（保持する場合）：50GB×$0.10＝$5.00／月</li><li>GPUと保存の合計：<strong>$5.74（約901円）</strong></li></ul>
+<p>GPUを合計10時間使い、50GBを1か月保持する場合：</p>
+<ul><li>GPU：$0.74×10時間＝$7.40</li><li>保存（保持する場合）：50GB×$0.10＝$5.00／月</li><li>GPUと保存の合計：<strong>$12.40（約1,947円）</strong></li></ul>
+<p>GPUを月40時間使い、50GBを1か月保持する場合：</p>
+<ul><li>GPU：$0.74×40時間＝$29.60</li><li>保存（保持する場合）：50GB×$0.10＝$5.00／月</li><li>GPUと保存の合計：<strong>$34.60（約5,432円）</strong></li></ul>
+<p>保存料金は、データを保持する場合に加わります。したがって、$5.74はGPUを1時間使うときの必須額ではありません。</p>
+<p>これは固定プランの価格ではありません。条件を置いた計算例です。停止中も50GBのVolumeを残すなら、保存部分は$0.20／GB／月で計算し直します。</p>
+<h2 id="s6">日本からの支払い方法・請求書・消費税の扱い</h2>
+<p><strong>日本からは、プリペイドクレジットへ入金して利用できます。</strong> 一般アカウントと$5,000を超える取引では、支払い方法や請求書対応が異なります。</p>
+<ul><li>対応カード：Visa、Mastercard、American ExpressなどのStripe対応カード</li><li>暗号資産：対応</li><li>Business invoicing：$5,000超の取引で利用可能</li><li>Business invoicingの決済：ACH、銀行送金、カード</li><li>通貨：USD</li></ul>
+<p>日本は利用規約の禁輸対象地域に含まれず、福島の日本リージョンAP-JP-1も提供されています。JCBへの対応は公式情報で確認できません。</p>
+<p>一般アカウントでは、Billing画面から残高、最近の取引、利用履歴を見られます。ただし、PDF形式の請求書や領収書をダウンロードできるかは確認できません。法人で書類が必要なら、入金前に経理要件と照らし合わせます。</p>
+<p>消費税やインボイスの扱いは、契約主体や取引条件で変わります。経費処理に必要な書類とあわせて、税理士に確認してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.runpod.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>入金前に、対応カードとBilling画面の案内を確認できます。</p>
+<h2 id="s7">課金を止めるにはPod停止後の保存領域まで確認する</h2>
+<p><strong>Podを停止すると計算資源の課金は止まりますが、VolumeやNetwork Volumeの保存料金は続きます。</strong> 支出を止めるには、残すデータと削除するデータまで決めます。</p>
+<ul><li>Pod停止：GPUなど計算資源の課金は停止</li><li>保存料金：VolumeとNetwork Volumeは継続</li><li>残高が0：Network Volume付きPodは停止し、データを保持</li><li>残高が0：Network VolumeなしPodは終了し、データを復元できない</li><li>購入済みクレジット：返金不可</li><li>Savings plan：返金不可</li></ul>
+<figure><img loading="lazy" src="../img/runpod-pricing/runpod-pricing-stop.png" alt="Runpodで停止後も残る料金"></figure>
+<p>作業を再開するなら、必要なデータを保存したままPodを止めます。もう使わないなら、手元への退避を済ませたうえで保存領域も削除する流れです。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.runpod.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>利用前に、停止時の課金と返金条件を公式文書で確認できます。</p>
+<h2 id="s8">ほかのGPUクラウドと料金を比べるときのチェック項目</h2>
+<p><strong>時間単価だけでは、GPUクラウドの安さを判断できません。</strong> 同じGPUと利用時間を置き、保存や入金まで条件をそろえて比べます。</p>
+<ul><li>GPUの時間単価と必要な処理時間</li><li>秒単位か、より大きな時間単位か</li><li>停止中に残るストレージ料金</li><li>常設無料枠と最低入金額</li><li>データ転送料</li><li>国内リージョンの有無</li></ul>
+<p>RunpodはPodsとServerlessが秒単位で、データ転送料はありません。一方、常設無料枠は公式文書で確認できず、最小$10からの入金が案内されています。</p>
+<p>Vast.aiやLambdaなどの候補と比べる場合も、表示されたGPU単価だけを並べないことが大切です。在庫があるか、処理後にデータをどこへ残すかまで同じ条件にします。</p>
+<p>GPUクラウドの候補を広く比べるときも、時間単価だけでなく在庫や保存先まで条件をそろえます。</p>
+<h2 id="s9">まとめ：Runpodは利用時間と保存料金を見積もってから始める</h2>
+<p><strong>Runpodは固定月額ではなく、GPUとストレージの従量課金です。</strong> 常設無料枠は公式文書で確認できません。まず使うGPUを決め、必要な稼働時間と保存容量を見積もります。そのうえで必要額を入金します。</p>
+<ul><li>GPU環境を動かすならPods、API処理ならServerlessを検討</li><li>常設の無料プランと無料トライアルは確認できず</li><li>Pod停止後も保存料金が残る場合あり</li><li>日本からはUSDのプリペイド方式で利用可能</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.runpod.io/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>利用予定のGPUを選び、現在の単価と在庫を確かめてから入金できます。</p>
+<p>Runpodを使い始めるときは、登録後の操作手順もあわせて確認しておくと迷いません。</p>
+<p>日本語で使える範囲を重視するなら、画面表示やサポートの対応状況も判断材料になります。</p>
+<p>他のGPUクラウドも候補に入れるなら、料金以外の条件までそろえて比べることが大切です。</p></div>
+<div class="nav"><span><a href="proxy-best.html">← 有料プロキシサーバーのおすすめ5選｜スクレイピン…</a></span><span><a href="softr-pricing.html">Softrの料金プラン【2026年8月改定対応】… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
