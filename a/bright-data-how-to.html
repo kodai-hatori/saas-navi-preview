@@ -1,0 +1,146 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Bright Dataの使い方【初心者向け】登録・製品選びから初回のデータ取得まで｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/bright-data-how-to/eyecatch.png" alt="">
+<h1 id="t">Bright Dataの使い方【初心者向け】登録・製品選びから初回のデータ取得まで</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,246字</div>
+<div class="tags">#BrightData #Webスクレイピング #プロキシ</div>
+<div class="body" id="b"><p>Bright Dataは、Webサイトからデータを集めるための製品群です。既製データの購入から、検索結果の取得、プロキシ経由の接続まで扱えます。</p>
+<p>初めて使う人が迷いやすいのは、製品の違いやKYC、無料クレジットの範囲です。ここでは、登録から最初のデータ取得までを順に説明します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Bright Dataを使い始める最短5ステップ</a></li><li><a href="#s2">アカウント登録とKYCの進め方</a></li><li><a href="#s3">目的に合う製品を選ぶ</a></li><li><a href="#s4">APIトークンとZoneを初期設定する</a></li><li><a href="#s5">最初のデータ取得を試す</a></li><li><a href="#s6">取得結果と使用量を確認する</a></li><li><a href="#s7">無料クレジットの対象と有料化の目安</a></li><li><a href="#s8">Bright Dataの使い方でよくある質問</a></li><li><a href="#s9">まとめ：製品を一つに絞り、少量の取得から始める</a></li></ol></nav><h2 id="s1">Bright Dataを使い始める最短5ステップ</h2>
+<p>使い始めるときの流れは、アカウント作成、製品選択、認証情報の発行、テスト取得、使用量確認です。KYCが必要かどうかは、製品や権限によって変わります。この記事では、Web Unlocker APIで1件取得する例まで扱います。</p>
+<ul><li>アカウントを作成する</li><li>取得方法に合う製品を選ぶ</li><li>APIトークンやZoneを用意する</li><li>少量のテスト取得を実行する</li><li>結果とクレジット消費を確認する</li></ul>
+<figure><img loading="lazy" src="../img/bright-data-how-to/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<h3>登録から初回取得までの流れ</h3>
+<p>アカウントを作成したら、まず取得したいデータに合う製品を一つ選びます。Web Unlocker APIなら、専用ZoneとAPIトークンを準備し、対象URLを1つ送信します。</p>
+<h3>始める前に用意するもの</h3>
+<p>登録を始める前に、次の三つを用意しておくと途中で止まりません。</p>
+<ul><li>連絡を受け取れるメールアドレス</li><li>欲しいデータが分かるURLや検索語</li><li>データを取得する目的の説明</li></ul>
+<p>KYC対象の製品では、企業情報や追加書類を求められる場合があります。使いたい製品が対象か、先に確認しておきましょう。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録前に、対象製品と初回設定の入口を確認できます。</p>
+<h2 id="s2">アカウント登録とKYCの進め方</h2>
+<p>アカウントを作っただけで、必ずKYCが始まるわけではありません。Residential Networkを使う場合や特別な権限を申請する場合は、企業情報や利用目的の確認が加わります。</p>
+<h3>アカウントを作成してメールを確認する</h3>
+<p>登録ページでは、Work emailのほかGoogle、GitHub、SSOも選べます。いずれかでアカウントを作り、画面や確認メールの案内に従って管理画面へ進みます。</p>
+<p>月次無料クレジットの対象製品は、クレジットカードを登録せずに始められます。プロキシ製品は同じ無料枠の対象ではないため、製品選択を先に済ませるのが大切です。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>アカウント作成後、選んだ製品に応じて必要な確認へ進めます。</p>
+<h3>KYCが必要になる製品と確認内容</h3>
+<p>KYCが原則必要なのは、Residential Networkまたは特別な権限へアクセスする場合です。基本となる確認項目は、企業ドメインのメール、企業情報、利用目的、連絡先です。</p>
+<p>身分証明書やビデオ通話は、全申請で固定の必須項目ではありません。追加確認として求められる場合があります。申請後のステータス更新は最大48時間が目安です。</p>
+<p>一方、robots.txtに従うImmediate Residential Accessには、KYCなしで使える例外があります。Residential Networkで先へ進めないときは、選んだアクセス方法と審査状況を確認してください。</p>
+<h2 id="s3">目的に合う製品を選ぶ</h2>
+<p>製品名から選ぶよりも、受け取りたいものと自前で組む範囲から逆算すると絞れます。完成済みデータならDataset、特定サイト向けの取得ならScraper API、任意ページならWeb Unlockerが候補です。</p>
+<ul><li>既製データが欲しい：Dataset</li><li>特定サイトから取得したい：Scraper API</li><li>任意ページを取得したい：Web Unlocker</li><li>検索結果が欲しい：SERP API</li><li>接続元IPを変えたい：プロキシ</li></ul>
+<figure><img loading="lazy" src="../img/bright-data-how-to/bright-data-how-to-product-choice.png" alt="取得したいものから選ぶ5分岐"></figure>
+<h3>DatasetとScraper APIが向いているケース</h3>
+<p>Datasetは、収集済みのデータをファイルとして受け取る製品です。取得処理を自作せずに済む一方、用意されたデータセットに必要な項目があるかを先に確認します。任意ページをその場で取得したい場合には向きません。</p>
+<p>Scraper APIは、対応サイト向けの取得処理をAPIから呼び出す製品です。構造化された出力を受け取れますが、対象サイトと出力形式は製品ごとに異なります。対応外の任意ページを取りたい場合は、Web Unlockerと比較します。</p>
+<h3>Web UnlockerとSERP APIが向いているケース</h3>
+<p>Web Unlockerは、任意の公開URLを指定し、接続制御や再試行をBright Data側へ任せるAPIです。URL送信の実装は必要ですが、通常のプロキシより取得処理を減らせます。クリックや長いセッションが必要な画面操作には向きません。</p>
+<p>SERP APIは、検索語を送り、検索結果をデータとして受け取る製品です。検索結果に特化しているため、一般のWebページを自由に取得する製品ではありません。</p>
+<h3>プロキシ製品が向いているケース</h3>
+<p>自分の取得プログラムから接続し、接続元の国やネットワークを選びたい場合はプロキシ製品を使います。プロキシ製品が提供するのは接続経路です。取得、再試行、保存は利用者側で組みます。</p>
+<p>Residential、ISP、Datacenterでは、ネットワークの性質と料金体系が異なります。実装の自由度は高いものの、完成済みデータが欲しい場合や取得処理を減らしたい場合には、DatasetやWeb Unlockerのほうが候補です。</p>
+<h2 id="s4">APIトークンとZoneを初期設定する</h2>
+<p>API製品はAPIトークンを使い、Web Unlockerでは専用Zoneも指定します。プロキシ製品はZoneの認証情報で接続します。</p>
+<ul><li>利用する製品を一つ選ぶ</li><li>対応する認証情報を発行する</li><li>認証情報を安全な場所へ保存する</li><li>公式サンプルを開く</li></ul>
+<figure><img loading="lazy" src="../img/bright-data-how-to/bright-data-how-to-auth-choice.png" alt="APIトークンとZoneの選び方"></figure>
+<h3>APIトークンを発行する</h3>
+<p>API製品を選んだら、管理画面からAPIトークンを発行します。トークンは公開リポジトリや共有資料へ載せず、安全な場所に保存してください。</p>
+<h3>プロキシ用のZoneを作成する</h3>
+<p>Zoneは、利用するプロキシ製品や接続条件をまとめる設定単位です。製品を選んでZoneを作り、そこで発行された認証情報を自分の接続設定に入力します。</p>
+<p>ホスト名やポートは、管理画面に表示された値を使います。別の製品向けに発行された値を流用すると、認証エラーの原因になります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後、利用する製品に合う認証方法を選べます。</p>
+<h2 id="s5">最初のデータ取得を試す</h2>
+<p>ここではWeb Unlocker APIを例に、公開URLを1件取得します。管理画面で専用ZoneとAPIトークンを用意し、公式形式のリクエストを送ります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>対象製品では、登録後に少量の取得から動作を確かめられます。</p>
+<ul><li>Web Unlocker用Zoneを作る</li><li>APIトークンとZone名を控える</li><li>対象URLを一つ決める</li><li>cURLでリクエストを送る</li><li>本文と使用量を確かめる</li></ul>
+<figure><img loading="lazy" src="../img/bright-data-how-to/bright-data-how-to-first-request.png" alt="初回取得の4段階"></figure>
+<h3>Web管理画面のサンプルで試す</h3>
+<p>管理画面の製品一覧からWeb Unlockerを選び、専用Zoneを作ります。続いてAPIトークンを発行し、Zone名と分けて控えてください。</p>
+<p>既存のプロキシ用Zoneは使わず、Web Unlocker用に作ったZoneを指定します。管理画面がどこまで日本語表示に対応しているかは公開されていないため、製品名とZone名を手掛かりに進めます。</p>
+<h3>APIまたはCLIで1件だけ取得する</h3>
+<p>APIトークン、Zone名、対象URLを自分の値へ置き換えます。APIトークンはコードへ直接書かず、環境変数へ保存してください。</p>
+<blockquote>curl https://api.brightdata.com/request \</blockquote>
+<blockquote>  -H &quot;Authorization: Bearer $BRIGHT_DATA_API_TOKEN&quot; \</blockquote>
+<blockquote>  -H &quot;Content-Type: application/json&quot; \</blockquote>
+<blockquote>  -d '{&quot;zone&quot;:&quot;YOUR_WEB_UNLOCKER_ZONE&quot;,&quot;url&quot;:&quot;https://example.com&quot;,&quot;format&quot;:&quot;raw&quot;}'</blockquote>
+<p>レスポンスが返ったら内容を開き、対象ページの本文が含まれているか確認します。空の内容や想定外の画面なら、保存や件数追加へ進む前にZone名と対象URLを見直します。</p>
+<h2 id="s6">取得結果と使用量を確認する</h2>
+<p>実行後は、対象ページの本文、取得件数、消費クレジットの三点を確認します。</p>
+<h3>成功したかをレスポンスで確かめる</h3>
+<p>Web Unlockerでは、エラーの有無に加え、指定したURLの本文が返ったかも確認します。チャレンジ画面や空の内容なら、成功件数として扱わずに設定を見直してください。</p>
+<p>DatasetやScraper APIを選んだ場合は出力形式が異なります。製品が違っても、対象、必要な項目、取得件数の三点は共通して確認します。</p>
+<h3>認証エラー・Zone未作成・KYC待ちを切り分ける</h3>
+<p>認証エラーが出たら、BearerトークンとZone名を見直します。次に、Web Unlocker用Zoneが作られているかを確認してください。</p>
+<p>Residential Networkの利用手続きで止まる場合は、KYCの審査状況も確認します。追加対応が必要なら、管理画面の案内か公式サポートから進めます。</p>
+<h3>クレジット残高と製品別の消費を確認する</h3>
+<p>対象製品の利用分は、一つの月次無料クレジットから消費されます。製品ごとに別々の5,000クレジットが付く仕組みではありません。</p>
+<p>管理画面では残高と利用した製品を確認します。CLIを使う場合、budgetは残高やZone別コストの確認に使います。非同期ジョブの進行を見るstatusとは用途が異なります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>開始前に、無料クレジットの対象と消費単位を確認できます。</p>
+<h2 id="s7">無料クレジットの対象と有料化の目安</h2>
+<p>対象製品には、月5,000クレジットの共通プールがあります。Datacenter、ISP、Residential Proxiesは対象外で、別枠のトライアルクレジットが用意されています。</p>
+<figure><img loading="lazy" src="../img/bright-data-how-to/bright-data-how-to-free-credit.png" alt="月次無料クレジットと別枠トライアル"></figure>
+<h3>月次無料クレジットを使える製品</h3>
+<p>月次無料クレジットの対象は、次の製品です。</p>
+<ul><li>Web Unlocker API</li><li>SERP API</li><li>Web Scraper API</li><li>Scraper Studio</li></ul>
+<p>Web Unlocker API、SERP API、Web Scraper APIは、リクエストまたはレコードごとに1クレジットを消費します。Scraper Studioはページロードごとに1クレジットです。</p>
+<p>クレジットは毎月1日に5,000へ戻り、未使用分は翌月へ繰り越されません。複数製品を試す場合は、それぞれの消費を合算して考えます。</p>
+<h3>プロキシ製品は別枠のトライアル</h3>
+<p>Datacenter、ISP、Residential Proxiesは、月次無料クレジットの対象外です。新規登録時には、一度だけ$2のトライアルクレジットが付き、7日間使えます。</p>
+<p>支払い方法を追加すると$5のボーナスが付き、有効期間は30日間です。</p>
+<p>月次の無料枠と、この一度きりの試用分を混同しないようにしてください。</p>
+<h3>有料プランへ移る前に見る項目</h3>
+<p>有料化を決める前に、次の四点を記録します。</p>
+<ul><li>一度に取得する件数</li><li>取得ごとのクレジット消費</li><li>毎月の実行回数</li><li>継続して使う製品</li></ul>
+<p>月額コミットの未使用分は翌月へ繰り越されません。サブスクリプション料金は原則として取消・返金の対象外です。まず少量を取得して消費量を測り、その結果をもとに契約を選びます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録前に、使いたい製品が月次無料クレジットの対象かを確かめられます。</p>
+<h2 id="s8">Bright Dataの使い方でよくある質問</h2>
+<p>日本語の公式サイトはありますが、管理画面全体がどこまで日本語に対応しているかは、公開情報で確認できません。APIやプロキシには技術設定も必要です。</p>
+<h3>管理画面は日本語で使える？</h3>
+<p>Bright Dataには日本語の公式サイトと料金ページがあります。ただし、管理画面全体が日本語になるかは公開情報から判断できません。</p>
+<p>英語の項目名を基準に進め、必要ならブラウザの翻訳機能を補助に使う方法があります。これはBright Dataが提供する日本語UI機能ではありません。</p>
+<p>日本市場向けの支援サービスは案内されています。ただし、日本語のメールやチャットでどこまで対応するかは公開情報で確認できません。</p>
+<h3>コードを書かなくても使える？</h3>
+<p>Datasetや管理画面から操作できる製品なら、コードを書かずに進められる場合があります。既製データを受け取るだけなら、自分で取得処理を組まない選択もできます。</p>
+<p>API、CLI、プロキシ接続を使う場合は、認証情報やコマンドの設定が必要です。コードを避けたいなら、まずDatasetや画面操作型の製品が目的に合うかを見てください。</p>
+<h3>個人でも登録できる？KYCは必須？</h3>
+<p>アカウント登録とKYCは別の手続きです。すべての製品で、登録直後にKYCが必須になるわけではありません。</p>
+<p>Residential NetworkのKYCでは、企業ドメインのメールや企業情報が前提です。そのため個人利用には制約があります。一部にはKYCなしで使えるアクセス方法もあります。</p>
+<h3>日本から使える支払い方法は？</h3>
+<p>クレジットカード、PayPal、Alipay、Payoneer、Google Pay、Apple Payに対応しています。大口アカウント向けには、Wire transferとAmazon Marketplaceも案内されています。</p>
+<p>JCB対応や日本の適格請求書発行事業者番号は、公開情報で確認できません。日本での税務上の扱いは、必要に応じて税理士へ相談してください。</p>
+<h2 id="s9">まとめ：製品を一つに絞り、少量の取得から始める</h2>
+<p>先に欲しいデータと実装できる範囲を決め、対応する製品で1件だけ試します。Web Unlockerなら、専用Zone、APIトークン、対象URLの三つが初回取得に必要です。本文とクレジット消費を見てから、有料化を判断してください。</p>
+<h3>登録後に最初に選ぶもの</h3>
+<p>最初に決めるのは、既製データで足りるか、対象が特定サイトか任意URLか、自分で取得処理を組むかの三点です。ここが決まれば、Dataset、Scraper API、Web Unlocker、プロキシのどれを契約するかを絞れます。</p>
+<h3>件数を増やす前に確認するもの</h3>
+<p>取得件数を本番の規模まで増やす前に、取得結果の本文、Zone別コスト、無料クレジットの残高を確認します。Residential Networkを使う場合は、KYCの状態も確認します。</p>
+<p>有料契約では返金条件と月額コミットも先に読みます。1件の取得と消費量が想定どおりなら、毎月の取得量に合わせて契約を選んでください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>使いたい製品を選び、対象なら無料クレジットで初回取得へ進めます。</p></div>
+<div class="nav"><span><a href="bright-data-guide.html">← Bright Dataとは？機能・料金・使い方と…</a></span><span><a href="bright-data-howto-653e.html">Web Unlockerとは？Bright Da… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

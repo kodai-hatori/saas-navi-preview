@@ -1,0 +1,131 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Amazonスクレイピングツールの選び方｜Bright Dataで商品データを取得｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/bright-data-howto-f44d/eyecatch.png" alt="">
+<h1 id="t">Amazonスクレイピングツールの選び方｜Bright Dataで商品データを取得</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,343字</div>
+<div class="tags">#BrightData #Amazon #スクレイピング #海外SaaS</div>
+<div class="body" id="b"><p>Amazonスクレイピングツールは、商品名や価格、在庫、レビューなどを継続して集めるための手段です。完成済みデータ、専用API、プロキシの違いと、Bright Dataで少量取得を始める流れを紹介します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Amazonスクレイピングツールは3つの方法から選ぶ</a></li><li><a href="#s2">取得したいAmazonデータから方法を選ぶ</a></li><li><a href="#s3">Bright DataでAmazon商品データを取得する手順</a></li><li><a href="#s4">無料クレジットと費用は課金単位から考える</a></li><li><a href="#s5">Bright Data以外の方法が向くケース</a></li><li><a href="#s6">IPブロック・利用規約・データの扱いに注意する</a></li><li><a href="#s7">Amazonスクレイピングツールのよくある質問</a></li><li><a href="#s8">まとめ：取得したいデータを決めて少量から試す</a></li></ol></nav><h2 id="s1">Amazonスクレイピングツールは3つの方法から選ぶ</h2>
+<p>最初に決めたいのは、ツール名よりも取得方法です。欲しいデータと社内の開発体制を照らし合わせ、次の3方式から選びます。</p>
+<ul><li>完成データ：収集処理を持たずに使う</li><li>API：商品やレビューの項目を指定</li><li>プロキシ：接続地域やIPを細かく制御</li><li>主役：3方式をそろえるBright Data</li><li>無料枠：対象製品で月5,000クレジット</li></ul>
+<figure><img loading="lazy" src="../img/bright-data-howto-f44d/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録画面では、選んだ製品が月5,000無料クレジットの対象かを確かめられます。</p>
+<h3>完成済みのデータを受け取るデータセット</h3>
+<p>データセットなら、自社で収集処理を組まずに、整えられたデータを受け取れます。価格監視や商品一覧の更新を定期的に行いたくても、取得コードの保守に人を割けない場合に向いています。</p>
+<p>受け取った後は、分析や社内システムへの取り込みに集中できます。ただし、データセットの価格や更新頻度は一律ではありません。欲しい項目、対象地域、更新間隔を伝え、条件が合っているか確かめます。</p>
+<h3>必要な項目を取得するAmazon向けスクレイパーAPI</h3>
+<p>商品情報やレビューなど、取得対象が決まっているならAPIが向いています。価格や在庫にはAmazon Products、評価や本文、著者、日付にはAmazon Reviewsを使います。</p>
+<p>対応地域では、Amazon ASINとAmazon PriceがすべてのAmazonドメインを対象としています。Amazon.co.jpの商品URLやASINも入力できますが、出力項目はスクレイパーごとに異なります。</p>
+<h3>取得処理を自社で組むプロキシ</h3>
+<p>すでに取得コードがあり、接続地域やIPを細かく制御したい場合はプロキシを使います。ページ構造の変化や失敗時の再試行など、取得処理を自社で管理したい開発チーム向けです。</p>
+<p>自由度が高い分、コードの保守は自社で続けます。また、Datacenter、ISP、Residential Proxiesは月5,000無料クレジットの対象外です。APIの無料枠と混同せず、通信量と開発工数を合わせて考えます。</p>
+<h2 id="s2">取得したいAmazonデータから方法を選ぶ</h2>
+<p>同じAmazonデータでも、価格監視とレビュー分析では必要な項目が違います。何に使うかを先に決めると、余分な機能や保守作業を避けられます。</p>
+<h3>商品名・価格・在庫を追う</h3>
+<p>商品単位で変化を追うなら、更新頻度を先に決めます。毎回必要な項目が決まっている場合はAmazon向けAPI、定期的にまとまったデータを受け取りたい場合はデータセットが候補です。</p>
+<ul><li>欲しい項目：商品名、価格、在庫</li><li>向く方式：APIまたはデータセット</li><li>先に決める条件：対象商品と更新頻度</li></ul>
+<p>価格や在庫は変わるため、一度だけ取得しても継続監視にはなりません。日々の判断に必要な間隔と、取得後に差分を保存する方法まで決めておきます。</p>
+<h3>ASINや検索結果から商品一覧を作る</h3>
+<p>市場調査や候補商品の抽出では、キーワードやカテゴリから一覧を作ります。最初から大量取得へ進まず、まず数ページで列の欠損や重複を調べます。その後で範囲を広げると、手戻りを抑えられます。</p>
+<ul><li>欲しい項目：ASIN、商品名、カテゴリ</li><li>向く方式：APIまたはデータセット</li><li>先に決める条件：対象地域、ページ数、出力項目</li></ul>
+<p>Amazon.co.jpの商品URLやASINは対象です。検索結果から一覧を作るときは、Amazon Productsのキーワード検索用またはカテゴリURL用スクレイパーを選びます。別地域の商品が同じ列に混在しないようにしてください。</p>
+<h3>レビュー・評価を分析する</h3>
+<p>レビュー分析では、本文だけでなく評価や投稿日も必要になります。レビュー向け製品では、ASIN、評価、本文、著者、日付などが取得項目として案内されています。</p>
+<ul><li>欲しい項目：評価、本文、著者、日付</li><li>向く方式：Amazon向けスクレイパーAPI</li><li>先に決める条件：対象ASINと再利用範囲</li></ul>
+<p>レビューには個人に結び付く情報や著作物が含まれる場合があります。取得後に社内分析へ使うのか、外部へ表示するのかを分けて扱ってください。</p>
+<h2 id="s3">Bright DataでAmazon商品データを取得する手順</h2>
+<p>初回はAmazon Productsを例に、登録から少量の出力を確認するところまで進めます。管理画面で入力を設定して実行し、結果をダウンロードします。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後は、Amazon向けの製品を選び、取得項目を指定して出力結果を確認します。</p>
+<ol><li>登録後、Amazon Scraper APIからAmazon Productsを選ぶ</li><li>Amazon.co.jpの商品URLまたはASINを入力する</li><li>少量で実行し、JSONまたはCSVをダウンロードする</li></ol>
+<h3>アカウントを作り、取得方法を選ぶ</h3>
+<p>商品名や価格、在庫を取得する場合は、管理画面のAmazon Scraper APIからAmazon Productsを選びます。レビュー分析ならAmazon Reviews、完成済みデータが必要ならAmazon products global datasetが候補です。</p>
+<p>月5,000無料クレジットは、Web Scraper APIなどの対象製品で使う共通プールです。プロキシ製品には別のトライアル条件があるため、どの無料枠が適用されるか、表示をよく確かめます。</p>
+<h3>対象と取得項目を指定する</h3>
+<p>商品情報を集めるときは、Amazon ProductsにAmazon.co.jpの商品URLまたはASINを入力します。レビューならAmazon Reviewsを選び、商品URLと取得件数を指定します。</p>
+<p>商品一覧を作る場合は、キーワード検索用やカテゴリURL用のスクレイパーを使います。目的に合うスクレイパーを選び、最初は対象URLと件数を絞ります。</p>
+<h3>少量取得してCSV・JSONを確認する</h3>
+<p>管理画面で入力を設定したら、少量で一度実行します。結果はJSONまたはCSVでダウンロードできるため、ASIN、商品名、価格、通貨、在庫など必要な列を見ます。</p>
+<p>欠損や重複があれば、入力したURLとスクレイパーの種類を見直します。必要な列がそろったら、定期実行や保存先への配信に広げます。</p>
+<h2 id="s4">無料クレジットと費用は課金単位から考える</h2>
+<p>費用は、選んだ製品の課金単位で変わります。Amazon Scraper APIは成功レコード、プロキシは通信量、データセットは個別条件で見積もります。</p>
+<h3>月5,000無料クレジットは対象製品で共用する</h3>
+<p>新規アカウントには、対象製品で使う月5,000無料クレジットがあります。クレジットカードは不要で、毎月1日に5,000へ戻ります。未使用分の繰り越しはありません。</p>
+<p>Web Scraper APIは、1レコードにつき1クレジットを使います。同じ無料枠を対象製品で共有するため、製品ごとに5,000ずつ付くわけではありません。</p>
+<p>Datacenter、ISP、Residential Proxiesはこの無料クレジットの対象外です。プロキシには、新規登録時に1回限り$2のトライアルクレジットがあり、有効期間は7日間です。</p>
+<h3>APIはレコードまたはリクエスト数で考える</h3>
+<p>APIの予算は「1回に取る成功レコード数×更新回数」で月間の利用量を計算します。商品を毎日追う場合と、月に一度だけ一覧を作る場合では、同じ商品数でも消費量が変わります。</p>
+<p>無料クレジットを超えた後は、Amazon Scraper APIの従量課金へ移ります。Pay as you goは、成功した1,000レコードあたり$1.5です。失敗した配信には料金がかかりません。</p>
+<p>月額のScaleプランは$499で、384,000レコードを含みます。超過分は1,000レコードあたり$1.3です。少量ならPay as you go、毎月の取得量が増えたらScaleとの総額を比べます。</p>
+<h3>プロキシは通信量と自社の開発費も含める</h3>
+<p>Residential Proxiesの従量制は$8／GBで、月額の契約義務はありません。1ドル=158円の概算では約1,264円／GBです。円換算額は為替で変動します。</p>
+<p>ただし、プロキシでは取得コードの開発と保守が自社側に残ります。通信量だけで比べると、ページ変更への対応や失敗時の再試行にかかる人件費を見落とします。</p>
+<p>日本からはクレジットカード、PayPal、Alipay、Payoneer、Google Pay、Apple Payで支払えます。Wire transferとAmazon Marketplaceは大口アカウント向けです。</p>
+<p>カードブランド別の対応にJCBの明記はありません。日本の適格請求書に必要な登録番号も示されていないため、必要な場合は契約前に問い合わせます。サブスクリプション料金は契約後の解約や返金ができません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>Amazon向けに選んだ製品が無料クレジットの対象か、どの単位で課金されるかを登録後に見られます。</p>
+<h2 id="s5">Bright Data以外の方法が向くケース</h2>
+<p>どんな案件にもBright Dataが合うとは限りません。取得件数が少ない場合や公式APIで目的を満たせる場合は、別の方法のほうが手間を抑えられます。</p>
+<h3>少量を画面操作で取りたいならノーコード型</h3>
+<p>数件だけを一度取得し、その場で結果を確かめたいならノーコード型が候補です。定期実行や社内システムへの連携が不要なら、APIを組み込む作業を省けます。</p>
+<h3>目的に合う公式APIがあるなら先に検討する</h3>
+<p>対象サービスの公式APIで必要な項目がそろうなら、利用条件と再利用範囲を先に比べます。呼び出し上限内で足りる案件では、スクレイピング基盤を別に持たずに済みます。</p>
+<h3>取得コードを保守できるならプロキシ＋自作</h3>
+<p>既存コードと保守担当者がいるなら、プロキシと自作コードの組み合わせが候補です。接続地域や再試行を細かく制御できますが、ページ変更時の修正も自社で担います。</p>
+<h2 id="s6">IPブロック・利用規約・データの扱いに注意する</h2>
+<p>技術的に取得できることと、取得したデータを使ってよいことは別の問題です。対象ページと利用目的を決め、アクセス方法と再利用範囲を事前に確かめます。</p>
+<h3>アクセス頻度とブロック対策を設計する</h3>
+<p>Amazonのページでは、CAPTCHAやIPブロック、動的描画、ページ構造の変更を想定します。取得間隔と同時接続を抑え、失敗時に無制限で再試行しない設計が必要です。</p>
+<p>プロキシやAPIを使っても、すべての取得が成功するとは限りません。失敗したレコードを分けて保存し、後から再実行できるようにしておきます。</p>
+<h3>Amazonの利用規約とrobots.txtを確認する</h3>
+<p>対象ページ、取得方法、利用目的によって扱いは変わります。Amazonの利用規約とrobots.txtを読み、一律に合法または違法と決めつけないようにします。</p>
+<p>業務利用や外部提供で判断が難しい場合は、法律の専門家へ相談してください。技術担当だけで結論を出さず、利用部門とも範囲を共有します。</p>
+<h3>レビューや画像の再利用範囲を決める</h3>
+<p>レビューや商品画像を取得できても、公開や再配布まで自由とは限りません。個人情報、著作権、社内利用か外部提供かを分けて考えます。</p>
+<p>通常のResidential Networkへ申し込むにはKYCが必要です。対象は登録済みの法人で、企業ドメインのメール認証と利用目的の提出が求められます。個人や、企業ドメインを持たないフリーランスは通常のKYCへ申請できません。</p>
+<p>一方、robots.txtに従って取得するImmediate Residential Accessは、KYCなしで使える場合があります。取得先が該当するかを申し込み前に確認し、KYC申請後は最大48時間の審査を見込みます。</p>
+<h2 id="s7">Amazonスクレイピングツールのよくある質問</h2>
+<p>選ぶときに迷いやすい、日本語対応と無料範囲、Amazon.co.jp、必要な技術知識をまとめます。</p>
+<h3>Bright Dataは日本語で使える？</h3>
+<p>日本語の公式サイトと料金ページがあります。ただし、管理画面全体の日本語UI対応範囲は公開情報だけでは分かりません。</p>
+<p>日本市場向けの支援は案内されていますが、チャットやメールの応対言語は明記されていません。導入前に、必要な窓口が日本語に対応しているか問い合わせると確実です。</p>
+<h3>Amazonの商品データを無料で取得できる？</h3>
+<p>Web Scraper APIなどの対象製品には、月5,000無料クレジットがあります。毎月1日に5,000へ戻り、未使用分は翌月へ繰り越されません。</p>
+<p>一方、Datacenter、ISP、Residential Proxiesは対象外です。Amazonデータの取得方法を選んでから、その製品に適用される無料枠を見ます。</p>
+<h3>Amazon.co.jpのデータも取得できる？</h3>
+<p>Amazon.co.jpの商品データは取得対象です。なかでもAmazon ASINとAmazon Priceは、すべてのAmazonドメインへの対応を明記しています。</p>
+<p>ただし、商品、検索結果、レビューでは使うスクレイパーが異なります。必要なページ種別を選び、少量の結果で商品名や価格、ASINなどの列を見ます。</p>
+<h3>プログラミング知識は必要？</h3>
+<p>取得方法によって変わります。完成済みのデータセットなら技術的な負担を抑えられますが、APIでは認証やデータ処理の知識が要ります。プロキシと自作コードは、取得処理の開発と保守まで担う前提です。</p>
+<p>コードを書かない担当者が一人で進めるなら、データセットかノーコード型から検討します。開発担当者がいる場合は、必要な制御範囲に応じてAPIやプロキシも候補に加えます。</p>
+<h2 id="s8">まとめ：取得したいデータを決めて少量から試す</h2>
+<p>Amazonスクレイピングツールは、欲しいデータと更新頻度から選びます。方式を先に決め、少量の出力と課金単位を見てから本番件数へ広げるのが安全です。</p>
+<h3>契約前に確認する5項目</h3>
+<ul><li>取得項目：商品名、価格、在庫、ASIN、レビュー</li><li>更新頻度：単発、毎月、毎日など必要な間隔</li><li>取得方式：データセット、API、プロキシ</li><li>費用：無料枠とレコード、リクエスト、GB</li><li>利用条件：規約、robots.txt、再利用範囲</li></ul>
+<p>この5項目を決めておけば、機能の多さだけで選ぶ失敗を減らせます。特に、無料クレジットの対象とプロキシのトライアルは分けて見てください。</p>
+<h3>Bright Dataが合うか少量で判断する</h3>
+<p>選べる取得方法は、完成済みデータ、Amazon向けAPI、プロキシの3つです。対象製品なら月5,000無料クレジットがあるため、少量の結果を見て必要項目がそろうかを判断できます。</p>
+<p>プロキシ製品は月5,000無料クレジットの対象外です。別のトライアル条件と混同せず、通信量と自社の開発費を含めて比べます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>少量で出力項目と課金単位を見たうえで、必要な件数まで段階的に広げられます。</p></div>
+<div class="nav"><span><a href="bright-data-howto-653e.html">← Web Unlockerとは？Bright Da…</a></span><span><a href="bright-data-pricing.html">Bright Dataの料金プラン｜無料枠・課金… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
