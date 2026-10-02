@@ -1,0 +1,136 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Bright Data MCPとは？Claude・Cursorへの設定と使い方｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/bright-data-mcp/eyecatch.png" alt="">
+<h1 id="t">Bright Data MCPとは？Claude・Cursorへの設定と使い方</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,761字</div>
+<div class="tags">#BrightData #MCP #Claude #Cursor #Webデータ収集</div>
+<div class="body" id="b"><p>Bright Data MCPは、ClaudeやCursorから公開Webページを検索・取得するための接続口です。Web MCPとも呼ばれます。</p>
+<p>通常APIとの違いから、事前準備、設定、無料範囲、エラー時の確認順まで紹介します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Bright Data MCPでできること</a></li><li><a href="#s2">Web MCPと通常APIは処理の進め方が違う</a></li><li><a href="#s3">Claude・Cursorで使う前に準備するもの</a></li><li><a href="#s4">Bright Data MCPを安全に設定する</a></li><li><a href="#s5">Claude・Cursorから最初のWebデータを取得する</a></li><li><a href="#s6">料金と無料クレジットは対象範囲を分けて読む</a></li><li><a href="#s7">うまく動かないときは6項目を順番に確認する</a></li><li><a href="#s8">まとめ：MCPは対話型のWeb取得から始めやすい</a></li></ol></nav><h2 id="s1">Bright Data MCPでできること</h2>
+<p>AIとの会話からWeb検索やページ取得を呼び出せる仕組みです。取得した情報をClaudeやCursorで読み、そのまま要約や比較へ進めます。</p>
+<ul><li>呼び方：Bright Data MCP／Web MCP</li><li>接続先：Claude・Cursorなど</li><li>基本：Web検索とページ取得</li><li>拡張：構造化抽出とブラウザ操作</li><li>注意：Rapidが既定、Proは全ツール</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>アカウントを作成すると、MCP接続に使う認証情報を準備できます。</p>
+<figure><img loading="lazy" src="../img/bright-data-mcp/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<h3>Bright Data MCPとWeb MCPは同じ製品を指す</h3>
+<p>公式ページでは「Bright Data MCP」と「Web MCP」の両方が使われています。検索結果や設定資料で名前が違っていても、ここでは同じMCPサーバーを指す呼び方として扱います。</p>
+<p>MCPは、Model Context Protocolの略です。AIクライアントと外部ツールの間で、利用できる機能や受け渡す情報の形をそろえます。</p>
+<h3>Web検索・取得・抽出・ブラウザ操作をAIから呼び出せる</h3>
+<p>基本は、検索語を渡して候補ページを探す操作と、指定URLの本文を取得する操作です。対応ツールを有効にすると、ページから項目を抜き出したり、ブラウザを遠隔操作したりする処理も使えます。</p>
+<p>すべての機能を最初から読み込むとは限りません。必要な機能はgroupsで群単位、toolsで個別に選べます。ClaudeやCursorに表示される操作は、この設定によって変わります。</p>
+<h3>対話しながら情報を集めたい場面に向く</h3>
+<p>たとえば「候補を検索し、公式ページだけを読み、違いをまとめる」といった調査です。途中で条件や対象ページを変えながら進めるなら、会話の流れから次のツールを選べるMCPが向いています。毎日同じURLを同じ形式で取得する処理には、通常APIで手順を固定する方法が向いています。</p>
+<h2 id="s2">Web MCPと通常APIは処理の進め方が違う</h2>
+<p>AIと対話しながら検索や取得を任せるなら、MCPが選択肢になります。呼び出し順を固定して定期実行するなら、APIやSDKのほうが細かく制御できます。</p>
+<ul><li>MCP：AIが目的に応じてツールを選ぶ</li><li>API：開発者が入力値と処理順を決める</li><li>MCP向き：調査・比較・試行錯誤</li><li>API向き：定期・大量・再現性重視</li></ul>
+<h3>MCPはAIが使うツールを選んで処理する</h3>
+<p>MCPでは、利用者が自然文で依頼し、AIクライアントが登録済みのBright Dataツールから処理を選びます。「まず検索し、よい候補だけ本文を取得する」といった分岐を、会話の続きとして頼めるのが特徴です。</p>
+<p>ただし、同じ依頼でも毎回まったく同じ順序になるとは限りません。処理の再現性が重要なら、使うツール名や対象URLを依頼文で絞ります。</p>
+<h3>APIは呼び出し順と出力を細かく固定できる</h3>
+<p>通常APIでは、開発者がエンドポイント、入力値、エラー処理、保存先をコードに定めます。取得処理をバッチや社内システムへ組み込み、件数や実行時刻を固定したい場合に向いています。</p>
+<h3>対話型の調査か定期・大量処理かで選ぶ</h3>
+<p>Web調査の試作はMCPで始め、使うツールと出力形式が固まった処理だけAPIへ移す流れが考えられます。大量取得を予定しているなら、頻度と再実行の条件までコードで管理できるAPIも比べてください。</p>
+<h2 id="s3">Claude・Cursorで使う前に準備するもの</h2>
+<p>利用前にBright Dataのアカウントと認証情報を用意します。ClaudeまたはCursorがMCP接続に対応しているかも確かめてください。</p>
+<ul><li>Bright Dataアカウント</li><li>公式手順で発行した認証情報</li><li>MCPに対応するClaudeまたはCursor</li><li>ローカル版で使うNode.js環境</li><li>認証情報を公開しない保存場所</li></ul>
+<h3>Bright Dataのアカウントと認証情報</h3>
+<p>接続にはBright DataのAPIトークンを使います。トークンはパスワードと同じ扱いにし、記事、チャット、画面共有へ実値を載せないでください。</p>
+<p>設定例にあるYOUR_API_TOKENはダミーです。実際の値へ置き換えるときは、共有ファイルや公開リポジトリへ入らない保存方法を選びます。</p>
+<p>月5,000クレジットの無料利用は、クレジットカードを登録せずに始められます。有料分はUSD建てです。支払いはクレジットカード、PayPal、Alipayに対応します。Payoneer、Google Pay、Apple Payも選べます。</p>
+<p>日本語の公式サイトはありますが、管理画面全体の日本語化と有人サポートの応対言語は、公表情報だけでは範囲を確認できません。日本語サイトの有無と、管理画面や問い合わせ対応の言語は分けて判断してください。</p>
+<h3>Claude・Cursor側のMCP対応状況</h3>
+<p>Claudeは利用するアプリによって登録場所が異なります。Claude Desktopではカスタムコネクタ、Claude Codeではコマンドから追加する方法が公式リポジトリに掲載されています。</p>
+<p>CursorはMCP設定からサーバーを追加します。メニュー名や保存場所が変わった場合は、各クライアントの現行ヘルプを優先してください。</p>
+<h3>ローカル接続に必要な実行環境</h3>
+<p>インストール不要のホスト版なら、接続先URLをクライアントへ登録します。ローカル版はnpx @brightdata/mcpを起動するため、Node.jsとnpxを実行できる環境が必要です。</p>
+<p>社内端末でコマンド実行が制限されているなら、導入前に管理者へ相談するか、ホスト版を選びます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後はAPIトークンを発行し、ホスト版かローカル版を選ぶ手順へ進めます。</p>
+<h2 id="s4">Bright Data MCPを安全に設定する</h2>
+<p>公式GitHubで現行の接続方法を読み、ホスト版かローカル版を選びます。設定例ではトークンをダミー値のまま示します。</p>
+<ul><li>ホスト版：接続先URLを登録</li><li>ローカル版：npxでMCPを起動</li><li>認証：APIトークンを渡す</li><li>機能範囲：Rapid／Proとツールを選ぶ</li><li>反映：保存後にクライアントを再読込</li></ul>
+<h3>ホスト版とローカル版から接続方法を選ぶ</h3>
+<p>ホスト版の接続先は次の形です。YOUR_API_TOKENには、自分のトークンを設定します。</p>
+<p>https://mcp.brightdata.com/mcp?token=YOUR_API_TOKEN</p>
+<p>手元で動かす場合は、クライアントのMCP設定に実行コマンドを登録します。</p>
+<p>{&quot;mcpServers&quot;:{&quot;Bright Data&quot;:{&quot;command&quot;:&quot;npx&quot;,&quot;args&quot;:[&quot;@brightdata/mcp&quot;],&quot;env&quot;:{&quot;API_TOKEN&quot;:&quot;YOUR_API_TOKEN&quot;}}}}</p>
+<p>インストールの手間を減らしたいならホスト版、実行環境や設定を手元で管理したいならローカル版が向いています。</p>
+<h3>認証情報とモードを設定する</h3>
+<p>Rapidが既定で、Proは全ツールを有効にする設定です。手元で動かす場合は環境変数PRO_MODE=true、ホスト版は接続URLの末尾に&amp;pro=1を加えます。</p>
+<p>全ツールが不要なら、機能を絞る方法もあります。ローカル接続ではGROUPSまたはTOOLS、ホスト版ではgroupsまたはtoolsを指定します。最初は検索とページ取得に必要な範囲だけを選びましょう。</p>
+<h3>トークンを設定ファイルへ直書きしない</h3>
+<p>トークンは環境変数やクライアントの保管機能から渡します。ファイルへ保存する場合は公開リポジトリへ追加せず、画面共有や問い合わせ前に実値を伏せてください。</p>
+<h2 id="s5">Claude・Cursorから最初のWebデータを取得する</h2>
+<p>接続後は簡単な検索かページ取得を実行します。ツール名と結果の両方を見て成功を判断します。</p>
+<ul><li>Claude：利用アプリに合う方法で登録</li><li>Cursor：MCP設定を追加して再読込</li><li>初回：公開ページを検索または取得</li><li>成功：ツール名と結果の両方を見る</li><li>注意：規約・個人情報・著作権を尊重</li></ul>
+<h3>ClaudeへMCP接続を追加する</h3>
+<p>Claude Desktopでは、設定のコネクタ画面からカスタム接続を追加します。名前をBright Dataとし、ホスト版のURLを登録します。</p>
+<p>Claude Codeでは、公式GitHubに掲載された次の形で追加できます。</p>
+<p>claude mcp add --transport http brightdata &quot;https://mcp.brightdata.com/mcp?token=YOUR_API_TOKEN&quot;</p>
+<p>保存後にBright Dataのツールが見えない場合は、Claudeを再読込してから接続状態を見直します。</p>
+<h3>CursorへMCP接続を追加する</h3>
+<p>Cursorでは~/.cursor/mcp.jsonへMCPサーバーを追加します。ホスト版を使う最小構成は次の形です。</p>
+<p>{&quot;mcpServers&quot;:{&quot;brightdata&quot;:{&quot;url&quot;:&quot;https://mcp.brightdata.com/mcp?token=YOUR_API_TOKEN&quot;}}}</p>
+<p>設定を保存したらCursorを再読込します。JSONのかっこや引用符が欠けていると、サーバー自体が一覧に表示されません。</p>
+<h3>最小プロンプトで接続成功を確かめる</h3>
+<p>初回は、対象を公開ページに限定します。たとえば「Bright Dataの日本語トップページを取得し、主な製品名だけ箇条書きにしてください」のような依頼です。</p>
+<p>返答だけでなく、Bright Dataの検索・取得ツールが実行されたかも見ます。別の内蔵検索が使われた場合は、「Bright Data MCPを使う」とツール名を明示してください。</p>
+<p>取得先のrobots.txtと利用規約に従ってください。個人情報や著作物の無断収集は避けます。</p>
+<h2 id="s6">料金と無料クレジットは対象範囲を分けて読む</h2>
+<p>MCPはWeb Unlocker API上で動き、対象製品で共通する月5,000クレジットを消費します。Datacenter、ISP、Residential Proxies向けのトライアルだけは別枠です。</p>
+<p>料金はUSDで表示されます。<strong>1ドル=158円換算（執筆時点の目安。為替で変動）</strong>として、必要額を見積もってください。</p>
+<h3>MCPの無料枠は抽出・ブラウザ操作も対象</h3>
+<p>Rapidは既定モードで、検索とページ取得が基本機能です。ただし、月5,000回の無料対象はRapidだけではありません。構造化スクレイパーとブラウザ自動化も含まれます。</p>
+<p>MCPの利用分は、Web Unlocker APIやSERP APIなどと同じ月5,000クレジットから消費されます。毎月1日に5,000へ戻り、未使用分は翌月へ繰り越されません。チームアカウントでは全ユーザーで共有します。</p>
+<h3>Pro機能は無料対象と課金条件を確認する</h3>
+<p>Proは全ツールを有効にする設定です。構造化抽出やブラウザ操作も無料5,000回に含まれます。上限を超えると、検索・取得・抽出は1,000結果あたり1.50ドル（約240円）、ブラウザ操作は1GBあたり8ドル（約1,260円）です。</p>
+<p>入金済み残高がなければ、無料枠を使い切った時点で処理は止まります。残高があるアカウントは従量課金へ移ります。予算を抑えるなら、groupsやtoolsで必要な機能だけを有効にしてください。</p>
+<h3>プロキシ製品の無料条件とは分けて考える</h3>
+<p>Datacenter、ISP、Residential Proxiesは、月額無料クレジットの対象外です。別枠で新規登録時に2ドルのトライアルクレジットが付き、7日間使えます。支払方法を追加すると5ドルが加わり、有効期間は30日です。</p>
+<p>無料枠があっても、すべての製品を無料で使えるわけではありません。MCPと対象APIの共通プール、プロキシ向けの一回限りの試用を分けてください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録画面では、利用予定のツールが現在の無料対象に含まれるか確認できます。</p>
+<h2 id="s7">うまく動かないときは6項目を順番に確認する</h2>
+<p>設定を最初から作り直す前に、認証情報、接続先、JSON、再読込の順で見直します。最後にツールの有効化と利用上限を切り分けます。</p>
+<ol><li>認証情報が正しいか</li><li>接続先URLまたはコマンドが現行か</li><li>JSONなどの設定形式が正しいか</li><li>クライアントを再読込したか</li><li>対象ツールとモードが有効か</li><li>無料枠・利用上限へ達していないか</li></ol>
+<h3>認証情報・接続先・設定形式を見直す</h3>
+<p>認証エラーが出たら、APIトークンの空白や不要な引用符を見直します。起動しない場合はNode.jsとnpxを確認し、Cursorに表示されない場合はJSONの階層とかっこを調べてください。</p>
+<h3>再読込とツールの有効化を確かめる</h3>
+<p>設定を保存しただけでは、新しいMCPサーバーが反映されないクライアントがあります。ClaudeまたはCursorを再読込し、Bright Dataの接続状態とツール一覧を開きます。</p>
+<p>サーバーが接続済みでも、groupsやtoolsで対象外にした機能は候補に出ません。検索、取得、抽出など、使いたい処理が設定に含まれるかを見直します。</p>
+<h3>Proモードと利用上限を切り分ける</h3>
+<p>基本ツールは動くのに特定機能だけ失敗するなら、Rapid／Proとgroups／toolsの指定を見直します。設定に問題がなければ、共通クレジットの残量を調べてください。</p>
+<p>解決しないときは、トークンを伏せたうえで、エラーを識別できる部分と設定方式を添えます。その情報をもとに、Bright Dataのサポートか公式GitHubのIssuesを調べてください。</p>
+<h2 id="s8">まとめ：MCPは対話型のWeb取得から始めやすい</h2>
+<p>ClaudeやCursorと会話しながらWebデータを集めるなら、Bright Data MCPが選択肢になります。MCPと対象APIは月5,000クレジットを共有し、プロキシ向けの試用だけが別枠です。</p>
+<ul><li>MCP向き：対話しながら検索・取得する</li><li>API向き：定期・大量処理を固定する</li><li>初回：最小プロンプトで接続を試す</li><li>無料枠：対象製品で月5,000を共有</li></ul>
+<h3>Claude・Cursorで調査するならMCPを候補にする</h3>
+<p>最初はホスト版を登録し、公開ページの検索または取得から始めます。成功したら、groupsやtoolsで必要な機能だけを追加してください。取得した内容は、同じ会話で要約や比較へ進められます。</p>
+<h3>定期・大量処理なら通常APIも比較する</h3>
+<p>処理対象と出力形式が固まったら、通常APIやSDKも選択肢に入ります。MCPで調査手順を固め、繰り返す部分だけコードへ移せば、定期実行や再処理の条件をそろえられます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>アカウント作成後は、無料クレジットの残量を見ながらMCPの接続設定へ進めます。</p>
+<p><strong>関連するnote</strong></p>
+<ul><li>Bright Dataの全体像を調べるときの候補：<a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf47e045a4f27">Bright Dataとは？機能・料金・使い方と日本から契約するときの注意点</a></li><li>Bright Dataの登録と基本操作を確認するときの候補：<a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/na75a30918179">Bright Dataの使い方【初心者向け】登録・製品選びから初回のデータ取得まで</a></li><li>Bright Dataの料金と無料範囲を調べるときの候補：<a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf031d2d43587">Bright Dataの料金プラン｜無料枠・課金単位・日本からの支払いを解説</a></li></ul>
+<p><strong>もっと詳しく比較したい方へ</strong></p>
+<ul><li>スクレイピングツールを比べるときの候補：<a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nb993015e6c27">スクレイピングツールおすすめ5選｜料金・無料枠・日本語対応で比較</a></li><li>プロキシサービスを比べるときの候補：<a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/ndd05477c5d70">有料プロキシサーバーのおすすめ5選｜スクレイピング・広告検証など用途別の選び方</a></li></ul></div>
+<div class="nav"><span><a href="bright-data-howto-f44d.html">← Amazonスクレイピングツールの選び方｜Bri…</a></span><span><a href="bright-data-pricing.html">Bright Dataの料金プラン｜無料枠・課金… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

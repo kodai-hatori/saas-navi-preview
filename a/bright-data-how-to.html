@@ -18,7 +18,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
 <img class="eyecatch" src="../img/bright-data-how-to/eyecatch.png" alt="">
 <h1 id="t">Bright Dataの使い方【初心者向け】登録・製品選びから初回のデータ取得まで</h1>
-<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,246字</div>
+<div class="meta"><span class="badge b-posted">note公開済み</span><span class="badge">開発・インフラ・データ</span> 6,404字</div>
 <div class="tags">#BrightData #Webスクレイピング #プロキシ</div>
 <div class="body" id="b"><p>Bright Dataは、Webサイトからデータを集めるための製品群です。既製データの購入から、検索結果の取得、プロキシ経由の接続まで扱えます。</p>
 <p>初めて使う人が迷いやすいのは、製品の違いやKYC、無料クレジットの範囲です。ここでは、登録から最初のデータ取得までを順に説明します。</p>
@@ -56,6 +56,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <h3>Web UnlockerとSERP APIが向いているケース</h3>
 <p>Web Unlockerは、任意の公開URLを指定し、接続制御や再試行をBright Data側へ任せるAPIです。URL送信の実装は必要ですが、通常のプロキシより取得処理を減らせます。クリックや長いセッションが必要な画面操作には向きません。</p>
 <p>SERP APIは、検索語を送り、検索結果をデータとして受け取る製品です。検索結果に特化しているため、一般のWebページを自由に取得する製品ではありません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/n3514ca5d66ed">Web Unlockerの仕組み・使い方・料金<span aria-hidden="true"> →</span></a></p>
 <h3>プロキシ製品が向いているケース</h3>
 <p>自分の取得プログラムから接続し、接続元の国やネットワークを選びたい場合はプロキシ製品を使います。プロキシ製品が提供するのは接続経路です。取得、再試行、保存は利用者側で組みます。</p>
 <p>Residential、ISP、Datacenterでは、ネットワークの性質と料金体系が異なります。実装の自由度は高いものの、完成済みデータが欲しい場合や取得処理を減らしたい場合には、DatasetやWeb Unlockerのほうが候補です。</p>
@@ -115,6 +116,7 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>有料化を決める前に、次の四点を記録します。</p>
 <ul><li>一度に取得する件数</li><li>取得ごとのクレジット消費</li><li>毎月の実行回数</li><li>継続して使う製品</li></ul>
 <p>月額コミットの未使用分は翌月へ繰り越されません。サブスクリプション料金は原則として取消・返金の対象外です。まず少量を取得して消費量を測り、その結果をもとに契約を選びます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf031d2d43587">Bright Dataの料金プラン<span aria-hidden="true"> →</span></a></p>
 <p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
 <p>登録前に、使いたい製品が月次無料クレジットの対象かを確かめられます。</p>
 <h2 id="s8">Bright Dataの使い方でよくある質問</h2>
@@ -136,11 +138,17 @@ a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{c
 <p>先に欲しいデータと実装できる範囲を決め、対応する製品で1件だけ試します。Web Unlockerなら、専用Zone、APIトークン、対象URLの三つが初回取得に必要です。本文とクレジット消費を見てから、有料化を判断してください。</p>
 <h3>登録後に最初に選ぶもの</h3>
 <p>最初に決めるのは、既製データで足りるか、対象が特定サイトか任意URLか、自分で取得処理を組むかの三点です。ここが決まれば、Dataset、Scraper API、Web Unlocker、プロキシのどれを契約するかを絞れます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf47e045a4f27">Bright Dataの機能・料金・使い方<span aria-hidden="true"> →</span></a></p>
 <h3>件数を増やす前に確認するもの</h3>
 <p>取得件数を本番の規模まで増やす前に、取得結果の本文、Zone別コスト、無料クレジットの残高を確認します。Residential Networkを使う場合は、KYCの状態も確認します。</p>
 <p>有料契約では返金条件と月額コミットも先に読みます。1件の取得と消費量が想定どおりなら、毎月の取得量に合わせて契約を選んでください。</p>
 <p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
-<p>使いたい製品を選び、対象なら無料クレジットで初回取得へ進めます。</p></div>
+<p>使いたい製品を選び、対象なら無料クレジットで初回取得へ進めます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf47e045a4f27">Bright Dataの機能・料金・使い方<span aria-hidden="true"> →</span></a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf031d2d43587">Bright Dataの料金プラン<span aria-hidden="true"> →</span></a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/n3514ca5d66ed">Web Unlockerの仕組み・使い方・料金<span aria-hidden="true"> →</span></a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/ndd05477c5d70">おすすめの有料プロキシサーバー5選<span aria-hidden="true"> →</span></a></p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nb993015e6c27">おすすめのスクレイピングツール5選<span aria-hidden="true"> →</span></a></p></div>
 <div class="nav"><span><a href="bright-data-guide.html">← Bright Dataとは？機能・料金・使い方と…</a></span><span><a href="bright-data-howto-653e.html">Web Unlockerとは？Bright Da… →</a></span></div>
 <div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
 <script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

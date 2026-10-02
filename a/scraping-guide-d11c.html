@@ -1,0 +1,155 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>Difyでスクレイピングする方法｜3つの連携方式と設定・エラー対処｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/scraping-guide-d11c/eyecatch.png" alt="">
+<h1 id="t">Difyでスクレイピングする方法｜3つの連携方式と設定・エラー対処</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 8,441字</div>
+<div class="tags">#Dify #スクレイピング #Firecrawl #BrightData #海外SaaS</div>
+<div class="body" id="b"><p>Difyは、WebデータをAIワークフローやナレッジへ取り込める開発基盤です。ただし、ページの取得には外部サービスやプラグインを使います。</p>
+<p>主な選択肢は3方式です。DifyでWebスクレイピングを始めるときの選び方から、設定、出力整形、エラー対処まで順に紹介します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">Difyでスクレイピングする3つの方法</a></li><li><a href="#s2">FirecrawlでWebサイトをナレッジへ同期する</a></li><li><a href="#s3">Difyプラグインで必要なページを取得する</a></li><li><a href="#s4">HTTP/API連携でBright Dataからデータを受け取る</a></li><li><a href="#s5">取得結果をMarkdown・JSONへ整える</a></li><li><a href="#s6">エラーは入力から後続ノードまで順に切り分ける</a></li><li><a href="#s7">料金はDify・LLM・取得サービスの3か所で発生する</a></li><li><a href="#s8">規約・個人情報・アクセス負荷を確認する</a></li><li><a href="#s9">まとめ：更新頻度と取得難度から連携方式を選ぶ</a></li></ol></nav><h2 id="s1">Difyでスクレイピングする3つの方法</h2>
+<p>定期的にサイト全体を取り込むならナレッジ同期、単一ページならプラグインが候補です。外部サービスのAPIキーやリクエスト本文まで設定したい場合は、HTTP/API連携を選びます。</p>
+<ul><li>ナレッジ同期：サイト単位の取り込み</li><li>プラグイン：単一URLを手早く取得</li><li>HTTP/API：APIキーや出力を細かく指定</li><li>共通入力：URLと取得したい項目</li><li>共通出力：MarkdownまたはJSON</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>登録ページでは、DifyからAPI連携するサービスと無料クレジットの対象範囲を確認できます。プロキシ製品は月次無料クレジットの対象外です。</p>
+<h3>サイト全体を取り込むならナレッジ同期</h3>
+<p>ナレッジ同期は、複数ページをまとめてRAGの参照元にしたい場合に向きます。開始URLと取得範囲を決め、本文をMarkdownとしてナレッジへ渡す流れです。</p>
+<p>製品マニュアルやヘルプセンターなど、同じサイトを定期的に更新したい場面と相性がよい方式です。一方、対象範囲を広げすぎると不要なページまで入り、更新にも時間がかかります。まず対象パスと更新頻度を決めておきます。</p>
+<h3>1ページを扱うならプラグイン</h3>
+<p>特定ページの要約や項目抽出なら、取得プラグインをワークフローへ置く方法が簡潔です。User InputノードでURLを受け取り、取得結果をLLMへ渡します。</p>
+<p>設定箇所が少なく、入力と出力の関係を追いやすいのが利点です。複数URLへ広げる前に、取得ノードの本文出力がLLMへ正しく渡るかを確かめます。</p>
+<h3>認証や取得条件を指定するならHTTP/API連携</h3>
+<p>HTTP/API連携では、外部のスクレイピングAPIへリクエストを送り、結果をDifyで受け取ります。ここで扱う認証は、外部APIへ接続するためのAPIキー認証です。対象サイトへログインするためのCookieやセッション認証とは分けて考えます。</p>
+<p>HTTP Requestでは、URL、ヘッダー、本文、応答形式を分けて指定できます。ログイン後のページを扱う場合は、閲覧権限に加えて規約上の許可も必要です。</p>
+<h2 id="s2">FirecrawlでWebサイトをナレッジへ同期する</h2>
+<p>Firecrawlは、開始URLや下層ページの範囲を指定し、取得した本文をMarkdownとしてDifyのナレッジへ渡せます。最初からサイト全体を対象にせず、少ないページ数で結果を見ます。</p>
+<ul><li>FirecrawlのアカウントとAPIキーを用意する</li><li>Dify Marketplaceから公式プラグインを追加する</li><li>APIキーは資格情報欄へ保存する</li><li>開始URL、深さ、ページ上限を小さく設定する</li><li>除外対象を見てから取得範囲を広げる</li></ul>
+<h3>FirecrawlプラグインとAPIキーを準備する</h3>
+<p>Dify Marketplaceには、Firecrawlのデータソースと取得ツールがあります。サイトをナレッジへ同期する場合は、データソース側を追加します。ワークフローで1ページを取る場合は、Scrapeなどのアクションを使います。</p>
+<p>Firecrawlで発行したAPIキーは、Difyの資格情報欄へ保存します。プロンプトや通常の入力変数へ書くと、実行ログや共有画面に残るおそれがあります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.firecrawl.dev/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Firecrawlの公式サイトでは、毎月のクレジット数と各プランの同時リクエスト数を確認できます。</p>
+<h3>開始URL・深さ・ページ上限を決める</h3>
+<p>開始URLは、取得したい情報に近い階層を選びます。サイトのトップを指定すると、会社情報や採用ページなど、RAGに不要な内容まで混ざる場合があるためです。</p>
+<p>深さとページ上限は小さく設定します。取得結果を見て、必要なパスを残し、タグ一覧や検索結果などの重複ページを除外します。ページを増やすのは、その後で十分です。</p>
+<h3>取得したMarkdownをナレッジで確かめる</h3>
+<p>同期が終わったら、件数だけで成功と判断しません。見出しと本文が残っているか、ナビゲーションやフッターが大半を占めていないかを読みます。</p>
+<p>同じページがURL違いで重複していないかも要確認です。回答テストでは、元の記述とDifyの回答を見比べます。回答の参照元として役立たないページは、取得対象から外します。</p>
+<h2 id="s3">Difyプラグインで必要なページを取得する</h2>
+<p>単一ページの要約や抽出なら、User Inputの後に取得プラグインを置き、LLMを経てOutputにつなぎます。取得ノードが返した本文を、変数として後続ノードへ渡す構成です。</p>
+<ul><li>User InputノードにURL入力を作る</li><li>FirecrawlのScrapeなどを選ぶ</li><li>取得ノードの出力をLLMへ渡す</li><li>Outputノードで結果を表示する</li><li>複数URLではIterationを加える</li></ul>
+<h3>User Inputノードで対象URLを受け取る</h3>
+<p>User Inputノードに対象URLを入れる文字列変数を追加し、必須項目に設定します。入力変数にすると、固定URLを取得ノードへ直接書く場合よりも、テスト対象を替えやすくなります。</p>
+<p>URL以外の条件も必要なら、取得したい言語や商品カテゴリを別変数に分けます。各入力欄で付けた変数名は、後続ノードの変数選択画面に表示されます。</p>
+<h3>取得ノードの出力をLLMへ渡す</h3>
+<p>取得ノードが返す本文を、LLMノードのプロンプトへ割り当てます。プロンプト欄で変数一覧を開き、「取得ノード名／本文の出力変数」を選びます。URL変数だけを渡しても、LLMがページを読めるわけではありません。</p>
+<p>プロンプトには、要約や抽出の目的だけを書きます。APIキーや認証情報は含めません。Outputノードでは「LLM／text」と元URLを出力変数に選ぶと、回答から取得元をたどれます。</p>
+<h3>複数URLはIterationで各要素を処理する</h3>
+<p>URLの配列はIterationへ渡します。各要素に同じ取得ノードとLLMノードを適用し、結果を配列としてまとめる構成です。</p>
+<p>Iterationは順次実行と並列実行を選べます。外部APIの同時実行上限や429エラーを避けたい場合は順次実行、互いに独立したURLを短時間で処理したい場合は並列実行が候補です。一部のURLが失敗しても追跡できるよう、元URLと結果を同じ単位で残します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://dify.ai/ja/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Difyの日本語サイトでは、Cloud版とセルフホスト版の違い、プランごとの上限を確認できます。</p>
+<h2 id="s4">HTTP/API連携でBright Dataからデータを受け取る</h2>
+<p>アクセス許可と規約の条件を満たしていても、JavaScript描画や構造化取得で基本プラグインが止まる場合があります。その場合は、Bright DataのDifyプラグインまたはAPI連携が候補です。外部APIの認証情報と取得方式を分けて設定します。</p>
+<figure><img loading="lazy" src="../img/scraping-guide-d11c/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<ul><li>Bright Dataのアカウントと認証情報を用意する</li><li>DifyプラグインかHTTP Requestを選ぶ</li><li>APIキーはSecret環境変数から認証欄へ渡す</li><li>URL、取得方式、必要な出力を指定する</li><li>構造化データ、Markdown、検索を使い分ける</li><li>最小リクエストで応答を確かめる</li></ul>
+<h3>プラグインとHTTP Requestのどちらを使うか決める</h3>
+<p>対応する取得処理がDifyプラグインに用意されているなら、プラグインから始めると設定を減らせます。商品情報の構造化取得、Markdownでのページ取得、検索結果の取得は、目的が異なります。</p>
+<p>HTTP Requestは、外部APIのリクエスト内容を自分で組みたい場合に選びます。ヘッダー、本文、応答形式を分けて設定できるため、既存のAPI仕様へ合わせたい場面に向いています。</p>
+<h3>認証情報と取得条件を設定する</h3>
+<p>HTTP Requestを使う場合は、APIキーをSecret型の環境変数へ保存します。その変数をAPI Key認証のBearerまたはCustomへ渡せば、実行ログでは秘密値が伏せられます。対象URL、取得方式、必要な出力項目は別々に設定します。</p>
+<p>応答はBody、Status Code、Headersに分かれて後続ノードから参照できます。JSONが必要でも、まずBodyに取得結果が入ったことを確かめてから出力項目を増やします。</p>
+<h3>基本取得から切り替える条件を決める</h3>
+<p>無料で公開され、静的な本文を返すページは、基本プラグインで足りることがあります。403が出たら、先に対象サイトの規約とアクセス条件を見直します。取得方法を変えても、アクセス許可が増えるわけではありません。</p>
+<p>商品名、価格、URLなどを決まった項目で受け取りたい場合も、構造化取得が候補になります。取得が難しい対象だけを高機能なAPIに振り分けると、費用を追いやすくなります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>登録ページから、Dify連携に使う認証情報と対象サービスを準備できます。月次無料クレジットはWeb Scraper APIなどが対象で、プロキシ製品には適用されません。</p>
+<h2 id="s5">取得結果をMarkdown・JSONへ整える</h2>
+<p>要約やRAGにはMarkdown、商品名や価格などの固定項目にはJSONが向きます。Difyでは取得ノードの出力変数を選び、LLM、Code、Templateのどこで整形するかを決めます。</p>
+<ul><li>Markdownは本文と見出しを残す</li><li>JSONは必要な項目名を先に定義する</li><li>LLMのStructured Outputで項目を定義する</li><li>CodeやTemplateノードで形式を整える</li><li>空文字、欠損、配列の型を検査する</li><li>元URLと取得時刻を結果へ残す</li></ul>
+<h3>要約やRAGにはMarkdownを使う</h3>
+<p>Markdownは見出しと段落の関係を保ちやすく、長い本文をLLMへ渡す場面に合います。取得ノードの本文出力をLLMのプロンプト欄で選び、要約や抽出の指示と分けて配置します。広告やメニューを除くなら、LLMへ渡す前にCodeノードで処理します。</p>
+<p>まずは、次のような小さな出力形式で試します。</p>
+<ul><li>タイトル：ページタイトル</li><li>元URL：https://example.com/page</li><li>主な内容：取得した本文</li></ul>
+<h3>固定項目の抽出にはJSONを使う</h3>
+<p>商品や求人のように同じ項目を繰り返し扱うなら、LLMノードのStructured Outputで項目名と型を定義します。後続ノードでは「LLMノード名／structured_output」を選ぶと、自由文ではなく決めた項目を参照できます。</p>
+<ul><li>name：商品名</li><li>price：価格</li><li>url：https://example.com/item</li></ul>
+<p>項目名は途中で変えず、必須項目もスキーマ上で指定します。配列や入れ子が必要ならJSON Schemaを使い、単純な項目ならVisual Editorで型を設定します。</p>
+<h3>欠損と型崩れを後続ノードの前で止める</h3>
+<p>Test Run後は対象ノードを選び、LAST RUNの入力と出力を開きます。HTTP RequestならBody、LLMならtextまたはstructured_outputを見て、空値が次へ渡っていないか確かめます。</p>
+<p>データが不正な場合は、そのままOutputへ送らず、IF/ELSEで空値を分岐させます。取得ノードのBodyが空なら再取得、Bodyはあるのにstructured_outputが崩れたならLLMかCodeだけを見直します。</p>
+<h2 id="s6">エラーは入力から後続ノードまで順に切り分ける</h2>
+<p>Test Runを実行し、失敗したノードのLAST RUNを開きます。入力と出力は、User InputのURLからLLMの出力まで順にたどります。</p>
+<ul><li>1. User InputのURL変数が空でないか</li><li>2. 401ならAPIキーと認証形式を確認</li><li>3. 403なら規約・権限と取得方式を確認</li><li>4. 429ならIterationの実行方式を確認</li><li>5. 空結果ならHTTP RequestのBodyを確認</li><li>6. JSON崩れならBodyとStructured Outputを分ける</li><li>7. タイムアウトなら取得範囲を減らす</li></ul>
+<h3>401・403・429は認証と取得側を確認する</h3>
+<p>401は、HTTP Requestノードの認証方式とSecret環境変数を見直します。BearerかCustomかは外部APIの仕様に合わせ、更新後は「Run this step」で取得ノードだけを再実行します。</p>
+<p>403では対象サイトの規約、閲覧権限、取得方式を切り分けます。429ならIterationを順次実行へ切り替えるか、並列処理を抑えます。ここでLLMのプロンプトを直しても、取得側の問題は解決しません。</p>
+<h3>空結果とタイムアウトは対象範囲を狭める</h3>
+<p>Status Codeが成功を示していても、Bodyが空なら、JavaScript描画後の内容が必要かもしれません。除外条件が広すぎて、本文まで消している場合もあります。</p>
+<p>タイムアウト時は、HTTP Requestの接続・読み取り・書き込みについて、それぞれのタイムアウト設定を見直します。Crawlなら下層の深さとページ上限も減らします。</p>
+<h3>JSON崩れは取得本文と整形処理を分けて見る</h3>
+<p>JSONの構文エラーが出たら、HTTP RequestのBodyとLLMのstructured_outputを別々に開きます。まずBodyをOutputへ一時的に渡し、必要な内容が含まれるかを読みます。</p>
+<p>Bodyに内容があれば、LLMまたはCodeノードだけを「Run this step」で再実行します。値に改行や引用符があっても、文字列を手作業で連結せず、Structured OutputかCodeノードの出力変数へ渡します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>基本取得で403や空結果が続く場合は、管理型の取得サービスと対象製品を登録ページで確認できます。無料クレジットの対象は製品ごとに異なります。</p>
+<h2 id="s7">料金はDify・LLM・取得サービスの3か所で発生する</h2>
+<p>Difyの契約だけでは総額は決まりません。ワークフローの実行回数、LLMの入出力トークン、外部サービスの取得ページ数を分けて見積もります。</p>
+<ul><li>Dify：ワークスペース、アプリ、API上限</li><li>LLM：利用モデルと入出力トークン</li><li>Firecrawl：クレジットと取得ページ数</li><li>Bright Data：対象サービス別の料金条件</li><li>契約条件：カード、請求書、日本語対応</li><li>Bright Data：プロキシ製品は月次無料枠の対象外</li></ul>
+<h3>Dify本体の無料枠と実行上限</h3>
+<p>Dify CloudのSandboxは$0で、1ワークスペース、1人、5アプリを利用できます。APIレート上限は月5,000回です。オープンソースのCommunity版は、セルフホストなら無料で使えます。</p>
+<p>有料のProfessionalは月払い$59、年払い$590です。1ドル=158円換算（執筆時点の目安。為替で変動）では、月払いは約9,300円になります。Dify Cloudはカード払いで、銀行振込には対応していません。日本発行カードとJCBの可否、日本語での有人サポートは確認できていません。</p>
+<h3>LLMのトークン料金</h3>
+<p>LLMの料金は、接続先のモデル側で発生する場合があります。長いWeb本文を毎回そのまま渡すと、入力トークンが増えます。</p>
+<p>取得後に不要なメニューや重複箇所を削り、必要な本文だけを渡します。テスト中は短いページを選び、モデルも固定すると、処理ごとの差を追えます。</p>
+<h3>Firecrawl・Bright Dataの取得料金</h3>
+<p>FirecrawlのFreeは$0で、毎月1,000クレジットです。基本のScrape、Crawl、Mapは1ページ1クレジット。Hobbyは月払い$19、または年払いで月$16です。セルフサービス契約はカード払いで、請求書払いはScaleとEnterpriseが対象。日本語UIと日本語サポートは確認できていません。</p>
+<p>Bright Dataは、対象製品共通の月5,000無料クレジットを新規アカウントへ付与します。Web Unlocker API、SERP API、Web Scraper APIなどが対象です。Datacenter、ISP、Residential Proxiesは、この月次無料枠に含まれません。</p>
+<p>Web Scraper APIなどの有料単価と最低利用条件は、対象製品の料金ページで照合します。支払いは、クレジットカード、PayPal、Alipayに対応しています。Payoneer、Google Pay、Apple Payも使えます。ただし、日本発行カードとJCBの可否は確認できていません。請求書・領収書のダウンロード手順も公開情報では不明です。日本語サイトはありますが、管理画面全体と有人サポートが日本語で対応できる範囲は未確認です。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://www.firecrawl.dev/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Firecrawlの料金ページでは、プラン別のクレジット数と繰り越し条件を確認できます。</p>
+<h2 id="s8">規約・個人情報・アクセス負荷を確認する</h2>
+<p>技術的に取得できても、自由に保存・再利用できるとは限りません。対象サイトの規約、robots.txt、著作権、個人情報、アクセス頻度を実装前に確認します。</p>
+<ul><li>対象サイトの利用規約とrobots.txt</li><li>著作物の保存・再利用範囲</li><li>個人情報と認証後ページの扱い</li><li>ページ数、並列数、実行間隔</li><li>取得データの保存先と削除方法</li><li>判断が難しい場合は法務担当へ相談</li></ul>
+<h3>対象サイトの規約とrobots.txtを読む</h3>
+<p>最初に、対象サイトの利用規約とrobots.txtを読みます。自動取得を禁止している範囲や、再利用に条件が付くコンテンツは対象から外します。</p>
+<p>robots.txtだけで法的な可否が決まるわけではありません。著作権や契約条件も含めて判断し、取得した本文をそのまま公開しないようにします。</p>
+<h3>個人情報と認証後ページを取得対象から外す</h3>
+<p>氏名、連絡先、購入履歴などの個人データは、安易に集めません。ログイン後のページも、閲覧権限があることと自動取得してよいことは別です。</p>
+<p>必要性が明確でない情報は取得対象から外します。業務で扱う場合は、保存先、閲覧できる人、削除時期まで決めます。</p>
+<h3>ページ数と実行間隔を小さく始める</h3>
+<p>並列数を抑え、短時間に大量のリクエストを送らないようにします。対象サイトへの負荷だけでなく、403や429の原因にもなります。</p>
+<p>定期実行では、更新頻度に合った間隔を選びます。毎日変わらない資料を短い間隔で取り直しても、費用と負荷が増えるだけです。</p>
+<h2 id="s9">まとめ：更新頻度と取得難度から連携方式を選ぶ</h2>
+<p>サイト全体の定期更新はナレッジ同期、単一ページはプラグイン、外部APIの認証や構造化取得はHTTP/API連携から検討します。方式を選んだら、取得結果と後続ノードの変数を順に確かめます。</p>
+<ul><li>ナレッジ同期：サイト単位で更新したい</li><li>プラグイン：少数ページを手早く扱いたい</li><li>HTTP/API：取得条件を細かく制御したい</li><li>確認順：URL、取得結果、整形結果</li><li>次の確認：方式、製品、料金を分けて比べる</li></ul>
+<h3>まず1URLで取得と整形を確認する</h3>
+<p>最小構成は、URL入力、取得、整形、出力の4段階です。まず取得したMarkdownを読み、次にJSONなど必要な形へ整えます。</p>
+<p>エラーが出た場合も、URLから順に1段階ずつ見ます。この順序を守れば、外部サービスの問題とDify内の変数設定を混同せずに済みます。</p>
+<h3>取得が難しいページだけ外部APIへ切り替える</h3>
+<p>基本プラグインで取得できるページは、そのまま使えます。JavaScript描画やアクセス制限で止まる対象だけ、管理型のAPIへ切り替えます。</p>
+<p>外部APIを選ぶときは、対応ページの多さより先に、課金単位と出力形式を見ます。無料枠で1ページを試し、必要な項目が返ることを確かめてから対象を増やします。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>Bright Dataの登録ページは、DifyからAPI連携を始める入口です。月次無料クレジットの対象には制限があり、プロキシ製品は含まれません。</p>
+<p><strong>関連するnote</strong></p>
+<ul><li><a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/na75a30918179">Bright Dataの登録と基本操作を知りたい方はこちら</a></li></ul>
+<p><strong>もっと詳しく比較したい方へ</strong></p>
+<ul><li><a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nb993015e6c27">スクレイピングツールをまとめて比べたい方はこちら</a></li><li><a target="_blank" rel="nofollow noopener" href="https://note.com/saas_serivce/n/nf031d2d43587">Bright Dataの料金と無料範囲を知りたい方はこちら</a></li></ul></div>
+<div class="nav"><span><a href="scraping-guide-2d16.html">← AIスクレイピングとは？4つの方式・選び方・おす…</a></span><span><a href="softr-pricing.html">Softrの料金プラン【2026年8月改定対応】… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

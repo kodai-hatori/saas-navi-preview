@@ -1,0 +1,138 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>プロキシサーバーの設定方法｜Windows・Mac・ブラウザ・Pythonの手順｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/proxy-setup/eyecatch.png" alt="">
+<h1 id="t">プロキシサーバーの設定方法｜Windows・Mac・ブラウザ・Pythonの手順</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 7,294字</div>
+<div class="tags">#プロキシ #BrightData #Python</div>
+<div class="body" id="b"><p>プロキシを設定すると、端末やアプリの通信を指定した中継サーバーへ通せます。ホスト、ポート、認証方式をどこへ入力するのか。設定後に何を確かめるのか。必要な作業を順に説明します。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">プロキシ設定に必要な4つの情報</a></li><li><a href="#s2">Windows 11・10でプロキシを設定する方法</a></li><li><a href="#s3">Macでプロキシを設定する方法</a></li><li><a href="#s4">Chrome・Edge・Firefoxでプロキシを設定する方法</a></li><li><a href="#s5">curl・Pythonでプロキシへ接続する方法</a></li><li><a href="#s6">Bright Dataの接続情報を各設定へ入力する方法</a></li><li><a href="#s7">プロキシ設定を確認・解除する方法</a></li><li><a href="#s8">プロキシへ接続できないときの確認項目</a></li><li><a href="#s9">まとめ｜使う範囲に合わせて設定先を選ぶ</a></li></ol></nav><h2 id="s1">プロキシ設定に必要な4つの情報</h2>
+<p>ユーザー名とパスワードで認証する手動接続では、次の4つの情報を使います。接続元IPを許可する方式なら、必要なのは主にホストとポートです。PAC URLを渡された場合は、各項目を個別に入力せず、自動構成スクリプトとして設定します。</p>
+<ul><li><strong>ホスト</strong>：接続先のサーバー名</li><li><strong>ポート</strong>：接続先の受付番号</li><li><strong>ユーザー名</strong>：パスワード認証で契約や地域を識別する値</li><li><strong>パスワード</strong>：パスワード認証で使う値</li><li><strong>PAC URL</strong>：自動構成用のURL</li></ul>
+<figure><img loading="lazy" src="../img/proxy-setup/proxy-setup-input-map.png" alt="プロキシ設定の入力項目"></figure>
+<h3>手動設定とPAC URLの違い</h3>
+<p>ホストとポートを受け取った場合は、OSやアプリの手動設定を使います。認証は、ユーザー名とパスワードを入力する方式のほか、接続元IPを事前に許可する方式もあります。契約先が指定する方法に合わせてください。</p>
+<p>PAC URLは、アクセス先に応じて使うプロキシを自動で切り替えるファイルの場所です。Windowsでは「セットアップスクリプト」、Firefoxでは「自動プロキシー設定URL」に入力します。PAC URLだけを渡されたときは、URLからホストやポートを推測しないでください。</p>
+<p>「設定を自動的に検出する」は、PACの指定とは別の方式です。組織から案内された方式だけを選びます。</p>
+<h3>ユーザー名とパスワードを入力する場所</h3>
+<p>Windowsの手動設定画面には、ホストとポートの欄が中心に表示されます。ユーザー名とパスワードは、接続時に出る認証画面や利用するアプリへ入力する場合があります。接続元IPの許可方式なら、これらの入力は不要です。</p>
+<p>Macは選んだプロトコルで認証欄を有効にできます。Firefox、curl、Pythonは、それぞれの接続設定へ認証情報を渡します。OS画面に欄がないからといって、認証が不要とは限りません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後は、利用する製品の接続情報と認証方式を確認できます。Residential Proxiesの通常アクセスには、法人向けのKYC条件があります。プロキシ製品の試用条件は、対象APIの月5,000無料クレジットとは別です。</p>
+<h2 id="s2">Windows 11・10でプロキシを設定する方法</h2>
+<p>Windowsでは「設定」から「ネットワークとインターネット」を開き、「プロキシ」へ進みます。ホストとポートが手元にある場合は、手動設定を選びます。</p>
+<figure><img loading="lazy" src="../img/proxy-setup/proxy-setup-windows.png" alt="Windowsのプロキシ設定"></figure>
+<h3>ホストとポートを手動で入力する</h3>
+<p>設定の流れは次のとおりです。</p>
+<ol><li>「設定」を開く</li><li>「ネットワークとインターネット」を選ぶ</li><li>「プロキシ」を開く</li><li>手動プロキシ設定の「セットアップ」を選ぶ</li><li>プロキシサーバーを使う設定を有効にする</li><li>ホストとポートを入力して保存する</li></ol>
+<p>プロキシを通さない宛先がある場合は、例外欄へ登録します。社内システムなどのローカルアドレスを除外する設定もあるため、勤務先から指定された内容をそのまま反映してください。</p>
+<h3>自動検出とセットアップスクリプトを使う</h3>
+<p>組織からPAC URLを受け取った場合は、「セットアップスクリプトを使う」を有効にします。スクリプトのアドレス欄へPAC URLを貼り付け、保存します。</p>
+<p>自動検出を指定されたなら、「設定を自動的に検出する」を使います。手動設定やPACも同時に有効にすると、意図しない接続先が選ばれることがあります。指定されていない方式は切っておくと原因を追いやすくなります。</p>
+<h3>認証画面が出ない場合を確認する</h3>
+<p>Windows標準のプロキシ画面は、主に接続先とポートを指定する場所です。認証画面は、ブラウザで最初に通信したときや、対象アプリを起動したときに出る場合があります。</p>
+<p>接続に失敗するなら、アプリがOS設定を使う仕様かを調べます。URLへ認証情報を埋め込む前に、アプリ側の認証欄を見てください。</p>
+<h2 id="s3">Macでプロキシを設定する方法</h2>
+<p>Macでは、使用中のWi-FiやEthernetごとにプロキシを設定します。「システム設定」から「ネットワーク」を開き、対象の接続を選びます。そのうえで「詳細」の「プロキシ」へ進みます。</p>
+<figure><img loading="lazy" src="../img/proxy-setup/proxy-setup-mac.png" alt="Macのプロキシ設定"></figure>
+<h3>HTTP・HTTPS・SOCKSから方式を選ぶ</h3>
+<p>契約先や管理者から指定された通信方式を選びます。WebプロキシはHTTP、保護されたWebプロキシはHTTPS、SOCKSプロキシはSOCKS用です。</p>
+<ol><li>使用中のネットワークを選ぶ</li><li>「詳細」を開く</li><li>「プロキシ」を選ぶ</li><li>指定されたプロトコルを有効にする</li><li>サーバー名とポートを入力する</li></ol>
+<p>HTTPとHTTPSに同じ値を入れるとは限りません。接続先から別々の値を渡された場合は、それぞれ対応する欄へ写します。</p>
+<h3>認証情報を入力して設定を適用する</h3>
+<p>認証が必要な接続では、プロキシサーバーがパスワードを要求する設定を有効にします。ユーザー名とパスワードを入れ、「OK」を選びます。</p>
+<p>設定は選択中のネットワークサービスに結び付きます。Wi-Fiへ設定したあとでEthernetへ切り替えた場合、Ethernet側にも同じ設定が必要かを見直してください。</p>
+<h2 id="s4">Chrome・Edge・Firefoxでプロキシを設定する方法</h2>
+<p>ChromeとEdgeは、原則としてOSのプロキシ設定を使います。Firefoxはブラウザ内に独自の接続設定を持つため、Firefoxの通信だけをプロキシへ通したい場合に向きます。</p>
+<figure><img loading="lazy" src="../img/proxy-setup/proxy-setup-browser-scope.png" alt="ブラウザごとのプロキシ適用範囲"></figure>
+<h3>ChromeとEdgeはOS設定を使う</h3>
+<p>Chromeの設定で「プロキシ」を検索すると、パソコンのプロキシ設定を開く項目が見つかります。Edgeでは「システムとパフォーマンス」に、コンピューターのプロキシ設定を開く項目があります。</p>
+<p>変更は、同じOS設定を参照するアプリにも及びます。Chrome以外へ影響させたくない場合は、Firefoxや処理単位の方法を検討します。</p>
+<h3>Firefoxだけにプロキシを設定する</h3>
+<p>現行版のFirefoxでは「設定」から「プライバシーとセキュリティ」を開きます。続いて「接続とソフトウェアのセキュリティ」にある「詳細設定」から「プロキシ設定」へ進みます。そこで「プロキシを設定」を選びます。旧版では「一般」の「ネットワーク設定」から「接続設定」を開く流れでした。</p>
+<p>手動の場合は、指定されたHTTP、HTTPS、SOCKSの欄へホストとポートを入力します。SOCKS利用時のDNSの扱いも選べますが、接続先の指定がある場合はそちらを優先します。</p>
+<h3>影響範囲で設定先を選ぶ</h3>
+<ul><li>端末の通信を広く対象にする：WindowsまたはMac</li><li>Firefoxの通信だけを対象にする：Firefoxの接続設定</li><li>コマンド単位で使う：curlのオプション</li><li>スクリプト単位で使う：Pythonのproxies</li></ul>
+<p>設定先を狭くすると、普段使うアプリへの影響を抑えられます。一方、複数の設定先へ同じプロキシを入れると、解除漏れや二重設定の原因になります。</p>
+<h2 id="s5">curl・Pythonでプロキシへ接続する方法</h2>
+<p>curlでは--proxyと--proxy-userを使います。PythonのRequestsではproxiesまたは環境変数を利用し、認証情報を公開リポジトリへ残さないようにします。</p>
+<h3>curlでホスト・ポート・認証情報を渡す</h3>
+<p>次の値は説明用のダミーです。実際には、契約先から受け取った値へ置き換えます。</p>
+<p>ターミナルへ次の1行を入力します。</p>
+<p>curl --proxy &quot;http://proxy.example:${PROXY_PORT}&quot; --proxy-user &quot;username:password&quot; &quot;https://example.com/ip&quot;</p>
+<p>ホストとポートは--proxy、ユーザー名とパスワードは--proxy-userへ分けています。認証情報をプロキシURLへ埋め込む方法もありますが、記号を含む値はURLエンコードが必要です。入力ミスを減らすなら、分離した指定から始めます。</p>
+<h3>Python Requestsでproxiesを指定する</h3>
+<p>次の例では、認証情報を含むURLを環境変数PROXY_URLから読み込みます。認証情報をソースコードへ残さないための分離です。ただし、環境変数そのものが安全な保管先になるわけではありません。</p>
+<p>Pythonファイルに、次の7行を上から順に記載します。</p>
+<ol><li>import os</li><li>import requests</li><li>proxy_url = os.environ[&quot;PROXY_URL&quot;]</li><li>proxies = {&quot;http&quot;: proxy_url, &quot;https&quot;: proxy_url}</li><li>response = requests.get(&quot;https://example.com/ip&quot;, proxies=proxies)</li><li>print(response.status_code)</li><li>print(response.text)</li></ol>
+<p>PROXY_URLには、利用するサービスが示す認証形式を設定します。HTTP用とHTTPS用で接続先が異なるなら、環境変数も分けて読み込みます。</p>
+<h3>認証情報をコードへ直書きしない</h3>
+<p>パスワードをソースコードへ直接書くと、Gitの履歴やエラーログから漏れるおそれがあります。本番や共有端末では、OSの資格情報ストアや実行基盤のシークレット管理を優先します。</p>
+<p>環境変数は、コードへの直書きを避けるための最低限の分離です。値を画面に表示したり、ログへ出力したりしないでください。画面共有にも注意が要ります。ユーザー名には、地域やセッションの指定が現れることがあります。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>リンク先では、Bright Dataの製品情報と料金を確認できます。curlやPythonへ渡す認証形式は、登録後の接続情報と公式資料を照らし合わせてください。</p>
+<h2 id="s6">Bright Dataの接続情報を各設定へ入力する方法</h2>
+<p>Bright DataにはAPIキーを使う「API Access」と、プロキシ用のユーザー名・パスワードを使う「Native Access」があります。OSやFirefox、curlからプロキシへ直接つなぐ場合は、Native Accessの接続情報を使います。</p>
+<figure><img loading="lazy" src="../img/proxy-setup/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<p>Residential Proxiesの通常アクセスではKYCが必要です。申請できるのは、企業ドメインのメールを認証できる登録企業です。事業内容、利用目的、連絡先を提出すると、結果は最大48時間で更新されます。追加確認として、身分証明書やビデオ通話を求められる場合もあります。</p>
+<p>robots.txtに従うImmediate Residential Accessは、KYCなしで利用できる例外です。DatacenterやISPまで同じKYC条件とは限らないため、利用する製品の画面で開始条件を確かめてください。</p>
+<h3>管理画面で4つの接続情報を取得する</h3>
+<p>管理画面の「Proxies」から作成済みの製品を開き、「Access Details」を表示します。Native Accessで使う4つの接続情報は、直後の一覧のとおりです。同じ画面でまとめて確認できます。Account IDは「Account Settings」の「Profile」で確認できます。</p>
+<ul><li>ホスト：Access Detailsの接続先</li><li>ポート：Access Detailsのポート</li><li>ユーザー名：brd-customer-[ACCOUNT_ID]-zone-[PRODUCT_NAME]</li><li>パスワード：Access DetailsのPassword</li></ul>
+<p>ユーザー名とパスワードは大文字・小文字を区別します。空白を入れず、ユーザー名とパスワードの間はコロンで区切ります。地域やセッションの指定が加わる場合も、表示された文字列を途中で省略しないでください。</p>
+<h3>OS・Firefox・コードの入力先へ写す</h3>
+<p>OSやFirefoxへ設定するのは、Access Detailsに表示された接続先とポートです。認証を求められたら、同じ画面のUsernameとPasswordを入力します。</p>
+<p>curlでは接続先とポートを--proxyへ、UsernameとPasswordを--proxy-userへ渡します。API向けの処理ではAPI Accessを選ぶ場合もあるため、APIキーとNative Accessの認証情報を混同しないでください。</p>
+<p>プロキシ製品には、新規登録時に1回限り$2のトライアルクレジットが付き、有効期間は7日間です。支払い方法を追加すると、30日間有効の$5ボーナスが付きます。Residential Proxiesでは、前述のKYCまたは例外条件を満たしたあとに接続情報を使います。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後は利用するプロキシ種別の接続先を作成し、各設定へ移す認証情報を取得できます。対象API向けの月5,000無料クレジットとは条件が異なります。</p>
+<h2 id="s7">プロキシ設定を確認・解除する方法</h2>
+<p>設定画面の有効状態と、接続先から見えるIPの両方を見ます。解除するときは、OS、Firefox、環境変数など、自分が有効にした場所を元へ戻します。</p>
+<h3>設定が有効かを二段階で確認する</h3>
+<p>最初に、設定した画面を開き直します。手動設定ならホストとポート、PACならURLが残っているかを見ます。あわせて、該当する設定が有効になっているかも確かめます。</p>
+<p>次に、接続サービスが案内する確認先へアクセスし、外部から見えるIPを調べます。FirefoxだけでIPが変わるなら、ブラウザ独自設定が効いています。curlだけ結果が違う場合は、コマンドの指定範囲に限って接続できている状態です。</p>
+<p>IPが変わっても、地域や認証方式まで正しいとは限りません。契約先の接続情報に地域指定がある場合は、その値も照合します。</p>
+<h3>Windows・Mac・Firefoxの設定を解除する</h3>
+<p>Windowsでは、手動設定またはセットアップスクリプトを有効にした画面へ戻り、該当する設定をオフにします。Macは、使用中のネットワークにあるプロキシ画面で、選択したプロトコルを解除して「OK」を選びます。</p>
+<p>Firefoxは接続設定を開き、プロキシを使わない設定、または普段使っていた方式へ戻します。会社や学校が管理する端末では、管理者指定の設定を勝手に解除しないでください。</p>
+<h3>curl・Pythonの環境変数を元へ戻す</h3>
+<p>HTTP_PROXY、HTTPS_PROXY、PROXY_URLなどを使った場合は、設定したシェルや実行環境から削除します。ターミナルを閉じるまで有効な一時設定と、OSやクラウド側に保存した設定を切り分けて確認します。</p>
+<p>コードのproxies指定と環境変数が重なっていると、解除したつもりでも通信が残る場合があります。両方を使っていないか検索してから、対象アプリを再起動します。</p>
+<h2 id="s8">プロキシへ接続できないときの確認項目</h2>
+<p>まずホストとポート、次に認証、最後にVPN、例外設定、接続地域を見ます。エラーの種類から調べる場所を絞ると、設定を最初からやり直さずに済みます。</p>
+<figure><img loading="lazy" src="../img/proxy-setup/proxy-setup-troubleshooting.png" alt="プロキシ接続エラーの切り分け"></figure>
+<h3>HTTP 407は認証情報を見直す</h3>
+<p>HTTP 407は、プロキシ側が認証を求めているときに返る状態です。ユーザー名とパスワードの入力漏れ、コピー時の空白、地域やセッション指定の欠落がないかを見ます。</p>
+<p>URLへ認証情報を埋め込んだ場合は、パスワード中の記号が正しくエンコードされているかも確認します。curlなら--proxy-userへ分けると、URLの組み立てミスを切り分けられます。</p>
+<h3>接続拒否とタイムアウトはホスト・ポートから確認する</h3>
+<p>接続拒否が出たら、ホストの綴りとポートを接続情報へ戻って照合します。接続元IPの登録が必要な方式では、現在のIPが許可されているかも調べます。</p>
+<p>タイムアウトでは、ファイアウォールや社内ネットワークが通信を止めている可能性があります。VPNや別のプロキシを一時的に外し、接続経路を一つにして試します。特定サイトだけ開けない場合は、例外リストや接続先側の制限も候補です。</p>
+<h3>IPや地域が変わらないときは影響範囲を確認する</h3>
+<p>ChromeとEdgeはOSの設定を参照し、Firefoxはブラウザ内の設定を使います。別の場所へ設定していると、確認に使ったブラウザへ反映されません。</p>
+<p>対象アプリを再起動し、外部から見えるIPをもう一度調べます。地域が違う場合は、ユーザー名などに含まれる地域指定と、作成した接続先の条件を見直します。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>接続先や認証方式は、管理画面の値と公式資料を並べて照合できます。パスワードなどの実値は問い合わせ文へ載せないでください。</p>
+<h2 id="s9">まとめ｜使う範囲に合わせて設定先を選ぶ</h2>
+<p>端末全体ならOS、Firefoxだけならブラウザ、処理単位ならcurlやPythonへ設定します。つながらない場合は、入力値、認証、影響範囲の順に見直してください。</p>
+<ul><li>接続情報と認証方式を先にそろえる</li><li>Chrome・EdgeはOS設定を使う</li><li>Firefoxはブラウザ内で設定する</li><li>コードの認証情報は外部管理する</li><li>確認と解除は設定した場所で行う</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>接続情報を取得したら、利用環境に合う設定方法を選べます。無料クレジットは対象製品が分かれているため、プロキシの試用条件と混同しないでください。</p></div>
+<div class="nav"><span><a href="proxy-free-server.html">← 無料プロキシサーバーは安全？種類・危険性と業務向…</a></span><span><a href="runpod-pricing.html">Runpodの料金はどう決まる？無料枠とGPU・… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>

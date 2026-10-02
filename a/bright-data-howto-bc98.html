@@ -1,0 +1,129 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="googlebot" content="noindex,nofollow"><title>SERP APIとは？料金・無料枠・日本語検索対応を比較して選び方を解説｜確認用</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;color:#1d1d1b;background:#f6f6f3;line-height:1.9}
+a{color:#1a5fb4}.top{background:#0f172a;color:#f8fafc;padding:14px 16px}.top a{color:#bfdbfe;text-decoration:none}.top .n{font-weight:800;font-size:17px}.top .s{font-size:12px;color:#cbd5e1}
+.wrap{max-width:1080px;margin:0 auto;padding:16px}.art{max-width:720px;margin:0 auto;padding:16px;background:#fff;min-height:100vh}
+.badge{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;margin-right:4px;background:#ecebe6;color:#333;white-space:nowrap}
+.b-draft{background:#dbeafe;color:#1e3a8a}.b-warn{background:#ffe08a;color:#6b4e00}.b-posted{background:#dcfce7;color:#14532d}
+.controls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}.controls input{flex:1 1 220px;padding:8px 10px;border:1px solid #d6d5cf;border-radius:8px;font-size:14px}
+.chipf{border:1px solid #d6d5cf;background:#fff;border-radius:99px;padding:3px 10px;font-size:12.5px;cursor:pointer}.chipf.on{background:#0f172a;color:#fff;border-color:#0f172a}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1280/670;object-fit:cover;background:#0f172a;display:block}.card .m{padding:10px 12px}.card .t{font-weight:700;font-size:14.5px;line-height:1.5}.card .i{font-size:12px;color:#6b6a66;margin-top:4px}
+.eyecatch{width:100%;border-radius:8px;display:block}h1{font-size:1.5em;line-height:1.5;margin:14px 0 6px}.meta{font-size:12.5px;color:#6b6a66;margin-bottom:8px}.tags{font-size:13px;color:#1a5fb4;margin-bottom:10px}
+.body h2{font-size:1.3em;margin:2em 0 .6em;padding-bottom:.2em;border-bottom:2px solid #eee}.body h3{font-size:1.1em;margin:1.6em 0 .4em}.body ul,.body ol{padding-left:1.4em}
+.body blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid #ddd;color:#555;background:#fafafa}.body mark{background:#ffe08a}.body figure{margin:1.2em 0}.body img{max-width:100%;border:1px solid #eee;border-radius:6px}.body a{word-break:break-all}
+.tools{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;z-index:2;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.tools button{font-size:13px;padding:5px 10px;border:1px solid #cfcfc8;border-radius:6px;background:#fafaf7;cursor:pointer}
+.toc{background:#f3f5fa;border:1px solid #e3e7f0;border-radius:10px;padding:12px 16px;margin:18px 0 8px}.toc-t{font-weight:700;font-size:14px}.toc ol{margin:6px 0 0;padding-left:1.5em;font-size:14px;line-height:1.85}.toc a{text-decoration:none}
+.cta{text-align:center;margin:20px 0 12px}.btn{display:inline-block;max-width:100%;background:#1a5fb4;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.5;padding:12px 22px;border-radius:10px;box-shadow:0 2px 0 #0f3f7a}.btn:hover{background:#174f95}
+.nav{display:flex;justify-content:space-between;margin:28px 0 8px;font-size:14px}.foot{font-size:12px;color:#8a8984;margin-top:24px}</style></head><body><div class="top"><div class="n"><a href="../index.html">SaaSサービス比較ナビ</a>　記事プレビュー</div><div class="s">確認用の非公開ページです（検索エンジンには表示されません）</div></div><div class="art">
+<div class="tools"><a href="../index.html">← 一覧へ</a><span style="flex:1"></span><button onclick="copyEl('t')">タイトルをコピー</button><button onclick="copyEl('b')">本文をコピー（note用）</button></div>
+<img class="eyecatch" src="../img/bright-data-howto-bc98/eyecatch.png" alt="">
+<h1 id="t">SERP APIとは？料金・無料枠・日本語検索対応を比較して選び方を解説</h1>
+<div class="meta"><span class="badge">開発・インフラ・データ</span> 6,363字</div>
+<div class="tags">#SERPAPI #検索API #Webデータ収集 #海外SaaS</div>
+<div class="body" id="b"><p>SERP APIは、検索順位やURL、タイトルなどを構造化データで取得する仕組みです。プロキシ管理やCAPTCHA対応、HTML解析の手間をサービス側へ任せられます。</p>
+<p>料金だけで選ぶと、日本語検索の地域指定や課金単位の違いで迷います。Bright Data、cloro、SerpApiを、無料枠と導入方法まで含めて比べます。</p>
+
+<nav class="toc"><div class="toc-t">目次</div><ol><li><a href="#s1">SERP APIでできることと3サービスの早見</a></li><li><a href="#s2">SERP APIと自前スクレイピングの違い</a></li><li><a href="#s3">Bright Data・cloro・SerpApiの特徴</a></li><li><a href="#s4">料金と無料枠は「何回検索できるか」で比べる</a></li><li><a href="#s5">日本語検索と地域指定は同じ条件で試す</a></li><li><a href="#s6">SERP APIを導入して最初の1件を取得する</a></li><li><a href="#s7">契約前に確かめたい5つのポイント</a></li><li><a href="#s8">SERP APIのよくある質問</a></li><li><a href="#s9">まとめ：日本語検索を無料枠で試してから選ぶ</a></li></ol></nav><h2 id="s1">SERP APIでできることと3サービスの早見</h2>
+<p>SERP APIでは、検索語と地域、言語などを指定し、結果をJSONなどで受け取れます。無料で試す最初の候補は、SERP APIが月次無料クレジットの対象となるBright Dataです。</p>
+<ul><li>取得対象：検索順位・URL・タイトルなど</li><li>Bright Data：無料クレジット対象</li><li>cloro：Google検索とAI回答に対応</li><li>SerpApi：毎月250検索の無料枠</li><li>比較軸：課金単位・地域指定・返却項目</li></ul>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録ページでは、SERP APIを含む月次無料クレジットの対象範囲を見られます。プロキシ製品は同じ月次無料枠の対象外です。</p>
+<h2 id="s2">SERP APIと自前スクレイピングの違い</h2>
+<p>SERP APIは、IPの切り替えやCAPTCHA対応、検索画面の変更への追従をサービス側に任せる方法です。ただし、検索条件の設計や取得結果の検品、利用規約の確認は利用者側に残ります。</p>
+<figure><img loading="lazy" src="../img/bright-data-howto-bc98/bright-data-howto-bc98-workflow.png" alt="自前スクレイピングとSERP APIの役割分担"></figure>
+<h3>自前スクレイピングで必要になる作業</h3>
+<p>検索結果を自前で集める場合、取得コードを書くだけでは終わりません。継続して動かすには、次の作業が発生します。</p>
+<ul><li>IPの管理とブロックへの対応</li><li>CAPTCHAが出たときの再試行</li><li>検索画面の変更に合わせたHTML解析の修正</li><li>エラーと欠損の記録</li><li>JSONやCSVなど保存形式の整備</li></ul>
+<p>数回だけ手作業で調べるなら、自前実装のほうが早い場合もあります。毎日の順位取得やAIへの検索結果供給では、保守にかかる手間と費用まで比べる必要があります。</p>
+<h3>SERP APIに任せられる作業と残る作業</h3>
+<p>APIを使うと、検索ページへの接続やHTMLからの項目抽出をサービス側に任せられます。タイトルやURL、順位などを構造化された形で受け取れるため、そのまま集計へ進めます。</p>
+<p>一方で、どの検索語を何時に取得するかは自社で決めます。国や都市、言語、端末の条件をそろえないと、同じ検索語でも結果は変わります。欠損時の再試行と月間コストの監視も必要です。</p>
+<h2 id="s3">Bright Data・cloro・SerpApiの特徴</h2>
+<p>Webデータ収集基盤とまとめたい人にはBright Data、検索と生成AI回答を同じ枠で扱いたい人にはcloroが向いています。検索エンジン別のAPIを広く検討するなら、SerpApiも候補です。</p>
+<h3>Bright Data：無料クレジットからSERP APIを試せる</h3>
+<figure><img loading="lazy" src="../img/bright-data-howto-bc98/bright-data.png" alt="Bright Dataの公式サイト"></figure>
+<p>Bright Dataは、新規アカウントへ対象製品共通の<strong>月5,000クレジット</strong>を付与します。クレジットカードは不要です。SERP APIは1リクエストにつき1クレジットを使い、Web Unlocker APIなどと同じ枠を共有します。</p>
+<p>クレジットは毎月1日に5,000へ戻り、余った分は翌月へ持ち越せません。すべてのプロキシ製品へ使える枠ではない点にも注意が要ります。</p>
+<p>日本語の公式サイトがあり、製品概要や料金を日本語で読めます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>アカウント作成後に、SERP APIの無料対象範囲と現在の料金単位を見られます。</p>
+<h3>cloro：検索と生成AI回答を同じクレジットで扱う</h3>
+<p>cloroは、Google SearchとGoogle News、複数の生成AI回答を共通クレジットで取得するAPIです。</p>
+<p>Freeは月額$0で<strong>毎月500クレジット</strong>、同時実行は1件です。Google Searchは非同期・バッチで3クレジットから始まり、追加ページは2クレジット、同期処理も2クレジット加算されます。500クレジットを500検索と読み替えてはいけません。</p>
+<p>失敗抽出やシステムエラーはクレジットを消費しません。未使用分は翌月へ繰り越されません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://cloro.dev">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>料金ページでは、プランごとのクレジット数とGoogle Searchの消費方法を見比べられます。</p>
+<h3>SerpApi：検索エンジン別のAPIを広く選べる</h3>
+<p>SerpApiは、Googleを含む検索エンジンの結果を構造化JSONで返すサービスです。特定の検索エンジンに合うAPIを選びたい場合の基準になります。</p>
+<p>Freeは月額$0で<strong>毎月250検索</strong>、1時間あたり50検索です。有料のStarterは月額$25で1,000検索。成功した検索だけが数えられ、キャッシュやエラー、失敗検索は消費しません。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://serpapi.com/">公式サイトで料金を見る<span aria-hidden="true"> →</span></a></p>
+<p>公式サイトから、対応する検索APIと検索条件を試すPlaygroundへの導線をたどれます。</p>
+<h2 id="s4">料金と無料枠は「何回検索できるか」で比べる</h2>
+<p>月額だけでは実際の負担を比べられません。1回で使う単位、追加ページ、同期処理、失敗時の消費、未使用枠の扱いまでそろえて計算します。</p>
+<p>料金の円換算には、<strong>1ドル=158円換算（執筆時点の目安。為替で変動）</strong>を使います。cloroのLiteは月額$30で約4,740円、SerpApiのStarterは月額$25で約3,950円が目安になります。Bright Dataは従量課金と月額枠から選べます。</p>
+<h3>無料枠は更新周期とカード要否まで見る</h3>
+<ul><li>Bright Data：月5,000クレジット。毎月リセット、カード不要</li><li>cloro：月500クレジット。未使用分は期末失効</li><li>SerpApi：月250検索。1時間あたり50検索</li></ul>
+<p>Bright Dataは、月額固定の無料プランではなく対象製品で共有する枠です。cloroは検索方法によって消費数が変わり、SerpApiは検索回数で示されます。「無料」という言葉だけで横並びにしないことが大切です。</p>
+<h3>1検索あたりの消費単位をそろえる</h3>
+<p>まず、月100件が無料枠に収まるかを見ます。月1,000件を超えるなら、次の単位を同じ検索件数に換算します。</p>
+<ul><li>Bright Data：従量課金は1,000成功リクエストあたり$1.5</li><li>cloro：Liteは月額$30で37,500クレジット。Google Searchは3クレジットから</li><li>SerpApi：Starterは月額$25で1,000検索</li></ul>
+<p>cloroは追加ページで2クレジット、同期処理でも2クレジットが加算されます。SerpApiは成功した検索数が基準です。月10,000件なら、必要な追加ページと同期処理、再試行を含めて計算します。</p>
+<h3>解約・返金・未使用枠も費用に含める</h3>
+<ul><li>Bright Data：カード、PayPal、Alipay、Payoneer、Google Pay、Apple Payに対応。大口契約では銀行振込も選べます。Scaleはいつでも解約できますが、支払い済み料金は返金されません</li><li>cloro：セルフサービスはカード決済。EnterpriseはACHまたは銀行振込に対応します。月次プランの解約は請求期間末に有効となり、返金はありません</li><li>SerpApi：いつでもプラン変更や解約ができ、更新日までは残りの検索枠を利用できます。契約から7日以内かつ使用量20%以下なら全額返金の対象です</li></ul>
+<p>Scaleは月額$499で380,000リクエストを含み、超過分は1,000件あたり$1.3です。法人名義の請求書が必要なら、契約前に各社へ発行条件を問い合わせます。税務上の扱いは税理士に確認してください。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>無料クレジットの対象製品と現在の消費単位を登録画面から確かめられます。</p>
+<h2 id="s5">日本語検索と地域指定は同じ条件で試す</h2>
+<p>同じ日本語クエリでも、国や都市、言語、端末が違えば検索結果は変わります。各社で指定できる範囲内で条件をできるだけそろえ、順位だけでなく返却項目と欠損も比べます。</p>
+<figure><img loading="lazy" src="../img/bright-data-howto-bc98/bright-data-howto-bc98-japanese-test.png" alt="日本語検索を試す条件"></figure>
+<h3>言語・国・都市・端末の条件を固定する</h3>
+<p>試す条件は、次のように先に決めておきます。</p>
+<ul><li>Bright Data：日本語の検索語と地域条件を含むGoogle検索URLをurlへ渡す</li><li>cloro：日本語の検索語に加え、国・都市・端末を指定する</li><li>SerpApi：hl、gl、location、google_domainで言語と地域を指定する</li><li>3社ともデスクトップと同じ取得時刻で試す</li></ul>
+<p>cloroでは国・都市・端末までをそろえます。独立した言語指定を前提にせず、日本語の検索語と返却内容を見比べます。管理画面の日本語化と、日本語の検索結果を取得できることも分けて考えます。</p>
+<h3>順位だけでなく返却項目と欠損を見る</h3>
+<p>自然検索の順位とURLだけで足りるのか、広告や「他の人はこちらも質問」、ローカル枠、画像も必要なのかを決めます。ページネーションと日本語スニペットの有無も確認します。</p>
+<p>JSONのキー名はサービスごとに違います。必要な項目が欠けていないか、同じ条件で再取得できるかを記録します。速度と精度は今回実測していないため、各社の優劣は断定しません。</p>
+<h2 id="s6">SERP APIを導入して最初の1件を取得する</h2>
+<p>最初はAPIキーを発行し、日本語クエリを1件だけ送ります。Bright Dataの非同期APIでは、発行されたresponse_idを使って結果を取得し、JSONを保存します。</p>
+<ol><li>アカウントを登録する</li><li>APIキーを発行する</li><li>日本語の検索語と地域条件を決める</li><li>cURLやJavaScriptから送信する</li><li>返ってきたJSONを保存する</li><li>管理画面で消費数を照合する</li></ol>
+<h3>APIキーを発行して安全に管理する</h3>
+<p>APIキーはソースコードへ直接書かず、環境変数から読み込みます。公開リポジトリ、画面共有、エラーログに残らない設定も必要です。</p>
+<p>Bright DataのAPIは、Authorization: BearerヘッダーにAPIキーを入れて認証します。キーを誤って公開した場合は、すぐに無効化して再発行します。</p>
+<h3>同じ日本語クエリを送る最小コード</h3>
+<p>Bright Dataで非同期リクエストを送る最小例です。事前にSERP APIゾーンを作り、非同期リクエストを有効にします。YOUR_ZONE_NAMEとYOUR_API_KEYは自分の値へ置き換えてください。</p>
+<p>curl --request POST --url 'https://api.brightdata.com/serp/req?zone=YOUR_ZONE_NAME' --header 'Authorization: Bearer YOUR_API_KEY' --header 'Content-Type: application/json' --data '{&quot;query&quot;:{&quot;q&quot;:&quot;法人向け パスワード管理&quot;},&quot;brd_json&quot;:&quot;json&quot;}'</p>
+<p>返ってきたresponse_idを次のURLへ入れると、構造化された結果をresults.jsonへ保存できます。</p>
+<p>curl --silent --compressed 'https://api.brightdata.com/unblocker/get_result?response_id=YOUR_RESPONSE_ID' --header 'Authorization: Bearer YOUR_API_KEY' --output results.json</p>
+<p>cloroとSerpApiでは、エンドポイントと認証方法が異なります。各社のコード例を使い、前節で決めた範囲の検索条件へ読み替えます。</p>
+<h3>JSONを保存して必要な項目を取り出す</h3>
+<p>最初のレスポンスは加工せずに保存します。そのうえで、順位、タイトル、リンクに当たる項目を抽出します。取得件数や欠損、エラー、消費した課金単位も同じ記録に残します。</p>
+<p>元のレスポンスがあれば、項目が消えたときに原因を追えます。保存期間とアクセス権限はデータに合わせて決めます。</p>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>登録後はAPIキーを発行し、SERP APIの接続設定へ進めます。</p>
+<h2 id="s7">契約前に確かめたい5つのポイント</h2>
+<p>有料契約の前に、返却項目、地域の再現性、処理量、課金、解約条件を同じ順番で比べます。無料枠の数字が大きくても、自然検索や広告など必要な検索面が返らなければ候補にはなりません。</p>
+<ul><li>必要な検索面が返るか</li><li>日本・都市・端末の条件を再現できるか</li><li>同時実行と待ち時間が処理量に足りるか</li><li>失敗と再試行で何が課金されるか</li><li>解約、返金、未使用枠はどう扱われるか</li></ul>
+<h3>無料枠で5クエリを試す</h3>
+<p>指名語、一般語、地域名を含む語、ニュース性のある語、結果が少ない語を1つずつ選びます。普段扱う検索語を混ぜると、自社の利用場面に近い判断材料になります。</p>
+<p>各クエリで返却項目、欠損、待ち時間、消費数を記録します。この記事では実測値を載せていません。契約前に自分の条件で試す工程は省かないでください。</p>
+<h3>利用規約とデータの扱いを確認する</h3>
+<p>API事業者の規約だけでなく、取得対象サイトの規約やrobots.txtも読みます。個人情報や著作物を保存する場合は、取得目的と保存期間、社内の閲覧権限も決めておきます。</p>
+<p>収集や二次利用の可否を判断できないときは、法務担当者や専門家へ相談します。APIを契約したこと自体が、取得データの利用許諾になるわけではありません。</p>
+<h2 id="s8">SERP APIのよくある質問</h2>
+<p>導入前に迷いやすいのは、一般的な検索APIとの違いと無料枠の範囲です。スクレイピングやAIへの組み込みも、用途とデータの扱いを分けて考えます。</p>
+<h3>SERP APIと一般的なWeb検索APIの違いは？</h3>
+<p>SERP APIは、実際の検索結果ページに並ぶ順位やURLなどを構造化して返します。一般的なWeb検索APIには、独自インデックスから候補ページや要約を返すものもあり、同じ検索語でも目的が異なります。</p>
+<h3>無料だけで使い続けられる？</h3>
+<p>3社とも無料枠がありますが、更新周期と消費単位が違います。小規模なら収まる場合があるものの、追加ページや同期処理を含めた月間消費数で判断してください。</p>
+<h3>SERP APIを使えばスクレイピングの規約確認は不要？</h3>
+<p>不要にはなりません。契約前に、取得対象の規約とデータの利用目的を確認します。</p>
+<h3>AIエージェントやRAGにも使える？</h3>
+<p>構造化した検索結果をAIへ渡す用途にも使えます。ただし、引用元URLと取得時刻を残し、重複や古い情報、誤情報を別に検査する仕組みが必要です。</p>
+<h2 id="s9">まとめ：日本語検索を無料枠で試してから選ぶ</h2>
+<p>まず各社で指定できる範囲の日本語クエリと地域条件をそろえ、必要な検索面と欠損、課金単位を見ます。無料で試す最初の候補はBright Dataです。有料契約は、必要な検索面と月間件数、決済条件を比べて決めます。検索と生成AI回答を同じ枠で扱うならcloro、検索エンジン別APIの広さを重視するならSerpApiが候補です。</p>
+<ol><li>必要な返却項目を決める</li><li>無料枠で5クエリを試す</li><li>月間件数から必要な料金枠を出す</li></ol>
+<p class="cta"><a class="btn" target="_blank" rel="nofollow noopener" href="https://get.brightdata.com/pb8619a">Bright Dataに登録して無料クレジットを試す<span aria-hidden="true"> →</span></a></p>
+<p>SERP APIは月次無料クレジットの対象です。対象外のプロキシ製品と混同せず、まず検索1件から試せます。</p></div>
+<div class="nav"><span><a href="bright-data-howto-653e.html">← Web Unlockerとは？Bright Da…</a></span><span><a href="bright-data-howto-f44d.html">Amazonスクレイピングツールの選び方｜Bri… →</a></span></div>
+<div class="foot">確認用ページ（noindex）。黄色の部分は note に貼る前に手作業が必要な箇所です。</div></div>
+<script>function copyEl(id){const el=document.getElementById(id);const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();alert('コピーしました');}</script></body></html>
